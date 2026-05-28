@@ -383,7 +383,7 @@
 			  pointer-events: none;
 			}
 			#bear-sideshow {opacity:0;}
-			.is-visible {
+			#bear-sideshow.is-visible {
 				opacity:1;
 			}
 			.c138z5kb[data-is-visible='false'] { opacity: 0; }
@@ -726,10 +726,10 @@
 			</svg>
 		  </div>
 		  <div data-is-visible="true" class="c138z5kb" style="--delay: 1250ms;">
-			<p class="prg881n">Übrigens, weißt du wie man schneller erfährt, ob etwas wirklich echt ist?</p>
+			<p class="prg881n">Unsere Anleitungen helfen Eltern bei Ihren ersten Schritten und weiter...</p>
 			<div class="b19w5h5e">
-			  <button data-cy="speech-bubble-accept" class="buqgy6u" style="color: rgb(66, 66, 250);">Klaro!</button>
-			  <button data-cy="speech-bubble-deny" class="buqgy6u">Jetzt nicht</button>
+			  <button data-cy="speech-bubble-accept" class="buqgy6u" style="color: rgb(66, 66, 250);">Zeigs mir!</button>
+			  <button data-cy="speech-bubble-deny" class="buqgy6u" data-modal-target="bear-sideshow" data-modal-toggle="bear-sideshow">Jetzt nicht</button>
 			</div>
 		  </div>
 		</div>
@@ -765,7 +765,7 @@
 		var isMobile = window.innerWidth <= 1024;
 		
 		// Appear when scrolled > 1400px on desktop, or > 800px on mobile
-		var threshold = isMobile ? 800 : 2800;
+		var threshold = isMobile ? 800 : 1800;
 
 		if (scrollY > threshold) {
 		  bearSideshow.classList.add('is-visible');
@@ -1017,51 +1017,63 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById('main-map-container');
-    const overlay = document.getElementById('main-map-overlay');
-    let isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
-
-    const activateOverlay = () => {
-        overlay.classList.remove('opacity-0', 'pointer-events-none');
-        overlay.classList.add('opacity-100');
-        container.classList.remove('lg:rotate-1');
-        container.classList.add('rotate-0');
-    };
-
-    const deactivateOverlay = () => {
-        overlay.classList.add('opacity-0', 'pointer-events-none');
-        overlay.classList.remove('opacity-100');
-        container.classList.remove('rotate-0');
-        container.classList.add('lg:rotate-1');
-    };
-
-    container.addEventListener('mouseenter', () => {
-        if (!isTouchDevice) activateOverlay();
-    });
-
-    container.addEventListener('mouseleave', () => {
-        if (!isTouchDevice) deactivateOverlay();
-    });
-
-    container.addEventListener('click', (e) => {
-        if (isTouchDevice) {
-            if (overlay.classList.contains('opacity-0')) {
-                activateOverlay();
-                e.stopPropagation(); 
-            }
-        }
-    });
-
-    document.addEventListener('click', (e) => {
-        if (isTouchDevice && !overlay.classList.contains('opacity-0')) {
-            if (!container.contains(e.target) || e.target.closest('button')) {
-                if (!e.target.closest('button')) {
-                    deactivateOverlay();
-                }
-            }
-        }
-    });
-});
-</script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const container = document.getElementById('main-map-container');
+		const overlay = document.getElementById('main-map-overlay');
+		
+		let hasTouched = false;
+		window.addEventListener('touchstart', () => {
+			hasTouched = true;
+		}, { passive: true });
+	
+		const activateOverlay = () => {
+			overlay.classList.remove('opacity-0', 'pointer-events-none');
+			overlay.classList.add('opacity-100');
+			container.classList.remove('lg:rotate-1');
+			container.classList.add('rotate-0');
+		};
+	
+		const deactivateOverlay = () => {
+			overlay.classList.add('opacity-0', 'pointer-events-none');
+			overlay.classList.remove('opacity-100');
+			container.classList.remove('rotate-0');
+			container.classList.add('lg:rotate-1');
+		};
+	
+		container.addEventListener('mouseenter', () => {
+			if (!hasTouched) activateOverlay();
+		});
+	
+		container.addEventListener('mouseleave', () => {
+			if (!hasTouched) deactivateOverlay();
+		});
+	
+		container.addEventListener('click', (e) => {
+			if (hasTouched) {
+				if (overlay.classList.contains('opacity-0')) {
+					activateOverlay();
+				}
+			}
+		});
+	
+		document.addEventListener('click', (e) => {
+			if (hasTouched && !overlay.classList.contains('opacity-0')) {
+				// Close if clicked completely outside the container
+				if (!container.contains(e.target)) {
+					deactivateOverlay();
+				}
+			}
+		});
+	
+		window.addEventListener('scroll', () => {
+			if (hasTouched && !overlay.classList.contains('opacity-0')) {
+				const rect = container.getBoundingClientRect();
+				// Close if container scrolls entirely out of view
+				if (rect.bottom < 0 || rect.top > window.innerHeight) {
+					deactivateOverlay();
+				}
+			}
+		}, { passive: true });
+	});
+	</script>
 </body></html>
