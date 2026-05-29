@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>	
+<style>
+  .scale-140-text {
+	transform: scale(1.4);
+	transform-origin: left center;
+	font-size: 19.6px !important; /* 14px * 1.4 */
+  }
+</style>
+<!--<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Gluten:wght@100..900&amp;display=swap" rel="stylesheet"/>-->
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Gluten:wght@100..900&amp;family=Radio+Canada:ital,wght@0,300..700;1,300..700&amp;display=swap" rel="stylesheet">
+
+<!--Raleway--> 
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+<!--<link href="https://fonts.googleapis.com/css2?family=family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">-->
+<!--<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&amp;family=Playfair:ital,opsz@0,5..1200;600;1,5..1200&amp;display=swap" rel="stylesheet"/>-->
+<!--<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&amp;display=swap" rel="stylesheet"/>-->
+<meta charset="utf-8"/>
+<meta http-equiv="content-language" content="de">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>cyBEAR - Kinder fit machen im Umgang mit Risiken rund um Apps, Social Media & Online KI</title>
+
+
+<meta name="description" content="Cybear – die spielerische Lernapp für digitale Kompetenzen. Kinder lernen sicher, kritisch und selbstbewusst mit Apps, Internet, KI und Medien umzugehen – Eltern erhalten praktische Hilfe für Risiken, Bildschirmzeit und den digitalen Familienalltag.">
+
+<meta name="keywords" content="Lernapp, spielerisch lernen, digitale Kompetenzen, digitale Bildung, Medienkompetenz Kinder, Medienkompetenz Eltern, Internet Sicherheit Kinder, Bildschirmzeit Kinder, App Sucht, digitale Erziehung, Kinderschutz Internet, Cybersicherheit Kinder, Online Risiken, Desinformation Kinder, Elternratgeber Medien, digitale Kompetenzen Kinder">
+
+<meta name="author" content="Cybear">
+<meta name="geo.country" content="DE">
+<meta name="country" content="Germany">
+<meta name="robots" content="all"/>
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cybear">
+<meta property="og:title" content="Cybear – Spielerische Lernapp für digitale Kompetenzen">
+<meta property="og:description" content="Die spielerische Lernapp für Familien: Kinder trainieren digitale Kompetenzen, Eltern erhalten praktische Unterstützung zu Risiken, Bildschirmzeit, Apps und sicherem Verhalten online.">
+<meta property="og:image" content="/images/og-image.jpg">
+<meta property="og:url" content="https://cybearapp.de">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cybear – Spielerisch digitale Kompetenzen lernen">
+<meta name="twitter:description" content="Spielerische Lernapp für Kinder und Eltern: Digitale Kompetenzen stärken, Risiken erkennen und sicher durch den digitalen Alltag navigieren.">
+<meta name="twitter:image" content="https://cybearapp.de/og-image.jpg">
+
+<link rel="canonical" href="https://cybearapp.de/" />
+<!--<link rel="icon" type="image/x-icon" href="/cybear-favicon.png">-->
+
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<!-- Tailwind Flowbite -->
+<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.2/dist/flowbite.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.2/dist/flowbite.min.css" rel="stylesheet">
+
+
+<script>
+	  tailwind.config = {
+		theme: {
+		  extend: {
+			fontFamily: {
+			  sans: ['Geist', 'ui-sans-serif', 'system-ui']
+			},
+			colors: {
+			  cyorange: '#FB855A',
+			  cyyellow: '#FFD166',
+			  cyblue: '#2B4162',
+			  cybeige: '#F9F4EE',
+			  'nav-orange': '#FFB347',
+			  'spot-orange': '#FFCC80',
+			  'protect-rose': '#FFD1DC',
+			  'safe-green': '#CCFF99',
+			  'parent-bg': '#FCE4EC',
+			  'kid-bg': '#E1F5FE',
+			  'spot-bg': '#ffead0',
+			  'protect-bg': '#fce3e9',
+			  'staysafe-bg': '#e9f7d1',
+			  'dark-teal': '#37474F',
+			  'dark-indigo': '#574d7d',
+			  'cygreen': '#dffaf8', //   #ceefed
+			  'cyteal': '#4ECDC4',
+			  'cypink': '#FF8FAB',
+			}
+		  }
+		}
+	  }
+</script>
+
+<style>
+:root {
+--mr_lg_bear: calc(-10vmin + 4vmax);
+--mr_xl_bear: calc(-1vmin + 3vmax);
+--mr_2xl_bear: calc(2vmin + 2vmax);
+}
+
+.gluten-font {
+	  font-family: "Gluten", cursive;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+	  font-variation-settings: "slnt" 0;
+}
+
+.geist-font {
+	  font-family: "Geist", sans-serif;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+}
+
+.playfair-font {
+	  font-family: "Playfair", serif;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+	  font-variation-settings: "wdth" 100;
+	}
+.radio-canada-font {
+	  font-family: "Radio Canada", sans-serif;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+	  font-variation-settings: "wdth" 100;
+	}
+.merriweather-font {
+	  font-family: "Merriweather", serif;
+	  font-optical-sizing: auto;
+	  font-weight: <weight>;
+	  font-style: normal;
+	  font-variation-settings: "wdth" 100;
+	}
+</style>
+<style data-purpose="custom-config">
+@import "tailwindcss";
+
+@theme {
+  --mr_lg_bear: calc(-10vmin + 4vmax);
+  --mr_xl_bear: calc(-1vmin + 3vmax);
+  --mr_2xl_bear: calc(2vmin + 12vmax);
+} 
+</style>
+<style data-purpose="neobrutalism-styles">
+	.neo-border {
+	  border: 3px solid #000000;
+	  box-shadow: 6px 6px 0px 0px #000000;
+	  transition: all 0.2s ease;
+	}
+	.neo-border:hover {
+	  transform: translate(-2px, -2px);
+	  box-shadow: 8px 8px 0px 0px #000000;
+	}
+	.neo-border:active {
+	  transform: translate(2px, 2px);
+	  box-shadow: 2px 2px 0px 0px #000000;
+	}
+	.neo-card {
+	  border: 2px solid #000000;
+	  box-shadow: 4px 4px 0px 0px #000000;
+	}
+	body {
+	  font-family: 'Geist', sans-serif;
+	  background: linear-gradient(180deg,rgba(166, 212, 237, 1) 1%, rgba(134, 194, 227, 1) 53%, rgba(131, 189, 230, 1) 100%);
+	  background-image: radial-gradient(#E5DACE 1.5px, transparent 1.5px), linear-gradient(180deg,rgba(166, 212, 237, 1) 1%, rgba(134, 194, 227, 1) 53%, rgba(131, 189, 230, 1) 100%);
+	  background-size: 30px 30px, 100% 100%;
+	  min-height: 100vh;
+	}
+	.tab-label {
+	  position: absolute;
+	  top: -18px;
+	  left: 20px;
+	  background: white;
+	  border: 2px solid #000;
+	  padding: 2px 12px;
+	  font-weight: 800;
+	  border-radius: 8px;
+	  font-size: 14px;
+	}
+	.modal-close-x {
+		  position: absolute;
+		  top: -12px;
+		  right: -12px;
+		  background: white;
+		  border: 2px solid #000;
+		  padding: 2px 12px;
+		  font-weight: 800;
+		  border-radius: 16px;
+		  font-size: 24px;
+		}
+	.modal-warning-triangle {
+		  position: absolute;
+		  top: -24px;
+		  left: -12px;
+		  
+		  border: 2px solid #000;
+		  padding: 2px 12px;
+		  font-weight: 800;
+		  border-radius: 16px;
+		  font-size: 24px;
+		}
+	
+	.nav-tab {
+	  margin-top: -0.75rem;
+	  border-top: 0;
+	  border-left: 2px solid #000;
+	  border-right: 2px solid #000;
+	  border-bottom: 2px solid #000;
+	  z-index: 60;
+	  height: calc(100% + 1rem);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+	.curved-underline {
+	  position: relative;
+	  display: inline-block;
+	}
+	.curved-underline::after {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: -6px;
+	  width: 100%;
+	  height: 8px;
+	  background: url("data:image/svg+xml,%3Csvg width='100' height='10' viewBox='0 0 100 10' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 Q 25 10 50 5 T 100 5' stroke='%23FB855A' stroke-width='4' fill='transparent'/%3E%3C/svg%3E");
+	  background-size: 100% 100%;
+	}
+	el-dialog::backdrop {
+	  background-color: rgba(0, 0, 0, 0.5);
+	  backdrop-filter: blur(4px);
+	}
+  </style>
+</head>
+<body class="text-slate-900 overflow-x-hidden overflow-y-scroll">
+<!-- Decorative Right Blob 1 -->
+<div class="absolute w-[100%] h-auto pointer-events-none -z-10 overflow-hidden opacity-[0.2]" style="top: 1680px;">
+<svg class="drop-shadow-2xl relative -right-[43%]" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M55.5,-11.4C64,8.2,57.5,39.2,43.1,46.7C28.7,54.3,6.2,38.3,-12.8,23.1C-31.8,8,-47.4,-6.2,-44.7,-17.8C-42,-29.4,-21,-38.3,1.2,-38.7C23.5,-39.1,47,-31,55.5,-11.4Z" fill="url(#rightBlobGradient)" transform="translate(100 100)"></path>
+<defs>
+<lineargradient gradienttransform="rotate(133)" id="rightBlobGradient">
+<stop offset="1%" stop-color="rgba(242, 225, 155, 0.47)"></stop>
+<stop offset="52%" stop-color="rgba(245, 232, 159, 0.23)"></stop>
+<stop offset="100%" stop-color="rgba(250, 240, 165, 0.03)"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<!-- Decorative Right Blob 2 -->
+<div class="absolute w-[100%] h-auto -left-[65%] pointer-events-none -z-10 overflow-hidden" style="top: 900px;">
+	<svg class="drop-shadow-2xl" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+	<path d="M62.6,-32.1C73.8,-16.8,70.3,10.9,57.5,34C44.6,57.1,22.3,75.6,3.1,73.8C-16.1,72,-32.2,50,-41.1,29.2C-49.9,8.4,-51.4,-11.1,-43.4,-24.6C-35.3,-38,-17.7,-45.5,4,-47.8C25.7,-50.1,51.5,-47.4,62.6,-32.1Z" fill="url(#blobGradient)" transform="translate(100 100)"></path>
+	<defs>
+	<lineargradient gradienttransform="rotate(133)" id="blobGradient">
+	<stop offset="1%" stop-color="rgba(207, 237, 166, 0.37)"></stop>
+	<stop offset="52%" stop-color="rgba(184, 227, 134, 0.17)"></stop>
+	<stop offset="100%" stop-color="rgba(192, 230, 131, 0.02)"></stop>
+	</lineargradient>
+	</defs>
+	</svg>
+	</div>
+<!-- Decorative Right Blob 3 -->
+<div class="absolute w-[100%] h-auto right-0 pointer-events-none -z-10 overflow-hidden opacity-[0.2]" style="top: 222px;">
+	<svg class="drop-shadow-2xl" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+	<path d="M61.7,-8C61.7,13.6,30.9,27.2,8,27.2C-14.9,27.2,-29.7,13.6,-29.7,-8C-29.7,-29.5,-14.9,-59,8,-59C30.9,-59,61.7,-29.5,61.7,-8Z" fill="url(#newRightBlobGradient)" transform="translate(100 100)"></path>
+	<defs>
+	<lineargradient gradienttransform="rotate(133)" id="newRightBlobGradient">
+	<stop offset="1%" stop-color="rgba(212, 155, 242, 0.39)"></stop>
+	<stop offset="52%" stop-color="rgba(216, 159, 245, 0.24)"></stop>
+	<stop offset="100%" stop-color="rgba(216, 165, 250, 0.04)"></stop>
+	</lineargradient>
+	</defs>
+	</svg>
+	</div>
+
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b-2 border-black px-4 md:px-8 py-3">
+<div class="max-w-7xl mx-auto flex flex-wrap justify-between gap-4 items-stretch">
+<!-- Logo Container -->
+<div class="w-32 md:w-44" data-purpose="logo">
+<svg viewbox="0 0 848.9 218.7" xmlns="http://www.w3.org/2000/svg">
+<style>.st0{fill:#FB855A}.st1{fill:#A396B5}</style>
+<g><path class="st0" d="M421.2 124.2c0 43.6-23.6 41.9-60.4 41.9-14.3 0-28.7-1.5-43-2.2-6.8-.5-9.5-2.6-10.1-9.5-2-21.4-2.6-43.4-2.6-64.8 0-15.7-.7-31.5.5-46.7.5-6.6 2.9-9.7 9.3-10.6 10.1-1.3 20.7-2 31.1-2 13.9 0 27.6.9 41.4 2 20.9 1.8 28.7 15.6 28.7 35.5 0 14.8-2.7 16.5-8.8 28.6 6 11.2 8.8 21.8 8.8 33.6zm-70.3 4.4c5.1-.4 25.4.2 25.4-6.8 0-8.8-8.4-9-15.2-9-3.5 0-6.8.2-10.3.5v15.3zm.4-60.4c.2 5.5.4 11.2.7 16.8 2.2.4 3.8.4 5.9.4 4.9 0 16.5-.7 16.5-7.3 0-9.3-9.2-10.1-16.3-10.1l-6.8.2z"></path><path class="st0" d="M484.5 70.9l.2 12.1c9.2 0 18.3-.5 27.8-.5 9.7 0 7.5 18.7 7.5 26 0 9.2-28 5.9-35.1 6.8v11h8.6c10.4 0 21.2-1.5 32-1.5 8.6 0 8.8 18.3 8.8 24.7 0 3.1-.2 5.9-.5 9-.9 5.5-4 7.5-9.3 7.7-17.9.5-35.9 1.1-53.8 1.1-25.8 0-32.8-.2-32.8-27.3 0-30.4 0-71.6 1.6-102.1.2-4 1.8-6.4 5.9-7.3 8.6-2.2 20.5-2 29.5-2 16.1 0 35.3-.7 50.9.4 5.3.4 8.1 1.3 8.6 6.8 1.1 8.4-1.1 18.7-1.1 26.9 0 12.4-21.8 8.4-30.6 8.4h-11z"></path><path class="st0" d="M600.7 140.3c-5.5 19.8-3.5 25.6-27.5 25.6-6.6 0-25.1.5-25.1-8.8 0-20.9 20.1-87.1 28.2-109.4 7.7-20.7 32.3-18.7 50.8-18.7 4.2 0 8.8.7 13 1.6 11.7 1.8 18.5 11 22.7 21.6 3.7 9.2 20.3 93.3 20.3 101.9 0 9.9-22.7 12.6-30.4 12.6-21.2 0-18.9-9-22-25.6-10.1.3-20.2.1-30.1 0zm26.9-37.2c-1.3-9-2.6-18.1-4.9-26.9-.4-2.2-1.8-3.3-4.8-3.3-2.6 0-3.3 1.1-3.7 2.9-2.6 9-4.8 18.3-6.4 27.3h19.8z"></path><path class="st0" d="M812.5 152.3c0 8.1-20.7 15.4-27.3 15.4-12.8 0-32.8-37.7-40.8-37.7-4.2 0-2.9 7.5-2.9 10.4 0 22.9.7 25.6-23.1 25.6-8.2 0-21.2.7-21.2-10.2 0-22.9 1.3-46.1 1.3-68.8 0-13-1.3-26-1.3-39 0-12.6 5.9-19.4 15.6-19.4 24.2 0 44.1-.2 63.9 1.1 6.6.5 14.6 1.6 20.5 4 13 4.2 15 28.2 15 40.3 0 7.1.2 17-1.3 26.4-1.8 11.3-11.2 20.3-21 19.6 11.3 5.4 29.7 25.9 29.7 32.1zm-43.1-72.3c0-11.9-3.1-16.5-13.2-16.5-4.2 0-10.1-.7-11 4.4-1.3 7-.7 22.3 0 24.7 1.3 2.1 17.7 3.3 17.7-10.8z"></path></g>
+<g><path class="st1" d="M78.2 120.2c.5 4 2.8 16.1 3.8 20.4 2.9 12.5 5.7 15 18.6 12.1 12.1-2.8 24.4-5.6 36-8.3 9.1-2.1 12.7 14.3 14.2 20.8 1.2 5.4 4.2 13.3-.6 17-6.8 5.7-38.6 12.5-47.9 14.6-10.5 2.4-21.1 3.7-31.9 4.9-22.2 2.3-36.4-64.3-40.1-80-1.8-7.8-3-16.2-3.7-24.1 0-11 5.2-18.6 14.8-23.2 20.5-10.4 44.8-16 67.4-21.2 8.4-1.9 11.9 1 13.6 5.9 1.5 4 1.7 9.2 6.4 27.6-29.5 13.8-84.9 14.7-82.5 34.1z"></path><path class="st1" d="M216.7 24.4c2.3-4 5-6.8 8.2-7.7 9.4-2.5 30.1 7.1 32.7 16.6.7 2.7.5 5.9-.5 9.4-4.4 16.7-27.1 48.9-23.5 60.9 1.8 6.1 4.4 15.1 6 21.1 5.8 21.7 10.6 29-14.3 35.7-25.5 6.8-21.1-.4-26.6-20.9-2.5-9.2-5.3-22.6-8.7-31.2-1.7-4.1-36.4-24-49.3-34.9-4.6-3.9-3.6-12.9-1.7-17.6 2.8-6.6 8.9-14.3 13.9-18.3 4.3-3.6 9.1-3.6 14-1.5 10.5 4.6 28.3 24.3 35.8 28.1.7.3 7.2-23.4 12.5-32.6z"></path></g>
+</svg>
+</div>
+<!-- Navigation -->
+<nav class="flex flex-grow items-center justify-center gap-6 font-bold text-sm md:text-base">
+	<!--
+<a class="hover:text-cyorange transition-colors" href="#">Wie funktionierts</a>
+<a class="hover:text-cyorange transition-colors" href="#">Mehr Infos</a>
+<a class="bg-nav-orange px-4 py-2 rounded-full neo-border text-sm" href="#" style="background-color: #FB855A;">Auf die Warteliste..</a>
+-->
+</nav>
+<!-- Toggle Switch as Tabs -->
+<div class="absolute top-0 right-4 md:right-8 flex items-start gap-0 z-50">
+<button class="bg-[#FDA4AF] border-x-2 border-b-2 border-black px-1 md:mt-[4.4rem] lg:mt-0 lg:px-4 md:px-5 py-1 lg:pb-6 lg:pt-4 rounded-b-2xl font-[#CD1E2D] text-lg uppercase shadow-[4px_4px_0_0_#000] hover:-translate-y-1 hover:shadow-none transition-all h-[2.2em] lg:h-[6em] font-['Gluten'] font-bold" data-modal-target="large-modal-kinder" data-modal-toggle="large-modal-kinder">Kinder</button>
+<button class="bg-[#93C5FD] border-x-2 border-b-2 border-black px-1 md:mt-[4.4rem] lg:mt-0 lg:px-4 md:px-5 py-1 lg:pb-6 lg:pt-4 rounded-b-2xl font-[#185AA8] text-lg uppercase shadow-[4px_4px_0_0_#000] -ml-[2px] hover:-translate-y-1 hover:shadow-none transition-all h-[2.2em] lg:h-[6em] font-['Gluten'] font-bold" data-modal-target="large-modal-eltern" data-modal-toggle="large-modal-eltern">Eltern</button>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<main class="max-w-[80vw] mx-auto px-4 md:px-8 py-12 md:py-20 relative">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+
+
+
+</div>
+</main>
+<!-- END: HeroSection -->
+
+<section class="py-24 pt-32 px-6 overflow-hidden">
+		  
+	  <div class="max-w-7xl mx-auto">
+	<div class="text-center mb-12 flex flex-col items-center" id="features">
+	  <h2 class="text-4xl font-extrabold text-primary dark:text-white lg:w-1/2">Wir sind nicht nur besorgte, sondern auch Technologie-affine Eltern, die täglich mit Digitaler Sicherheit, neuen Technologien und Risiken zu tun haben. Uns liegt am Herzen, dass Kinder von der Technologiewelle, nicht einfach überrollt werden, sondern den Umgang tiefsinnig lernen. Also nicht nur Bedienen, sondern echtes verstehen.</h2>
+	  <p class="text-slate-500 mt-2 lg:w-1/2 font-medium">Viele Gefahrensituationen sind subtil und lassen sich nicht sofort als Gefährdungen erkennen. Einfach schnell ein Profil angelegt, dort einfach JA gesagt, anderswo etwas unüberlegt hochgeladen... und schon steht die Tür offen. Es ist unmöglich für Eltern am Ball zu bleiben und immer über die Schultern ihrer Kinder zu gucken. </p>
+	</div>
+	  </div>
+	</section>
+	
+	
+	
+		
+		
+		
+	
+		<!-- founder card -->
+		<!-- Founder Statement (Blue Banner) -->
+		<section class="w-full py-24 px-6">
+		<div class="max-w-7xl mx-auto"><div class=" neo-border bg-spot-bg rounded-[3rem] p-12 md:p-20 relative overflow-visible shadow-2xl">
+		<div class="mb-6">
+		<span class="text-yellow-400 font-bold tracking-[0.2em] text-sm uppercase">Wieso machen wir Cybear?</span>
+		</div>
+		<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+		<div class="lg:col-span-7 pr-4 md:pr-12">
+		<h2 class="text-3xl md:text-5xl font-extrabold text-indigo-700 mb-8 leading-tight">
+						Von Eltern gemacht, die wissen wie schwer es ist, seine Kinder fit im sicheren Online-Sein zu machen.
+					</h2>
+		<blockquote class="relative">
+		<span class="material-symbols-outlined absolute -top-8 -left-8 text-6xl text-navy-800 opacity-50" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+		<p class="text-xl md:text-xl text-black-800 font-['Merriweather'] leading-relaxed relative z-10">
+			<!--In Feeds oder in Whatsapp werden munter neue Videos, Links, Apps, Fakes, Memes und Trends geteilt...-->
+			In Feeds oder in Whatsapp werden munter Inhalte geteilt, die oft nicht kindgerecht sind. Der Gruppendruck ist immens. Dem entziehen kann man sich kaum.
+			Gewohnheiten stellen sich schnell ein: Weniger Kindsein, Reizüberflutung, Stress, Abhängigkeit. Viele Eltern sind damit überfordert.<br><br> Das muss nicht sein! Deshalb wollen wir helfen Kinder (und Eltern) konstruktiv vorzubereiten: Impulskontrolle stärken. Kinder für richtiges und falsches Verhalten sensibilisieren. Durch wissens- und praxis-orientierte Übungen lernen wie man sich effektiv schützt, Desinformation erkennt und Gefahren aus dem Weg geht. 
+						</p>
+		<footer class="mt-8">
+		<p class="text-yellow-400 font-bold text-lg">Karina, Stefan, Melissa</p>
+		<p class="text-blue-300 text-sm">CyBear-Gründer</p>
+		</footer>
+		</blockquote>
+		</div>
+		<div class="lg:col-span-5 relative">
+		<div class="lg:absolute lg:-right-32 lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-[90%] aspect-square rounded-3xl overflow-hidden shadow-2xl rotate-6 bg-navy-800 border-8 border-navy-900">
+		<img alt="Karina Mang Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 contrast-125" src="./images/cybear_team-illustration_small.png"/>
+		</div>
+		</div>
+		</div>
+		</div></div>
+		</section>
+
+		
+		<section class="py-24 pt-32 px-6 overflow-hidden">
+			  
+		  <div class="max-w-7xl mx-auto">
+		<div class="text-center mb-12" id="features">
+		  <h2 class="text-4xl font-extrabold text-primary dark:text-white">Neue Risiken kommen schneller als Eltern + IT-Fachleute mithalten können</h2>
+		  <p class="text-slate-500 mt-2 font-medium">Emotionale Beratung mit KI; Bots die sich wie echte Menschen verhalten; Personalisierungs-Algorithmen</p>
+		  </div>
+		  
+		  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+		  <div class="neo-border bg-kid-bg dark:bg-card-dark p-8 rounded-[32px] shadow-sm transition-transform hover:-translate-y-1">
+		  <div class="w-12 h-12 bg-spot-bg rounded-xl flex items-center justify-center mb-6 text-primary">
+		  <span class="material-symbols-outlined">book_5</span>
+		  </div>
+		  <h3 class="text-xl font-medium text-primary dark:text-white mb-3"><span class="font-extrabold">Für das Erlernen digitaler Kompetenzen sind praktikable Hilfen rar.</span> Entweder zu textlastig oder nicht an der Realität orientiert.</h3>
+		  <!--<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Smartmeister’s engine continuously adjusts the difficulty level in real-time, ensuring your child is always challenged but never overwhelmed.</p>-->
+		  </div>
+		  
+		  <div class="neo-border bg-protect-bg dark:bg-slate-800/50 p-8 rounded-[32px] shadow-sm transition-transform hover:-translate-y-1">
+		  <div class="w-12 h-12 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center mb-6 text-primary dark:text-accent">
+		  <span class="material-symbols-outlined">psychology_alt</span>
+		  </div>
+		  <h3 class="text-xl font-medium text-primary dark:text-white mb-3"><span class="font-extrabold">Je früher Kinder vorbereitet werden</span> desto leichter können sie später selbst die richtigen Entscheidungen treffen.</h3>
+		  <!--<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Foster self-reliance as children learn to overcome challenges and navigate their own learning path without constant supervision.</p>-->
+		  </div>
+		  
+		  <div class="neo-border bg-staysafe-bg p-8 rounded-[32px] shadow-lg transition-transform hover:-translate-y-1 text-primary dark:text-accent">
+		  <div class="w-12 h-12 bg-protect-bg rounded-xl flex items-center justify-center mb-6">
+		  <span class="material-symbols-outlined">match_word</span>
+		  </div>
+		  <h3 class="text-xl text-primary dark:text-white font-medium mb-3"><span class="font-extrabold">Viele digitale Gewohnheiten beeinträchtigen</span> die kognitiven Entwicklung, emotionale Gesundheit oder fördern Abhängigkeiten.</h3>
+		  <!--<p class="text-blue-100 text-sm leading-relaxed">Built-in AI tools for paraphrasing, translation, and text-to-speech help break down complex concepts into digestible insights.</p>-->
+		  </div>
+		</div>
+		</section>
+		
+		<!-- full width callout -->
+		<section class="py-24 bg-primary text-primary text-center">
+		  <div class="max-w-4xl mx-auto px-6">
+		  <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+						  Spot, Protect, Stay Safe
+					  </h2>
+		  <div class="w-24 h-1.5 bg-accent mx-auto rounded-full mt-6"></div>
+		  <p class="mt-8 text-primary text-lg">
+						  Wir kümmern uns darum, dass Kinder online wissen was sie tun
+					  </p>
+		  </div>
+		</section>
+		
+		<!-- Team Section -->
+		<section class="max-w-7xl mx-auto px-6 py-24">
+		<div class="mb-16">
+		<h2 class="text-3xl font-extrabold text-navy-900">Leadership Team</h2>
+		<div class="h-1.5 w-20 bg-yellow-400 mt-4"></div>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+		<!-- Card 1: Karina Mang -->
+		<div class="bg-white rounded-xl overflow-hidden shadow-xl border border-slate-100 flex flex-col md:flex-row group">
+		<div class="md:w-2/5 aspect-[4/5] md:aspect-auto overflow-hidden">
+		<img alt="Karina Mang" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Karina Mang Founder and CEO portrait smiling" src="./images/smartmeister-founder-grunder-mang.jpg"/>
+		</div>
+		<div class="p-8 md:w-3/5 flex flex-col justify-center">
+		<h3 class="text-2xl font-bold text-navy-900 mb-1">Karina Mang</h3>
+		<p class="text-blue-600 font-semibold mb-4">Mamma,<br>Produkt &amp Benutzer</p>
+		<p class="text-slate-600 leading-relaxed">
+									Karina hat einen Hintergrund als Juristin, besitzt aber ebenso Erfahrung mit Edu-startups, App- und Interaktionsdesign. Für Karina ist das Prinzip der Hilfe zur Selbsthilfe eines der Kernfundamente für Cybear.
+								</p>
+		</div>
+		</div>
+		<!-- Card 2: CTO/Head of Ed -->
+		<div class="bg-white rounded-xl overflow-hidden shadow-xl border border-slate-100 flex flex-col md:flex-row group">
+		<div class="md:w-2/5 aspect-[4/5] md:aspect-auto overflow-hidden">
+		<img alt="David Chen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="David Chen CTO portrait in professional setting" src="./images/smartmeister_cofounder_stefan.jpg"/>
+		</div>
+		<div class="p-8 md:w-3/5 flex flex-col justify-center">
+		<h3 class="text-2xl font-bold text-navy-900 mb-1">Stefan Ripperger</h3>
+		<p class="text-blue-600 font-semibold mb-4">Co-Founder, Product and Technology</p>
+		<p class="text-slate-600 leading-relaxed">
+									Awarded veteran product designer, Stefan brings brings technical excellence and creative product vision to the table, ensuring the platform houses well-designed systems and technology that work intuitively.
+								</p>
+		</div>
+		</div>
+		</div>
+		</section>
+
+<!-- BEGIN: MainFooter -->
+<footer class="bg-dark-teal text-white py-16 px-16 sm:px-16 md:px-20 lg:px:48 lg:px-[16vw] " style="background-color: #3D5266;">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start mb-12">
+<!-- Brand Description -->
+<div>
+<p class="text-lg font-black leading-relaxed max-w-xs" style="font-size: 1.2rem; line-height: 1.425;">
+	Eine Lernapp damit Kinder verstehen wie man sicher in der online KI-Ära navigiert
+			<!--A learning app preparing children to safely navigate the online AI era -->
+		  </p>
+</div>
+<!-- Quick Links -->
+
+<div class="flex flex-col gap-2">
+	<!--
+<h4 class="font-black text-slate-300 mb-2">Mehr über uns</h4>
+<a class="hover:text-cyorange transition-colors" href="#">Team</a>
+<a class="hover:text-cyorange transition-colors" href="#">Die Cybear App</a>
+<a class="hover:text-cyorange transition-colors" href="#">Platform</a>
+-->
+</div>
+
+<!-- Footer Logo & Tagline -->
+<div class="flex flex-col items-end gap-2">
+<div class="w-48 brightness-0 invert opacity-90">
+<!-- Using Logo SVG here with invert for dark background -->
+<svg viewbox="0 0 848.9 218.7" xmlns="http://www.w3.org/2000/svg">
+	<style>.st0{fill:#FB855A}.st1{fill:#A396B5}</style>
+	<g><path class="st0" d="M421.2 124.2c0 43.6-23.6 41.9-60.4 41.9-14.3 0-28.7-1.5-43-2.2-6.8-.5-9.5-2.6-10.1-9.5-2-21.4-2.6-43.4-2.6-64.8 0-15.7-.7-31.5.5-46.7.5-6.6 2.9-9.7 9.3-10.6 10.1-1.3 20.7-2 31.1-2 13.9 0 27.6.9 41.4 2 20.9 1.8 28.7 15.6 28.7 35.5 0 14.8-2.7 16.5-8.8 28.6 6 11.2 8.8 21.8 8.8 33.6zm-70.3 4.4c5.1-.4 25.4.2 25.4-6.8 0-8.8-8.4-9-15.2-9-3.5 0-6.8.2-10.3.5v15.3zm.4-60.4c.2 5.5.4 11.2.7 16.8 2.2.4 3.8.4 5.9.4 4.9 0 16.5-.7 16.5-7.3 0-9.3-9.2-10.1-16.3-10.1l-6.8.2z"></path><path class="st0" d="M484.5 70.9l.2 12.1c9.2 0 18.3-.5 27.8-.5 9.7 0 7.5 18.7 7.5 26 0 9.2-28 5.9-35.1 6.8v11h8.6c10.4 0 21.2-1.5 32-1.5 8.6 0 8.8 18.3 8.8 24.7 0 3.1-.2 5.9-.5 9-.9 5.5-4 7.5-9.3 7.7-17.9.5-35.9 1.1-53.8 1.1-25.8 0-32.8-.2-32.8-27.3 0-30.4 0-71.6 1.6-102.1.2-4 1.8-6.4 5.9-7.3 8.6-2.2 20.5-2 29.5-2 16.1 0 35.3-.7 50.9.4 5.3.4 8.1 1.3 8.6 6.8 1.1 8.4-1.1 18.7-1.1 26.9 0 12.4-21.8 8.4-30.6 8.4h-11z"></path><path class="st0" d="M600.7 140.3c-5.5 19.8-3.5 25.6-27.5 25.6-6.6 0-25.1.5-25.1-8.8 0-20.9 20.1-87.1 28.2-109.4 7.7-20.7 32.3-18.7 50.8-18.7 4.2 0 8.8.7 13 1.6 11.7 1.8 18.5 11 22.7 21.6 3.7 9.2 20.3 93.3 20.3 101.9 0 9.9-22.7 12.6-30.4 12.6-21.2 0-18.9-9-22-25.6-10.1.3-20.2.1-30.1 0zm26.9-37.2c-1.3-9-2.6-18.1-4.9-26.9-.4-2.2-1.8-3.3-4.8-3.3-2.6 0-3.3 1.1-3.7 2.9-2.6 9-4.8 18.3-6.4 27.3h19.8z"></path><path class="st0" d="M812.5 152.3c0 8.1-20.7 15.4-27.3 15.4-12.8 0-32.8-37.7-40.8-37.7-4.2 0-2.9 7.5-2.9 10.4 0 22.9.7 25.6-23.1 25.6-8.2 0-21.2.7-21.2-10.2 0-22.9 1.3-46.1 1.3-68.8 0-13-1.3-26-1.3-39 0-12.6 5.9-19.4 15.6-19.4 24.2 0 44.1-.2 63.9 1.1 6.6.5 14.6 1.6 20.5 4 13 4.2 15 28.2 15 40.3 0 7.1.2 17-1.3 26.4-1.8 11.3-11.2 20.3-21 19.6 11.3 5.4 29.7 25.9 29.7 32.1zm-43.1-72.3c0-11.9-3.1-16.5-13.2-16.5-4.2 0-10.1-.7-11 4.4-1.3 7-.7 22.3 0 24.7 1.3 2.1 17.7 3.3 17.7-10.8z"></path></g>
+	<g><path class="st1" d="M78.2 120.2c.5 4 2.8 16.1 3.8 20.4 2.9 12.5 5.7 15 18.6 12.1 12.1-2.8 24.4-5.6 36-8.3 9.1-2.1 12.7 14.3 14.2 20.8 1.2 5.4 4.2 13.3-.6 17-6.8 5.7-38.6 12.5-47.9 14.6-10.5 2.4-21.1 3.7-31.9 4.9-22.2 2.3-36.4-64.3-40.1-80-1.8-7.8-3-16.2-3.7-24.1 0-11 5.2-18.6 14.8-23.2 20.5-10.4 44.8-16 67.4-21.2 8.4-1.9 11.9 1 13.6 5.9 1.5 4 1.7 9.2 6.4 27.6-29.5 13.8-84.9 14.7-82.5 34.1z"></path><path class="st1" d="M216.7 24.4c2.3-4 5-6.8 8.2-7.7 9.4-2.5 30.1 7.1 32.7 16.6.7 2.7.5 5.9-.5 9.4-4.4 16.7-27.1 48.9-23.5 60.9 1.8 6.1 4.4 15.1 6 21.1 5.8 21.7 10.6 29-14.3 35.7-25.5 6.8-21.1-.4-26.6-20.9-2.5-9.2-5.3-22.6-8.7-31.2-1.7-4.1-36.4-24-49.3-34.9-4.6-3.9-3.6-12.9-1.7-17.6 2.8-6.6 8.9-14.3 13.9-18.3 4.3-3.6 9.1-3.6 14-1.5 10.5 4.6 28.3 24.3 35.8 28.1.7.3 7.2-23.4 12.5-32.6z"></path></g>
+	</svg>
+</div>
+<p class="text-cyorange font-bold text-sm italic">Learn navigating the digital AI world</p>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="border-t border-slate-700 pt-8 text-center text-xs text-slate-400">
+<p>© 2026 Copyright. All rights reserved | <a class="hover:underline" href="privacypol_cy.html">Privacy Policy</a> | <a class="hover:underline" href="impr_cy.html">Imprint</a></p>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+					
+					<!-- free popover -->
+					<!-- Large Modal 1 -->
+					<div id="large-modal-1" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+						<!--<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "><button type="button" class="w-full h-full" data-modal-hide="large-modal-1"></button></div>-->
+						<!--<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.4-20vmax/1.4)] md:top-0">-->
+							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.6-30vmax/1.2)] md:top-0">
+							<!-- Modal content -->
+							<div class="relative bg-spot-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 sm:my-8 sm:w-full lg:w-4/5 xl:w-3/4 2xl:w-1/2 data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									<!--<span class="text-[#FDA4AF] text-3xl uppercase font-['Gluten'] font-bold" >Kinder</span>-->
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-1">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+
+								</div>
+								<!-- Modal body -->
+								<div class="modal-warning-triangle mx-auto flex shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 size-16 sm:size-16 2xl:size-20">
+									  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-12 text-red-600">
+										<path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" stroke-linecap="round" stroke-linejoin="round" />
+									  </svg>
+									</div>
+									<div class="mt-3 sm:mt-0 sm:ml-4 text-left">
+									  <!--<h3 id="dialog-title" class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900">Bad guys oder Manipulation sehen online meist nicht so verdächtig aus wie in der Realität</h3>-->
+									  <h3 id="dialog-title" class="text-xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold text-gray-900">Verführerische Benutzungs-Mechanismen, KI Inhalte und Akteure, welche diese Inhalte für verschiedenste Absichten benutzen. Risiken sind zahlreicher denn je.</h3>
+									  <div class="mt-4 sm:mt-4 md:mt-6 lg:mt-6 xl:mt-8">
+										<p class="text-base lg:text-lg text-black-300 font-['Merriweather']">Es ist schwierig all dem zu widerstehen.. In-App Purchases, Skins &amp; Lootboxes, Scams, Influencer-Welten, Bait-Click, süchtig-machende Belohnungsmuster. Dinge, mit denen gut verdient werden kann oder die Benutzer dazu animieren immer weiterzumachen, sind oft reizvoll gestaltet. </p><blockquote class="max-w-3/4 text-lg lg:text-xl text-[#ED546F] italic font-semibold text-left text-heading font-['Geist'] my-2 lg:my-3">Mit für Kinder visuell ansprechenden Anreizen wird der Effekt nochmal vergrößert. Dazu kommen mehr und mehr unterstützende KI-generierte Inhalte.</blockquote> <p class="text-base lg:text-lg text-black-300  font-['Merriweather']">
+										<strong class="underline">Unmittelbarer Effekt:</strong><br>
+										Viele dieser Mechanismen lösen instinktives Impulsverhalten aus, also Handeln ohne Rücksicht auf die Konsequenzen. Es ist so von den Machern gewollt. Das Internet ist voll davon.<br><br>
+										
+										<strong>Diese Mechanismen kindgerecht zu erlernen und das Erkennen dieser zu schärfen ist ungeheuer wichtig, damit Kinder grundlegend verstehen, welche Absichten oder Risiken dahinterstecken. Cybear hilft dabei Kids kritisch darauf vorzubereiten.</strong> </p>
+									  </div>
+									</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Large Modal 2 -->
+					<div id="large-modal-2" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+						<!--<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "><button type="button" class="w-full h-full" data-modal-hide="large-modal-2"></button></div>-->
+						<!--<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.4-20vmax/1.4)] md:top-0">-->
+							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.6-30vmax/1.2)] md:top-0">
+							<!-- Modal content -->
+							<div class="relative bg-protect-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 sm:my-8 sm:w-full lg:w-4/5 xl:w-3/4 2xl:w-1/2 data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									<!--<span class="text-[#FDA4AF] text-3xl uppercase font-['Gluten'] font-bold" >Kinder</span>-->
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-2">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+
+								</div>
+								<!-- Modal body -->
+								<div class="modal-warning-triangle mx-auto flex shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 size-16 sm:size-16 2xl:size-20">
+									  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-12 text-red-600">
+										<path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" stroke-linecap="round" stroke-linejoin="round" />
+									  </svg>
+									</div>
+									<div class="mt-3 sm:mt-0 sm:ml-4 text-left">
+									  <!--<h3 id="dialog-title" class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900">Bad guys oder Manipulation sehen online meist nicht so verdächtig aus wie in der Realität</h3>-->
+									  <h3 id="dialog-title" class="text-xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold text-gray-900">Szenarien und Akteure besser einschätzen, Verhaltensweisen lernen: sich selbst und andere gezielt schützen </h3>
+									  <div class="mt-4 sm:mt-4 md:mt-6 lg:mt-6 xl:mt-8">
+										<p class="text-base lg:text-lg text-black-300 font-['Merriweather']">Wenn Kinder wissen, wie man sich in verschiedenen Situationen verhalten sollte und die Motivationen oder Absichten von Akteuren besser nachvollziehen können, dann ist auch Selbstschutz einfacher. Ob bei Mobbing von Mitschülern in der Klassen-Whatsapp-Gruppe, zwielichtige Gestalten in Game Chats oder idiotischen Hassnachrichten gleichaltriger. </p><blockquote class="max-w-3/4 text-lg lg:text-xl text-[#ED546F] italic font-semibold text-left text-heading font-['Geist'] my-2 lg:my-3">Für jede dieser Situationen gibt es bestmögliche Verhaltensweisen.</blockquote> <p class="text-base lg:text-lg text-black-300  font-['Merriweather']">
+										
+										<strong>Kinder, die gelernt haben, sich kritischer zu verhalten und diesen Dingen entgegenzuwirken, können auch gemeinsam sich selbst und andere besser schützen.</strong> </p>
+									  </div>
+									</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<!-- Large Modal 3 -->
+					<div id="large-modal-3" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+						<!--<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "><button type="button" class="w-full h-full" data-modal-hide="large-modal-3"></button></div>-->
+						<!--<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.4-20vmax/1.4)] md:top-0">-->
+							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.6-30vmax/1.2)] md:top-0">
+							<!-- Modal content -->
+							<div class="relative bg-staysafe-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 sm:my-8 sm:w-full lg:w-4/5 xl:w-3/4 2xl:w-1/2 data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									<!--<span class="text-[#FDA4AF] text-3xl uppercase font-['Gluten'] font-bold" >Kinder</span>-->
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-3">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+
+								</div>
+								<!-- Modal body -->
+								<div class="modal-warning-triangle mx-auto flex shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 size-16 sm:size-16 2xl:size-20">
+									  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-12 text-red-600">
+										<path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" stroke-linecap="round" stroke-linejoin="round" />
+									  </svg>
+									</div>
+									<div class="mt-3 sm:mt-0 sm:ml-4 text-left">
+									 <!--<h3 id="dialog-title" class="text-xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold text-gray-900">Risiken werden nicht richtig eingeschätzt; sind nicht direkt als Gefahren erkennbar</h3>-->
+									  <h3 id="dialog-title" class="text-xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold text-gray-900">Risiken und Gefahren richtig im Voraus erkennen, damit dem sicheren Online-sein nichts im Wege steht</h3>
+									  <div class="mt-4 sm:mt-4 md:mt-6 lg:mt-6 xl:mt-8">
+										<p class="text-base lg:text-lg text-black-300 font-['Merriweather']">Online machen Kinder und Jugendlichen schnell mal etwas Unüberlegtes. Herausgegebene Adressdaten oder persönliche Details der Familie, ungeschützte Account-Passwörter, Herunterladen Viren-verseuchter Dateien oder falsche Verhaltensweisen in Chats.<br><br>
+										
+										 </p><blockquote class="max-w-3/4 text-lg lg:text-xl text-[#ED546F] italic font-semibold text-left text-heading font-['Geist'] my-2 lg:my-3">Brenzlige Situationen und Absichten anderer im Voraus zu erkennen ist eine der Kompetenzen, die Kinder durch praktische Übungen erwerben können.</blockquote> <p class="text-base lg:text-lg text-black-300  font-['Merriweather']">
+										
+										<strong>Altersgerechte Verhaltens-Übungen helfen Kindern nicht nur achtsamer und umsichtiger zu werden, sondern besser auf sich selbst aufzupassen. Eltern lernen auch etwas dabei.</strong> </p>
+									  </div>
+									</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+					
+					<!-- Large Modal KINDER -->
+					
+					<div id="large-modal-kinder" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+						<div class="relative w-full max-w-4xl max-h-full">
+							<!-- Modal content -->
+							<div class="relative bg-parent-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-4 md:p-6 lg:p-12">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									<!--<span class="text-[#FDA4AF] text-3xl uppercase font-['Gluten'] font-bold" >Kinder</span>-->
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-kinder">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+									
+									
+									
+									
+								</div>
+								<!-- Modal body -->
+								<div class="space-y-4 md:space-y-6 py-4 md:py-6">
+									<h3 class="text-xl lg:text-3xl font-bold">
+										Ein digitaler Kompass, der Kinder praxisnah vorbereitet. Bei Online-Risiken denken viele Eltern zuerst an:. 
+									</h3>
+									<ul class="leading-tight text-base lg:text-lg space-y-2 text-slate-700 line-h list-disc list-outside pl-3 lg:pl-6 pr-1 lg:pr-3 xl:pr-6" style="line-height:1.2em;">
+									<li class="pl-3 lg:pl-0">Fremde Personen und gefährliche Chats </li>
+									<li class="pl-3 lg:pl-0">Cybermobbing / Hatespeech</li>
+									<li class="pl-3 lg:pl-0">Bildschirmzeit und App-Sucht </li>
+									<li class="pl-3 lg:pl-0">Passwörter und Phishing</li>
+									</ul>
+									<p class="leading-relaxed text-lg lg:text-xl pr-16">Natürlich sind diese alle wichtig. </p>
+									<p class="leading-relaxed text-lg lg:text-xl pr-16">Doch Risiken sind ebenso: Abhängig machende Benutzungsmuster; Desinformation beschleunigende Algorithmen, Verzerrte Realität durch KI-Inhalte, FOMO und Gruppendruck, manipulative Mechanismen, KI-gesteuerte Bots in Chats und somit veränderte Gewohnheiten, die Verhalten und Selbstverständnis langfristig beeinflussen. Damit Kinder ihr Online-sein nicht unkontrolliert+unkritisch unter digitalem Dauerfeuer verbringen, werden notwendige Kompetenzen mit praxisnahen Trainingsaufgaben vermittelt. 
+									</p>
+								</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Large Modal ELTERN -->
+					
+					<div id="large-modal-eltern" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+						<div class="relative w-full max-w-4xl max-h-full">
+							<!-- Modal content -->
+							<div class="relative bg-kid-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-4 md:p-6 lg:p-12 ">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									<!--<span class="text-[#FDA4AF] text-3xl uppercase font-['Gluten'] font-bold" >Kinder</span>-->
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-eltern">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+									
+									
+									
+									
+								</div>
+								<!-- Modal body -->
+								<div class="space-y-4 md:space-y-6 py-4 md:py-6">
+									<h3 class="text-xl lg:text-3xl font-bold">
+										Die Spielregeln ändern sich täglich.<br>Neue Plattformen. Neue Influencer Trends. Neue Risiken.
+									</h3>
+									<p class="leading-relaxed text-lg lg:text-xl pr-16">
+										Es ist schwer am Ball zu bleiben, schließlich haben Eltern nicht die Zeit jeder neuen Entwicklung hinterherzuhetzen. Deshalb gibt Cybear auch Eltern kompakte Informationsformate in die Hand.
+									</p>
+									<p class="leading-relaxed text-lg lg:text-xl pr-16">
+										Eltern erhalten kurz-gehaltene Erklärvideos, ebenso alters-adäquate Checklists (wie reglementiere ich gemeinsam, was sollte ich ansprechen) und Verhaltens-Guidelines. Kurz und praktisch an der Realität der Eltern orientiert, keine langen Textwände und Abhandlungen.
+									</p>
+								</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+<!--
+<el-dialog>
+	  <dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+		<el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+	
+		<div tabindex="0" class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+		  <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+			<div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+-->				
+				
+				
+<!-- BEGIN: Interactive Modal -->
+<!--<el-dialog class="p-0 bg-transparent overflow-visible" id="dialog">
+	<dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+		<el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+		
+		<div tabindex="0" class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+			  <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+		
+<div class="bg-white neo-border rounded-[40px] p-8 md:p-12 max-w-lg mx-auto relative overflow-hidden">
+<div class="absolute top-4 right-4">
+<button class="text-slate-400 hover:text-black transition-colors" command="close" commandfor="dialog">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-cyorange rounded-2xl flex items-center justify-center neo-card">
+<span class="material-symbols-outlined text-4xl text-white">info</span>
+</div>
+<h3 class="text-3xl font-black text-slate-800">Mehr Informationen</h3>
+</div>
+<p class="text-xl text-slate-600 leading-relaxed">
+		Willkommen in der Welt von CyBear! Hier lernst du alles, was du brauchst, um sicher durch den digitalen Dschungel zu navigieren. Ob KI-Inhalte erkennen oder persönliche Daten schützen – unser Bär zeigt dir spielerisch, wie es geht. 
+	  </p>
+<div class="pt-4">
+<button class="w-full bg-black text-white py-4 px-8 rounded-2xl font-bold text-xl hover:bg-slate-800 transition-colors neo-border" command="close" commandfor="dialog">
+		  Schließen
+		</button>
+</div>
+</div> -->
+<!-- Decorative mini blob inside modal -->
+<!-- <div class="absolute -bottom-8 -left-8 w-24 h-24 bg-cyteal/20 rounded-full blur-2xl -z-10"></div>
+</div>
+</el-dialog-panel>
+</div>
+</dialog>
+</el-dialog>-->
+
+
+<!-- END: Interactive Modal -->
+</body></html>
