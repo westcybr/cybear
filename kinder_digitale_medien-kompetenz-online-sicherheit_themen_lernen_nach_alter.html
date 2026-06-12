@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>	
+<style>
+  .scale-140-text {
+	transform: scale(1.4);
+	transform-origin: left center;
+	font-size: 19.6px !important; /* 14px * 1.4 */
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Gluten:wght@100..900&amp;family=Radio+Canada:ital,wght@0,300..700;1,300..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta http-equiv="content-language" content="de">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cybear - Leitfaden für Digitale Kompetenzen nach Kindesalter – Praktischer Eltern-Guide</title>
+
+<meta name="description" content="Was Kinder in welchem Alter über das Internet, KI, Social Media und richtiges Verhalten wissen müssen: Praktisch, altersgerecht, ohne lange Textwände">
+
+<meta name="keywords" content="digitale Kompetenzen Kinder, Medienkompetenz Grundschule, Kinder online sicher, digitale Erziehung Alter, Internet Sicherheit Kinder, Cybermobbing erklären, KI Kinder verstehen, Bildschirmzeit Grundschule, Datenschutz Teenager, Eltern digitale Bildung, Online-Risiken Kinder, Grooming erkennen, Social Media Teenager, digitale Resilienz Kinder, Cybear Elternratgeber">
+
+
+<meta name="author" content="Cybear">
+<meta name="geo.country" content="DE">
+<meta name="country" content="Germany">
+<meta name="robots" content="all"/>
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Digitale Kompetenzen nach Kindesalter – Was Kinder wann lernen sollten">
+<meta property="og:description" content="Von Passwörtern bis Deepfakes: Cybear zeigt Eltern, welche digitalen Fähigkeiten in welchem Alter wirklich zählen – und wie man sie kindgerecht vermittelt.">
+<meta property="og:image" content="/images/og-image.jpg">
+<meta property="og:url" content="https://cybearapp.de">
+<meta property="og:site_name" content="Cybear">
+<meta property="og:locale" content="de_DE">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digitale Kompetenzen nach Kindesalter – Eltern-Guide von Cybear">
+<meta name="twitter:description" content="Was müssen Kinder wann über das Internet wissen? Unser Alters-Guide zeigt es – von 6 bis 18, mit konkreten Tipps für Eltern.">
+<meta name="twitter:image" content="https://cybearapp.de/og-image.jpg">
+<meta name="twitter:site" content="https://cybearapp.de">
+
+<!--<link rel="canonical" href="https://cybearapp.de/" />-->
+
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<!-- Tailwind Flowbite -->
+<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.2/dist/flowbite.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.2/dist/flowbite.min.css" rel="stylesheet">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.fuzzysearch.js/0.1.0/list.fuzzysearch.min.js"></script>
+<!-- NOT NEEDED ANY MORE .. BUNDLED INTO listjs <script src="https://cdnjs.cloudflare.com/ajax/libs/list.pagination.js/0.1.1/list.pagination.min.js"></script> -->
+
+
+<script>
+	  tailwind.config = {
+		theme: {
+		  extend: {
+			fontFamily: {
+			  sans: ['Geist', 'ui-sans-serif', 'system-ui'],
+			  display: ['Geist','DM Serif Display', 'serif'],
+				body: ['Geist','DM Sans', 'ui-sans-serif', 'system-ui'],
+			},
+			colors: {
+			  cyorange: '#FB855A',
+			  cyyellow: '#FFD166',
+			  cyblue: '#2B4162',
+			  cybeige: '#F9F4EE',
+			  'nav-orange': '#FFB347',
+			  'spot-orange': '#FFCC80',
+			  'protect-rose': '#FFD1DC',
+			  'safe-green': '#CCFF99',
+			  'parent-bg': '#FCE4EC',
+			  'kid-bg': '#E1F5FE',
+			  'spot-bg': '#ffead0',
+			  'protect-bg': '#fce3e9',
+			  'staysafe-bg': '#e9f7d1',
+			  'dark-teal': '#37474F',
+			  'dark-indigo': '#574d7d',
+			  'cygreen': '#dffaf8', //   #ceefed
+			  'cyteal': '#4ECDC4',
+			  'cypink': '#FF8FAB',
+			  age6:  '#FFF0E6',
+				age9:  '#E8F5E0',
+				age12: '#E8EEF8',
+				age15: '#F3E8F8',
+				age6b:  '#FB855A',
+				age9b:  '#5BB450',
+				age12b: '#3B68C8',
+				age15b: '#9B59B6',
+				age6light:  '#FEE0CC',
+				age9light:  '#D4EDCB',
+				age12light: '#D0DCEF',
+				age15light: '#E6D0F0',
+			}
+		  }
+		}
+	  }
+</script>
+
+<style>
+:root {
+--mr_lg_bear: calc(-10vmin + 4vmax);
+--mr_xl_bear: calc(-1vmin + 3vmax);
+--mr_2xl_bear: calc(2vmin + 2vmax);
+}
+
+.gluten-font {
+	  font-family: "Gluten", cursive;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+	  font-variation-settings: "slnt" 0;
+}
+
+.geist-font {
+	  font-family: "Geist", sans-serif;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+}
+
+.playfair-font {
+	  font-family: "Playfair", serif;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+	  font-variation-settings: "wdth" 100;
+	}
+.radio-canada-font {
+	  font-family: "Radio Canada", sans-serif;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+	  font-variation-settings: "wdth" 100;
+	}
+.merriweather-font {
+	  font-family: "Merriweather", serif;
+	  font-optical-sizing: auto;
+	  font-weight: <weight>;
+	  font-style: normal;
+	  font-variation-settings: "wdth" 100;
+	}
+</style>
+<style data-purpose="custom-config">
+@import "tailwindcss";
+
+@theme {
+  --mr_lg_bear: calc(-10vmin + 4vmax);
+  --mr_xl_bear: calc(-1vmin + 3vmax);
+  --mr_2xl_bear: calc(2vmin + 12vmax);
+} 
+</style>
+<style data-purpose="neobrutalism-styles">
+	.neo-border {
+	  border: 3px solid #000000;
+	  box-shadow: 6px 6px 0px 0px #000000;
+	  transition: all 0.2s ease;
+	}
+	.neo-border:hover {
+	  transform: translate(-2px, -2px);
+	  box-shadow: 8px 8px 0px 0px #000000;
+	}
+	.neo-border:active {
+	  transform: translate(2px, 2px);
+	  box-shadow: 2px 2px 0px 0px #000000;
+	}
+	.neo-card {
+	  border: 2px solid #000000;
+	  box-shadow: 4px 4px 0px 0px #000000;
+	}
+	body {
+	  font-family: 'Geist', sans-serif;
+	  background: linear-gradient(180deg,rgba(166, 212, 237, 1) 1%, rgba(134, 194, 227, 1) 53%, rgba(131, 189, 230, 1) 100%);
+	  background-image: radial-gradient(#E5DACE 0.1px, transparent 0.1px), linear-gradient(180deg,rgba(166, 212, 237, 1) 1%, rgba(134, 194, 227, 1) 53%, rgba(131, 189, 230, 1) 100%);
+	  background-size: 30px 30px, 100% 100%;
+	  min-height: 100vh;
+	}
+	/* .tab-label {
+	  position: absolute;
+	  top: -18px;
+	  left: 20px;
+	  background: white;
+	  border: 2px solid #000;
+	  padding: 2px 12px;
+	  font-weight: 800;
+	  border-radius: 8px;
+	  font-size: 14px;
+	} */
+	.modal-close-x {
+		  position: absolute;
+		  top: -12px;
+		  right: -12px;
+		  background: white;
+		  border: 2px solid #000;
+		  padding: 2px 12px;
+		  font-weight: 800;
+		  border-radius: 16px;
+		  font-size: 24px;
+		}
+	.modal-warning-triangle {
+		  position: absolute;
+		  top: -24px;
+		  left: -12px;
+		  
+		  border: 2px solid #000;
+		  padding: 2px 12px;
+		  font-weight: 800;
+		  border-radius: 16px;
+		  font-size: 24px;
+		}
+	
+	.nav-tab {
+	  margin-top: -0.75rem;
+	  border-top: 0;
+	  border-left: 2px solid #000;
+	  border-right: 2px solid #000;
+	  border-bottom: 2px solid #000;
+	  z-index: 60;
+	  height: calc(100% + 1rem);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+	.curved-underline {
+	  position: relative;
+	  display: inline-block;
+	}
+	.curved-underline::after {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: -6px;
+	  width: 100%;
+	  height: 8px;
+	  background: url("data:image/svg+xml,%3Csvg width='100' height='10' viewBox='0 0 100 10' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 Q 25 10 50 5 T 100 5' stroke='%23FB855A' stroke-width='4' fill='transparent'/%3E%3C/svg%3E");
+	  background-size: 100% 100%;
+	}
+
+  </style>
+  
+
+		<style>
+			  .split-flag {
+				  width: 20px;
+				  height: 14px;
+				  /* Load the SVG instead of the gradient */
+				  background-image: url('./images/language-auswahl.svg');
+				  background-size: 100% 100%; /* Ensures the SVG stretches/fits exactly to the 20x14 box */
+				  background-position: center;
+				  background-repeat: no-repeat;
+				  
+				  /* Kept all your original positioning and borders */
+				  position: relative;
+				  border-radius: 2px;
+				  display: inline-block;
+				  vertical-align: middle;
+				  margin-right: 8px;
+				  border: 1px solid rgba(0,0,0,0.1);
+			  }
+				  /* Hide scrollbar for cleaner look */
+				  ::-webkit-scrollbar { width: 8px; }
+				  ::-webkit-scrollbar-track { background: #f1f1f1; }
+				  ::-webkit-scrollbar-thumb { background: #2e2195; border-radius: 10px; }
+				  ::-webkit-scrollbar-thumb:hover { background: #1a135a; }
+			  </style>
+			  <style>
+				  /* ── Custom tokens ───────────────────────────────────────────── */
+				  :root {
+					--tab-active-bg:     #0f172a;   /* slate-900 */
+					--tab-active-text:   #000000;
+					--tab-idle-bg:       #f8f8f6;
+					--tab-idle-border:   #e2e2dc;
+					--tab-idle-text:     #6b7280;   /* gray-500  */
+					--tab-label-text:    #9ca3af;   /* gray-400  */
+					--tab-hover-bg:      #f0f0ec;
+					--panel-bg:          #ffffff;
+					--radius:            12px;
+					--transition:        200ms ease;
+				  }
+			  
+				  /* ── Tab strip ───────────────────────────────────────────────── */
+				  .tab-strip {
+					display: flex;
+					gap: 10px;
+					overflow-x: auto;
+					scrollbar-width: none;          /* Firefox */
+				  }
+				  .tab-strip::-webkit-scrollbar { display: none; }
+			  
+				  /* ── Individual tab card ─────────────────────────────────────── */
+				  .tab-card {
+					flex: 0 0 auto;
+					min-width: 130px;
+					background: var(--tab-idle-bg);
+					cursor: pointer;
+					transition: background var(--transition), border-color var(--transition);
+					user-select: none;
+				  }
+				  .tab-card:hover {
+					background: var(--tab-hover-bg);
+				  }
+				  .tab-card.active {
+					background: var(--tab-active-bg);
+					border-color: var(--tab-active-bg);
+				  }
+			  
+				  /* ── Label (small caps above title) ─────────────────────────── */
+				  .tab-label {
+					font-size: 0.5em;
+					font-weight: 600;
+					letter-spacing: 0.1em;
+					text-transform: uppercase;
+					color: var(--tab-label-text);
+					margin-bottom: 2px;
+					transition: color var(--transition);
+				  }
+				  .tab-card.active .tab-label {
+					color: rgba(35,35,35,0.5);
+				  }
+			  
+				  /* ── Title ───────────────────────────────────────────────────── */
+				  .tab-title {
+					font-size: 0.6em;
+					font-weight: 600;
+					color: var(--tab-idle-text);
+					line-height: 1.3;
+					transition: color var(--transition);
+				  }
+				  .tab-card.active .tab-title {
+					color: var(--tab-active-text);
+				  }
+			  
+				  /* ── Content panel ───────────────────────────────────────────── */
+				  .tab-panel {
+					display: none;
+					background: var(--panel-bg);
+					border: 1px solid var(--tab-idle-border);
+					border-radius: var(--radius);
+					padding: 28px 32px;
+				  }
+				  .tab-panel.active {
+					display: block;
+				  }
+				</style>
+				
+				
+				<style>					
+					  .age-badge {
+						display: inline-flex;
+						align-items: center;
+						gap: 6px;
+						text-transform: uppercase;
+						padding: 4px 14px;
+						border-radius: 99px;
+						border: 2px solid #000;
+						box-shadow: 3px 3px 0 #000;
+					  }
+					
+					  .neo-card {
+						border: 2px solid #000;
+						box-shadow: 5px 5px 0 #000;
+						border-radius: 16px;
+					  }
+					
+					  .row-header {
+						border: 2px solid #000;
+						border-radius: 10px;
+						padding: 10px 14px;
+						display: flex;
+						align-items: center;
+						gap: 8px;
+					  }
+					
+					  .bullet-dot {
+						width: 7px;
+						height: 7px;
+						border-radius: 50%;
+						flex-shrink: 0;
+						margin-top: 6px;
+					  }
+					
+					  .note-pill {
+						background: rgba(255,255,255,0.55);
+						border: 1.5px solid rgba(0,0,0,0.12);
+						border-radius: 8px;
+						padding: 8px 11px;
+					  }
+					
+					  .col-header {
+						letter-spacing: 0.1em;
+						text-transform: uppercase;
+						padding-bottom: 4px;
+					  }
+					
+					  @media (max-width: 768px) {
+						.row-3col {
+						  flex-direction: column !important;
+						}
+						.col-topic { width: 100% !important; }
+						.col-action { width: 100% !important; }
+						.col-note   { width: 100% !important; }
+					  }
+					</style>
+</head>
+<body class="text-slate-900 overflow-x-hidden overflow-y-scroll">
+
+	
+<!-- Decorative Right Blob 1 -->
+<div class="absolute w-[100%] scale-[0.7] h-auto pointer-events-none -z-10 overflow-hidden opacity-[0.2] top-[380px] xl:top-[280px]">
+<svg class="drop-shadow-2xl relative -right-[13%]" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M55.5,-11.4C64,8.2,57.5,39.2,43.1,46.7C28.7,54.3,6.2,38.3,-12.8,23.1C-31.8,8,-47.4,-6.2,-44.7,-17.8C-42,-29.4,-21,-38.3,1.2,-38.7C23.5,-39.1,47,-31,55.5,-11.4Z" fill="url(#rightBlobGradient)" transform="translate(100 100)"></path>
+<defs>
+<linearGradient gradientTransform="rotate(133)" id="rightBlobGradient">
+<stop offset="1%" stop-color="rgba(242, 225, 155, 0.47)"></stop>
+<stop offset="52%" stop-color="rgba(245, 232, 159, 0.23)"></stop>
+<stop offset="100%" stop-color="rgba(250, 240, 165, 0.03)"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<!-- Decorative Right Blob 2 -->
+<div class="absolute w-[100%] scale-[0.7] h-auto -left-[65%] pointer-events-none -z-10 overflow-hidden top-[280px] xl:top-[180px]">
+	<svg class="drop-shadow-2xl" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+	<path d="M62.6,-32.1C73.8,-16.8,70.3,10.9,57.5,34C44.6,57.1,22.3,75.6,3.1,73.8C-16.1,72,-32.2,50,-41.1,29.2C-49.9,8.4,-51.4,-11.1,-43.4,-24.6C-35.3,-38,-17.7,-45.5,4,-47.8C25.7,-50.1,51.5,-47.4,62.6,-32.1Z" fill="url(#blobGradient)" transform="translate(100 100)"></path>
+	<defs>
+	<linearGradient gradientTransform="rotate(133)" id="blobGradient">
+	<stop offset="1%" stop-color="rgba(207, 237, 166, 0.37)"></stop>
+	<stop offset="52%" stop-color="rgba(184, 227, 134, 0.17)"></stop>
+	<stop offset="100%" stop-color="rgba(192, 230, 131, 0.02)"></stop>
+	</linearGradient>
+	</defs>
+	</svg>
+	</div>
+
+
+
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b-2 border-black px-4 md:px-8 py-3">
+	<div class="max-w-7xl mx-auto flex flex-wrap justify-between gap-1 sm:gap-4 md:items-stretch">
+<!-- Logo Container -->
+<div class="relative w-32 md:w-44 top-[0.5rem] md:top-0" data-purpose="logo">
+	<a href="./index.html" title="Cybear Home" class="">
+<svg viewBox="0 0 848.9 218.7" xmlns="http://www.w3.org/2000/svg">
+<style>.st0{fill:#FB855A}.st1{fill:#A396B5}</style>
+<g><path class="st0" d="M421.2 124.2c0 43.6-23.6 41.9-60.4 41.9-14.3 0-28.7-1.5-43-2.2-6.8-.5-9.5-2.6-10.1-9.5-2-21.4-2.6-43.4-2.6-64.8 0-15.7-.7-31.5.5-46.7.5-6.6 2.9-9.7 9.3-10.6 10.1-1.3 20.7-2 31.1-2 13.9 0 27.6.9 41.4 2 20.9 1.8 28.7 15.6 28.7 35.5 0 14.8-2.7 16.5-8.8 28.6 6 11.2 8.8 21.8 8.8 33.6zm-70.3 4.4c5.1-.4 25.4.2 25.4-6.8 0-8.8-8.4-9-15.2-9-3.5 0-6.8.2-10.3.5v15.3zm.4-60.4c.2 5.5.4 11.2.7 16.8 2.2.4 3.8.4 5.9.4 4.9 0 16.5-.7 16.5-7.3 0-9.3-9.2-10.1-16.3-10.1l-6.8.2z"></path><path class="st0" d="M484.5 70.9l.2 12.1c9.2 0 18.3-.5 27.8-.5 9.7 0 7.5 18.7 7.5 26 0 9.2-28 5.9-35.1 6.8v11h8.6c10.4 0 21.2-1.5 32-1.5 8.6 0 8.8 18.3 8.8 24.7 0 3.1-.2 5.9-.5 9-.9 5.5-4 7.5-9.3 7.7-17.9.5-35.9 1.1-53.8 1.1-25.8 0-32.8-.2-32.8-27.3 0-30.4 0-71.6 1.6-102.1.2-4 1.8-6.4 5.9-7.3 8.6-2.2 20.5-2 29.5-2 16.1 0 35.3-.7 50.9.4 5.3.4 8.1 1.3 8.6 6.8 1.1 8.4-1.1 18.7-1.1 26.9 0 12.4-21.8 8.4-30.6 8.4h-11z"></path><path class="st0" d="M600.7 140.3c-5.5 19.8-3.5 25.6-27.5 25.6-6.6 0-25.1.5-25.1-8.8 0-20.9 20.1-87.1 28.2-109.4 7.7-20.7 32.3-18.7 50.8-18.7 4.2 0 8.8.7 13 1.6 11.7 1.8 18.5 11 22.7 21.6 3.7 9.2 20.3 93.3 20.3 101.9 0 9.9-22.7 12.6-30.4 12.6-21.2 0-18.9-9-22-25.6-10.1.3-20.2.1-30.1 0zm26.9-37.2c-1.3-9-2.6-18.1-4.9-26.9-.4-2.2-1.8-3.3-4.8-3.3-2.6 0-3.3 1.1-3.7 2.9-2.6 9-4.8 18.3-6.4 27.3h19.8z"></path><path class="st0" d="M812.5 152.3c0 8.1-20.7 15.4-27.3 15.4-12.8 0-32.8-37.7-40.8-37.7-4.2 0-2.9 7.5-2.9 10.4 0 22.9.7 25.6-23.1 25.6-8.2 0-21.2.7-21.2-10.2 0-22.9 1.3-46.1 1.3-68.8 0-13-1.3-26-1.3-39 0-12.6 5.9-19.4 15.6-19.4 24.2 0 44.1-.2 63.9 1.1 6.6.5 14.6 1.6 20.5 4 13 4.2 15 28.2 15 40.3 0 7.1.2 17-1.3 26.4-1.8 11.3-11.2 20.3-21 19.6 11.3 5.4 29.7 25.9 29.7 32.1zm-43.1-72.3c0-11.9-3.1-16.5-13.2-16.5-4.2 0-10.1-.7-11 4.4-1.3 7-.7 22.3 0 24.7 1.3 2.1 17.7 3.3 17.7-10.8z"></path></g>
+<g><path class="st1" d="M78.2 120.2c.5 4 2.8 16.1 3.8 20.4 2.9 12.5 5.7 15 18.6 12.1 12.1-2.8 24.4-5.6 36-8.3 9.1-2.1 12.7 14.3 14.2 20.8 1.2 5.4 4.2 13.3-.6 17-6.8 5.7-38.6 12.5-47.9 14.6-10.5 2.4-21.1 3.7-31.9 4.9-22.2 2.3-36.4-64.3-40.1-80-1.8-7.8-3-16.2-3.7-24.1 0-11 5.2-18.6 14.8-23.2 20.5-10.4 44.8-16 67.4-21.2 8.4-1.9 11.9 1 13.6 5.9 1.5 4 1.7 9.2 6.4 27.6-29.5 13.8-84.9 14.7-82.5 34.1z"></path><path class="st1" d="M216.7 24.4c2.3-4 5-6.8 8.2-7.7 9.4-2.5 30.1 7.1 32.7 16.6.7 2.7.5 5.9-.5 9.4-4.4 16.7-27.1 48.9-23.5 60.9 1.8 6.1 4.4 15.1 6 21.1 5.8 21.7 10.6 29-14.3 35.7-25.5 6.8-21.1-.4-26.6-20.9-2.5-9.2-5.3-22.6-8.7-31.2-1.7-4.1-36.4-24-49.3-34.9-4.6-3.9-3.6-12.9-1.7-17.6 2.8-6.6 8.9-14.3 13.9-18.3 4.3-3.6 9.1-3.6 14-1.5 10.5 4.6 28.3 24.3 35.8 28.1.7.3 7.2-23.4 12.5-32.6z"></path></g>
+</svg>
+	</a>
+</div>
+<div class="absolute top-[4.5rem] md:top-0 right-4 md:right-8 flex items-start gap-0 z-25">
+	<button class="bg-[#FDA4AF] border-x-2 border-b-2 border-black px-1 mt-[0rem] md:mt-[4.4rem] lg:mt-0 lg:px-4 md:px-5 py-1 lg:pb-6 lg:pt-4 rounded-b-2xl font-[#CD1E2D] text-lg uppercase shadow-[4px_4px_0_0_#000] hover:-translate-y-1 hover:shadow-none transition-all h-[2.2em] lg:h-[6em] font-['Gluten'] font-bold" data-modal-target="large-modal-kinder" data-modal-toggle="large-modal-kinder">Kinder</button>
+	<button class="bg-[#93C5FD] border-x-2 border-b-2 border-black px-1 mt-[0rem] md:mt-[4.4rem] lg:mt-0 lg:px-4 md:px-5 py-1 lg:pb-6 lg:pt-4 rounded-b-2xl font-[#185AA8] text-lg uppercase shadow-[4px_4px_0_0_#000] -ml-[2px] hover:-translate-y-1 hover:shadow-none transition-all h-[2.2em] lg:h-[6em] font-['Gluten'] font-bold" data-modal-target="large-modal-eltern" data-modal-toggle="large-modal-eltern">Eltern</button>
+	</div>
+	
+	 <div class="relative hidden md:flex right-0 md:right-[0rem] lg:right-[13rem]">
+		<div class="flex items-center gap-4 lg:gap-8">
+			<a href="./index.html#features" title="Wie CyBear hilft" class="font-semibold text-base hover:text-cyorange transition">Was man lernt</a>
+			<a href="./team_ueber-uns.html" title="Über das CyBear team" class="font-semibold text-base hover:text-cyorange transition">Über uns</a>
+			<a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" title="Guides und Ressourcen für Eltern" class="font-semibold text-base hover:text-cyorange transition">Eltern-Guides</a>
+	
+		   <button class="hidden">
+			 <a href="#waitlist" class="hidden md:block bg-cyyellow text-black px-5 py-2 rounded-full font-bold hover:scale-105 transition active:scale-95 shadow-lg shadow-black/20 text-sm sm:text-base">
+				 In die Warteliste
+			 </a>
+		   </button>
+		</div>
+		<div class="hidden md:flex items-center ml-4 pr-4 mr-2">
+			<a class="flex items-center text-slate-600 hover:text-navy-900 transition-colors duration-200 font-medium text-sm" href="./index_en.html" title="English Language Cybear Website">
+			<span aria-hidden="true" class="split-flag"></span>
+			<span>EN / <b>DE</b></span>
+			</a>
+		</div>
+	 </div>
+	<!-- <div class="relative flex md:hidden"> TEMPORARY -->
+		<div class="relative hidden"> 
+		 <button class="">
+			  <a href="#waitlist" class="block md:hidden bg-cyyellow text-black px-5 py-2 rounded-full font-bold hover:scale-105 transition active:scale-95 shadow-lg shadow-black/20 text-sm sm:text-base">
+				 Auf die Warteliste
+			 </a>
+		 </button>
+	 </div>
+	<!-- MOBILE NAV -->
+	<div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-900 absolute w-full left-0 pl-6 animate-in slide-in-from-top duration-300 z-26">
+		  <div class="flex flex-col p-6 space-y-4">
+			  <div class="w-32 md:w-44" data-purpose="logo">
+					<svg viewBox="0 0 848.9 218.7" xmlns="http://www.w3.org/2000/svg">
+					<style>.st0{fill:#FB855A}.st1{fill:#A396B5}</style>
+					<g><path class="st0" d="M421.2 124.2c0 43.6-23.6 41.9-60.4 41.9-14.3 0-28.7-1.5-43-2.2-6.8-.5-9.5-2.6-10.1-9.5-2-21.4-2.6-43.4-2.6-64.8 0-15.7-.7-31.5.5-46.7.5-6.6 2.9-9.7 9.3-10.6 10.1-1.3 20.7-2 31.1-2 13.9 0 27.6.9 41.4 2 20.9 1.8 28.7 15.6 28.7 35.5 0 14.8-2.7 16.5-8.8 28.6 6 11.2 8.8 21.8 8.8 33.6zm-70.3 4.4c5.1-.4 25.4.2 25.4-6.8 0-8.8-8.4-9-15.2-9-3.5 0-6.8.2-10.3.5v15.3zm.4-60.4c.2 5.5.4 11.2.7 16.8 2.2.4 3.8.4 5.9.4 4.9 0 16.5-.7 16.5-7.3 0-9.3-9.2-10.1-16.3-10.1l-6.8.2z"></path><path class="st0" d="M484.5 70.9l.2 12.1c9.2 0 18.3-.5 27.8-.5 9.7 0 7.5 18.7 7.5 26 0 9.2-28 5.9-35.1 6.8v11h8.6c10.4 0 21.2-1.5 32-1.5 8.6 0 8.8 18.3 8.8 24.7 0 3.1-.2 5.9-.5 9-.9 5.5-4 7.5-9.3 7.7-17.9.5-35.9 1.1-53.8 1.1-25.8 0-32.8-.2-32.8-27.3 0-30.4 0-71.6 1.6-102.1.2-4 1.8-6.4 5.9-7.3 8.6-2.2 20.5-2 29.5-2 16.1 0 35.3-.7 50.9.4 5.3.4 8.1 1.3 8.6 6.8 1.1 8.4-1.1 18.7-1.1 26.9 0 12.4-21.8 8.4-30.6 8.4h-11z"></path><path class="st0" d="M600.7 140.3c-5.5 19.8-3.5 25.6-27.5 25.6-6.6 0-25.1.5-25.1-8.8 0-20.9 20.1-87.1 28.2-109.4 7.7-20.7 32.3-18.7 50.8-18.7 4.2 0 8.8.7 13 1.6 11.7 1.8 18.5 11 22.7 21.6 3.7 9.2 20.3 93.3 20.3 101.9 0 9.9-22.7 12.6-30.4 12.6-21.2 0-18.9-9-22-25.6-10.1.3-20.2.1-30.1 0zm26.9-37.2c-1.3-9-2.6-18.1-4.9-26.9-.4-2.2-1.8-3.3-4.8-3.3-2.6 0-3.3 1.1-3.7 2.9-2.6 9-4.8 18.3-6.4 27.3h19.8z"></path><path class="st0" d="M812.5 152.3c0 8.1-20.7 15.4-27.3 15.4-12.8 0-32.8-37.7-40.8-37.7-4.2 0-2.9 7.5-2.9 10.4 0 22.9.7 25.6-23.1 25.6-8.2 0-21.2.7-21.2-10.2 0-22.9 1.3-46.1 1.3-68.8 0-13-1.3-26-1.3-39 0-12.6 5.9-19.4 15.6-19.4 24.2 0 44.1-.2 63.9 1.1 6.6.5 14.6 1.6 20.5 4 13 4.2 15 28.2 15 40.3 0 7.1.2 17-1.3 26.4-1.8 11.3-11.2 20.3-21 19.6 11.3 5.4 29.7 25.9 29.7 32.1zm-43.1-72.3c0-11.9-3.1-16.5-13.2-16.5-4.2 0-10.1-.7-11 4.4-1.3 7-.7 22.3 0 24.7 1.3 2.1 17.7 3.3 17.7-10.8z"></path></g>
+					<g><path class="st1" d="M78.2 120.2c.5 4 2.8 16.1 3.8 20.4 2.9 12.5 5.7 15 18.6 12.1 12.1-2.8 24.4-5.6 36-8.3 9.1-2.1 12.7 14.3 14.2 20.8 1.2 5.4 4.2 13.3-.6 17-6.8 5.7-38.6 12.5-47.9 14.6-10.5 2.4-21.1 3.7-31.9 4.9-22.2 2.3-36.4-64.3-40.1-80-1.8-7.8-3-16.2-3.7-24.1 0-11 5.2-18.6 14.8-23.2 20.5-10.4 44.8-16 67.4-21.2 8.4-1.9 11.9 1 13.6 5.9 1.5 4 1.7 9.2 6.4 27.6-29.5 13.8-84.9 14.7-82.5 34.1z"></path><path class="st1" d="M216.7 24.4c2.3-4 5-6.8 8.2-7.7 9.4-2.5 30.1 7.1 32.7 16.6.7 2.7.5 5.9-.5 9.4-4.4 16.7-27.1 48.9-23.5 60.9 1.8 6.1 4.4 15.1 6 21.1 5.8 21.7 10.6 29-14.3 35.7-25.5 6.8-21.1-.4-26.6-20.9-2.5-9.2-5.3-22.6-8.7-31.2-1.7-4.1-36.4-24-49.3-34.9-4.6-3.9-3.6-12.9-1.7-17.6 2.8-6.6 8.9-14.3 13.9-18.3 4.3-3.6 9.1-3.6 14-1.5 10.5 4.6 28.3 24.3 35.8 28.1.7.3 7.2-23.4 12.5-32.6z"></path></g>
+					</svg>
+			  </div>
+			  <a href="./index.html#features" title="Wie CyBear hilft" class="font-semibold text-lg pb-2 border-b border-slate-50">Was man lernt</a>
+				<a href="./team_ueber-uns.html" title="Über das CyBear team" class="font-semibold text-lg pb-2 border-b border-slate-50">Über uns</a>
+				<a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" title="Guides und Ressourcen für Eltern" class="font-semibold text-lg pb-2 border-b border-slate-50">Eltern-Guides</a>
+				<a class="flex items-center text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white transition-colors duration-200 font-medium text-base" href="./index_en.html" title="English Language Cybear Website"><span aria-hidden="true" class="split-flag"></span>
+				<span>EN / <b>DE</b></span></a>
+		  </div>
+	</div>
+	
+	<button id="menu-toggle" class="relative md:hidden text-primary focus:outline-none p-2 z-51" aria-label="Mobile-only navigation">
+		<svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+		  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+		</svg>
+	  </button>
+	</div>
+</header>
+	<script>
+		  const btn = document.getElementById('menu-toggle');
+		  const menu = document.getElementById('mobile-menu');
+		  const icon = document.getElementById('menu-icon');
+	  
+		  btn.addEventListener('click', () => {
+			  menu.classList.toggle('hidden');
+			  
+			  // Simple icon swap (Hamburger to X)
+			  if (menu.classList.contains('hidden')) {
+				  icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />';
+			  } else {
+				  icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+			  }
+		  });
+	  
+		  // Close menu when clicking a link
+		  document.querySelectorAll('#mobile-menu a').forEach(link => {
+			  link.addEventListener('click', () => {
+				  menu.classList.add('hidden');
+			  });
+		  });
+	  </script>
+<!-- END: MainHeader -->
+
+
+<!------------------------------- PAGE HEADER ---------------------------------->
+<!------------------------------------------------------------------------------>
+<section class="space-y-12 mt-12  mb-32">
+<div class="max-w-7xl mx-auto mb-12">
+  <div class="neo-card bg-cyyellow p-8 md:p-12">
+	<p class="text-sm font-bold uppercase tracking-widest text-cyblue mb-3">Medienkompetenz-Leitfaden für Eltern</p>
+	<h1 class="text-4xl md:text-5xl text-cyblue font-bold leading-tight mb-4">Digitale Kompetenzen<br><em>nach Alter</em></h1>
+	<p class="text-base md:text-lg text-slate-700 max-w-2xl leading-relaxed">
+	  Wo anfangen bei dermaßen vielen Themen. Von „Was ist ein Passwort?" bis zu Umgang mit Cyberbullying und KI-Kritik: Kinder brauchen unterschiedliche Fähigkeiten je nach Entwicklungsstand. Diese Übersicht zeigt dir, was in welchem Alter wirklich relevant ist und wie du es am besten ansprichst.<br>
+	  *<i>Bei unbekannten Begriffen einfach in unserem Medienkompetenz-Wortverzeichnis nachschlagen.</i>
+	</p>
+	<div class="mt-6 flex flex-wrap gap-3">
+	  <div class="flex items-center gap-2 bg-white/60 border border-black/10 rounded-full px-3 py-1.5 text-sm font-semibold">
+		<span>!</span> Welche Themen zu welchem Alter
+	  </div>
+	  <div class="flex items-center gap-2 bg-white/60 border border-black/10 rounded-full px-3 py-1.5 text-sm font-semibold">
+		<span></span> Was tun / wie ansprechen
+	  </div>
+	  <div class="flex items-center gap-2 bg-white/60 border border-black/10 rounded-full px-3 py-1.5 text-sm font-semibold">
+		<span></span> Hinweise & Ansätze
+	  </div>
+	</div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+	 AGE BLOCK: 6–8
+════════════════════════════════════════ -->
+<div class="max-w-7xl mx-auto mb-10">
+  <div class="neo-card bg-age6 overflow-hidden">
+	<!-- Age Header -->
+	<div class="bg-age6b px-6 py-4 flex flex-wrap items-center gap-4 border-b-2 border-black">
+	  <span class="text-3xl"></span>
+	  <div>
+		<div class="age-badge text-base md:text-lg font-bold bg-white text-age6b border-black">6 – 8 Jahre</div>
+		<p class="text-white font-bold text-lg mt-1">Grundschule · Erstes Entdecken</p>
+	  </div>
+	  <p class="text-white/90 text-sm md:text-base font-bold ml-auto max-w-sm hidden md:block leading-snug">Erste digitale Grundlagen legen. Regeln ganz konkret und spielerisch – ohne Angst zu machen.</p>
+	</div>
+
+	<!-- Column headers (desktop only) -->
+	<div class="hidden md:flex flex-row gap-4 px-6 pt-4 pb-1 mt-6">
+	  <div class="w-[22%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Themen</div>
+	  <div class="w-[42%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Was tun / ansprechen</div>
+	  <div class="w-[36%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Hinweise & Dos/Don'ts</div>
+	</div>
+
+	<!-- Rows -->
+	<div class="px-4 md:px-6 pb-6 space-y-3 mt-2">
+
+	  <!-- Row -->
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age6light text-base lg:text-lg font-bold">Was ist das Internet?</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Erklären: Das Internet ist ein riesige Welt voller Werkzeuge zum Machen, Kommunizieren und Lernen. Damit kann man gute und schlechte Dinge tun.</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Zeigen, dass es echte Menschen hinter Bildschirmen gibt und manche davon nicht nett sind bzw. ganz andere Absichten haben, als man denkt</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Unterschied zwischen Online und Offline erklären: Was online passiert, kann trotzdem echte Gefühle auslösen. Was online geschieht, kann sich auch in die reale Welt verlagern.</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Mit Bildern oder kurzen Videos erklären. Nicht: „Geh da nicht hin", sondern: „Das ist wie eine große Stadt – die meisten sind nett, aber man bleibt trotzdem bei Erwachsenen"</div>
+		</div>
+	  </div>
+
+	  <!-- Row -->
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age6light text-base lg:text-lg font-bold">Passwörter & Datenschutz</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Passwörter sind „Superkräfte". Sie schützen uns und werden niemandem erzählt, nicht mal Freunden</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Name, Alter, Schule, Adresse = private Infos (Schätze!!!), die nur weitergegeben werden, wenn die Eltern zustimmen</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Avatare, Profil-Bilder und Nutzernamen erklären: Man muss sein echtes Gesicht nicht zeigen. Genauso: Wenn jemand anderes sein echtes Gesicht zeigt, muss das nicht sein wahres Gesicht sein.</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">⚠️ Nicht übertreiben! Kinder sollen keine Angst vor dem Internet haben, sondern verstehen, was privat ist. Passwort gemeinsam ausdenken und sicher aufschreiben lassen... am besten in den Mediennutzungsvertrag</div>
+		</div>
+	  </div>
+
+	  <!-- Row -->
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age6light text-base lg:text-lg font-bold">Gute vs. schlechte Erlebnisse</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  „Gute Überraschung" vs. „unsicheres Geheimnis": Wenn jemand online sagt, dass man etwas vor Mama/Papa verbergen soll, immer gleich melden</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Üben: Was fühlst du, wenn etwas komisch wirkt? Bauchgefühl ernst nehmen!</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Klarmachen: Du kommst niemals in Schwierigkeiten, wenn du uns etwas erzählst</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Rollenspiele helfen: „Was machst du, wenn ein Fremder online fragt, wie du heißt?" Keine Angst machen, aber Szenarien konkret durchspielen</div>
+		</div>
+	  </div>
+
+	  <!-- Row -->
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age6light text-base lg:text-lg font-bold">Körper & digitale Sicherheit</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Korrekte anatomische Begriffe verwenden (lernen!): Niemand darf Fotos von Körperteilen verlangen, die normalerweise bedeckt sind</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Sowohl online als auch offline gilt: Kein normaler Erwachsener fragt nach solchen Fotos. Auch andere private Dinge, müssen wie geheime Schätze gehütet werden.</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Klar sagen: Wenn das passiert, ist das nicht deine Schuld. Dann einfach sofort zu Mama/Papa gehen</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">⚠️ Sachlich und ruhig bleiben. Kein Drama. Kinder im Grundschulalter können damit umgehen, wenn es klar und altersgerecht erklärt wird</div>
+		</div>
+	  </div>
+
+	  <!-- Row -->
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age6light text-base lg:text-lg font-bold">Bildschirmzeit & Gewohnheiten</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Aktive vs. passive Bildschirmzeit erklären: Malen, Lernen und Bauen ist nicht dasselbe wie stundenlang Minecraft spielen. Das Gehirn lernt mehr in der analogen Welt.</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Schlafzimmer und Bettzeit als bildschirmfreie Zonen einführen. Am besten schon 1 Std. vor dem Schlafen</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Stoppzeiten gemeinsam planen, nicht mitten im Spiel abbrechen. Klare Grenzen setzen, was getan wird, wenn ein Tablet-Spielsession kurz länger dauert.</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Nicht nur „Wie lange?", sondern auch „Was machst du dabei?" fragen. Gemeinsame Regeln aufschreiben und sichtbar aufhängen</div>
+		</div>
+	  </div>
+
+	  <!-- Row -->
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age6light text-base lg:text-lg font-bold">Fremde in Spielen</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Erklären: Viele Spiele haben fremde Mitspieler, die sind nicht automatisch Freunde</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  Nein sagen darf man immer, wenn etwas komisch wirkt oder jemand Dinge fragt, die sich falsch anfühlen</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age6b mt-1.5"></span><span class="text-sm lg:text-base/6">  „Vertrauens-Erwachsene" festlegen: Wem kann ich alles erzählen?</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Ca. 1 von 7 Grundschulkindern vertraut Fremden in Spielen. Das Thema konkret ansprechen, bevor das Kind erste Multiplayer-Erfahrungen macht. Fremde oder Leute, die sich komisch verhalten, können online nur schwer von "Freunden" unterschieden werden, vor allem, wenn erstere mit Witzen, kleinen Geschenken und coolen Avataren "überzeugen". Wichtigste Lektion: Man kann Leute nicht aufgrund von Nettigkeiten sofort als freundlich einschätzen.</div>
+		</div>
+	  </div>
+
+	</div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+	 AGE BLOCK: 9–11
+════════════════════════════════════════ -->
+<div class="max-w-7xl mx-auto mb-10">
+  <div class="neo-card bg-age9 overflow-hidden">
+	<div class="bg-age9b px-6 py-4 flex flex-wrap items-center gap-4 border-b-2 border-black">
+	  <span class="text-3xl"></span>
+	  <div>
+		<div class="age-badge text-base md:text-lg font-bold bg-white text-age9b border-black">9 – 11 Jahre</div>
+		<p class="text-white font-bold text-lg mt-1">Grundschule · Wachsende Eigenständigkeit</p>
+	  </div>
+	  <p class="text-white/90 text-sm md:text-base font-bold ml-auto max-w-sm hidden md:block leading-snug">Soziale Dynamiken, Gruppenlogik und kritisches Denken greifbar machen.</p>
+	</div>
+
+	<div class="hidden md:flex flex-row gap-4 px-6 pt-4 pb-1 mt-6">
+	  <div class="w-[22%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Themen</div>
+	  <div class="w-[42%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Was tun / ansprechen</div>
+	  <div class="w-[36%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Hinweise & Dos/Don'ts</div>
+	</div>
+
+	<div class="px-4 md:px-6 pb-6 space-y-3 mt-2">
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age9light text-base lg:text-lg font-bold">Digitaler Fußabdruck</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Erklären: Alles, was online gestellt wird, kann kopiert, geteilt und für immer gespeichert bleiben</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  „Würdest du das auf einem Plakat vor der Schule aufhängen?" als einfacher Test</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Den eigenen Namen mal googeln und gemeinsam anschauen, was zu finden ist und wer noch so in den Ergebnissen erscheint.</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">⚠️ Nicht verurteilen, welche Inhalte schon online gestellt wurden. Das Kind soll keine Scham entwickeln, sondern Bewusstsein. „Screenshot = für immer" als konkretes Bild verwenden. Wenn man etwas witziges, gemeines oder falsches über andere Leute postet, bleibt das mitunter für immer online. Man ist dadurch auch ein Täter, dessen Spuren niemals wirklich verschwinden. </div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age9light text-base lg:text-lg font-bold">Fakten vs. Meinungen</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Unterschied zwischen Meinung, Glaube und Fakt üben, mit echten Beispielen aus dem Alltag</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Desinformation erklären: Viele Stimmen machen etwas nicht automatisch wahr</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Werbung und Clickbait zeigen: Warum ist dieser Titel so übertrieben? Was will er von dir?</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Konkret mit einer Schlagzeile aus dem Alltag üben. „Was stimmt hier wirklich?" als Familienfrage einführen... macht Spaß und schärft den Blick. Hier hilft es auch den Spieß umzudrehen, d.h. Kinder verdrehen eine vorher ausgewählte Wahrheit so, dass die Eltern es erkennen müssen, was daran falsch ist.</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age9light text-base lg:text-lg font-bold">Gruppenchats & soziale Dynamiken</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Gruppendynamik und Logik erklären: Anerkennung, Lob, Mißverständnisse, Ausgrenzung, Beobachten der Gruppe, Kettenreaktionen in Chats,  das fühlt sich online genauso an wie offline</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  „Phone fatigue": Ständige Benachrichtigungen können stressen, und leeren unsere Energie ... auch das darf man ansprechen und abstellen</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Digitale Empathie und Courage üben: Wenn jemand im Chat traurig ist oder angegriffen wird, was mache ich?</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">⚠️ Erlebnisse nicht kleinreden: „Das ist nur Kinderkram in deiner Chat-Gruppe" entwertet echte Erfahrungen. Stattdessen: ernst nehmen und gemeinsam über Verhaltensweisen und Reaktionen nachdenken</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age9light text-base lg:text-lg font-bold">Cybermobbing & Melden</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Was ist Cybermobbing und was ist nur „ein blöder Kommentar"? Unterschiede besprechen</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Zeigen, wie man blockiert, etwas meldet und Screenshots macht (als Beweis)</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Klarmachen: Melden ist keine Petze-Aktion, sondern es schützt andere mit</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Konkrete Plattformen durchgehen, die das Kind nutzt. Melde-Funktion gemeinsam suchen und merken, nicht erst im Krisenmoment</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age9light text-base lg:text-lg font-bold">Scams & Fake-Profile</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Erklären, warum Menschen online so tun, als wären sie jemand anderes</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  „Zu gut um wahr zu sein" als Grundprinzip einführen: Gratis-Robux (Währung im Roblox-Game), viel-versprechende Gewinnspiele, wertvolle Geschenke, unbekannte Links</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Phishing-Versuche zeigen, d.h., wie sehen die aus? Wie geben andere Leute vor, jemand anderes zu sein, um nicht verdächtig zu erscheinen. Was verrät einen Fake oder Identitätsdieb?</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Echte Beispiele aus dem Alltag des Kindes nehmen (Roblox, Minecraft, WhatsApp). „Was würdest du machen wenn…" als spielerische Übung. </div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age9light text-base lg:text-lg font-bold">Urheberrecht & Teilen</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Erklären: Bilder, Musik und Videos im Internet gehören oft jemandem</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Was darf man teilen, posten, weiterverwenden und was nicht?</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Fotos von anderen teilen: auch das braucht deren Erlaubnis</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Am besten mit einem konkreten Beispiel: „Das Bild, das du für die Schulpräsentation genutzt hast... wem gehört das eigentlich?"</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age9light text-base lg:text-lg font-bold">In-App-Käufe & Spielmechaniken</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Erklären, wie Loot-Boxen, Skins und In-App-Währungen funktionieren und warum sie so verlockend gestaltet sind</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  Impulskontrolle üben: „Ich warte einen Tag und schaue dann nochmal, ob ich das wirklich will"</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age9b mt-1.5"></span><span class="text-sm lg:text-base/6">  In-App-Kauf-Schutz in den Geräteeinstellungen gemeinsam einrichten</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">⚠️ Nicht nur verbieten, sondern erklären, warum diese Dinge absichtlich schwer zu widerstehen sind. Das stärkt mehr als jede Sperre</div>
+		</div>
+	  </div>
+
+	</div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+	 AGE BLOCK: 12–14
+════════════════════════════════════════ -->
+<div class="max-w-7xl mx-auto mb-10">
+  <div class="neo-card bg-age12 overflow-hidden">
+	<div class="bg-age12b px-6 py-4 flex flex-wrap items-center gap-4 border-b-2 border-black">
+	  <span class="text-3xl"></span>
+	  <div>
+		<div class="age-badge text-base md:text-lg font-bold bg-white text-age12b border-black">12 – 14 Jahre</div>
+		<p class="text-white font-bold text-lg mt-1">Teenageranfang · Unsichtbare Kräfte verstehen</p>
+	  </div>
+	  <p class="text-white/90 text-sm md:text-base font-bold ml-auto max-w-sm hidden md:block leading-snug">Algorithmen, KI und erste ernsthafte Risiken: Tieferes Verstehen wird jetzt wichtig.</p>
+	</div>
+
+	<div class="hidden md:flex flex-row gap-4 px-6 pt-4 pb-1 mt-6">
+	  <div class="w-[22%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Themen</div>
+	  <div class="w-[42%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Was tun / ansprechen</div>
+	  <div class="w-[36%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Hinweise & Dos/Don'ts</div>
+	</div>
+
+	<div class="px-4 md:px-6 pb-6 space-y-3 mt-2">
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age12light text-base lg:text-lg font-bold">Algorithmen & Filterblasen</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Erklären: Der Feed „lernt" aus dem Verhalten und zeigt immer mehr vom Gleichen, auch wenn das nicht gut für einen ist. Klar machen: Dinge, die nicht gut sind, werden besonders oft angeschaut.</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Filterblasen und Echo-Kammern: Warum siehst du immer nur eine Seite der Geschichte? Wieviele Seiten einer Wahrheit kann es geben.</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Zeigen, wie man aktiv gegensteuert: anderen Accounts folgen, Interessen bewusst variieren</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Den eigenen TikTok- oder YouTube-Feed gemeinsam anschauen: „Warum zeigt uns die App gerade genau das (was hat man vorher konsumiert, was schauen sich andere aus derselben Gruppe immer an, was wird besonders oft angeschaut)?" Deutlich machen, dass die App alles mitbekommt: Wie lange man etwas guckt, wie oft, von welchem Influencer, zu welcher Zeit, etc.</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age12light text-base lg:text-lg font-bold">KI-Kompetenz</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  KI-Antworten kritisch prüfen: Kritisches Denken üben, z.B. dasselbe Thema in anderen Quellen nachschlagen</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  KI „halluziniert", also erfindet manchmal Fakten, Behauptungen oder Quellen. Auch, wenn das witzig sein kann, ist es ebenso eine Gefahr, wenn man das ungefragt glaubt.</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  84% der Jugendlichen glauben, KI von Menschen unterscheiden zu können, allerdings liegen die meisten damit falsch</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Gemeinsam eine KI-Antwort auf eine Frage testen, die ihr Zuhause beantworten könnt und dann vergleichen, was stimmt. Macht den Effekt greifbar. Klar machen, dass normale Individuen in Chats, Foren oder Comment-Boards KI-Agenten also "Bots" sein können, die ihrer eigenen Agenda folgen. KI-Agenten können heute richtig viel, also Software benutzen, vorgeben jemand anderes zu sein, Informationen sammeln.</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age12light text-base lg:text-lg font-bold">KI-Freundschaften & parasoziale Bindungen</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Viele Jugendliche reden mit KI-Chatbots über persönliche Probleme, manchmal mehr als mit echten Menschen</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Erklären: KI spiegelt zurück, was man hören will. Das fühlt sich zuerst gut an, ist aber keine echte Beziehung. Es ist eine Maschine, die sich passend auf die eigene Wortwahl und Wünsche einstellt... ohne Gefühle.</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Ein Chatbot fühlt sich oft so an, als ob dieser an uns interessiert ist, wenn man etwas sagt. Dabei sind das nur von der KI "errechnete" Satz-Konstruktionen, die so wie Neugier, Emotion oder Freundschaft klingen, in Wirklichkeit aber nur durch Wahrscheinlichkeiten geformt werden. KI ist so erschaffen worden, dass ihre Antworten uns schmeicheln.</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  KI kann tolle Ratschläge geben, ohne Vorurteile, ohne Besserwisserei oder Arroganz, ohne den Drang sofort passend antworten zu müssen. Macht man das zu lang, verlernt man wie man mit richtigen Menschen spricht.</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">Sich zusammen vor einen KI-Chat wie Mistral, OpenAI, Claude, Gemini oder Perplexity setzen. Dann einige Szenarien durchspielen, einmal bestimmte falsche Behauptungen eingeben und nach bestimmten Dingen aus den alltäglichen Leben fragen. Oder: Rollenspiele ausprobieren (z.B.: Die KI muss so tun, als ob sie der verrückte Professor ist, der in den Tresor will, für den man das Passwort kennt). </div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age12light text-base lg:text-lg font-bold">Einwilligung bei expliziten Inhalten & Sexting-Risiken</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Digitale Einwilligung gilt für alles: Memes teilen, Fotos weiterschicken, Screenshots, d.h. immer fragen, nicht automatisch davon ausgehen, dass man es einfach darf.</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Sexting: Was auf Snapchat „verschwindet", kann trotzdem gespeichert oder weitergeteilt werden</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Explizite Bilder unter 18 zu teilen (auch von sich selbst) kann rechtliche Konsequenzen haben</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">⚠️ Sachlich ansprechen. Das Ziel: Das Kind muss die Risiken verstehen und sich nicht dabei schämen, wenn etwas passiert ist. Aufklären, dass einige dieser Dinge Straftaten sein können. Über Rechte und Gesetze aufklären. Informieren wie man derartige Vorkommnisse meldet.</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age12light text-base lg:text-lg font-bold">Grooming & Sextortion</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Erklären: Grooming beginnt oft harmlos – Geschenke, Komplimente, gemeinsame Interessen</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Sextortion: KI kann Fake-Nacktbilder erzeugen und damit drohen – das ist kriminell, nicht die Schuld des Opfers</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Klarmachen: Du kommst niemals in Schwierigkeiten, wenn du das meldest, egal was vorher passiert ist</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">⚠️ Das ist ein schwieriges Thema – ruhig und klar ansprechen, ohne Panik. Der entscheidende Satz: „Du hast keine Schuld, und du kannst immer zu mir kommen".  Generelle Aufklärung über die emotionale und rechtliche Konsequenz, wenn derartige Inhalte veröffentlicht werden.</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age12light text-base lg:text-lg font-bold">Körperbild & Online-Vergleiche</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Erklären: Die meisten Bilder in sozialen Medien sind gefiltert, gestellt oder bearbeitet. Manche Photos sind ein Versuch von 100 versuchen, man sieht also nur einen gekünstelten Ausschnitt. </span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  FOMO und Social Comparison: Wie fühle ich mich nach 20 Minuten Scrollen – besser oder schlechter?</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age12b mt-1.5"></span><span class="text-sm lg:text-base/6">  Selbstgespräch: Positiv über sich sprechen, statt sich mit bearbeiteten Bildern zu vergleichen</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Gemeinsam ansehen: „Dieser Account – wie fühlen wir uns dabei?" Kritischer Blick auf Inhalte kann man trainieren</div>
+		</div>
+	  </div>
+
+	</div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+	 AGE BLOCK: 15–18
+════════════════════════════════════════ -->
+<div class="max-w-7xl mx-auto mb-10">
+  <div class="neo-card bg-age15 overflow-hidden">
+	<div class="bg-age15b px-6 py-4 flex flex-wrap items-center gap-4 border-b-2 border-black">
+	  <span class="text-3xl"></span>
+	  <div>
+		<div class="age-badge text-base md:text-lg font-bold bg-white text-age15b border-black">15 – 18 Jahre</div>
+		<p class="text-white font-bold text-lg mt-1">Spätere Teenagejahre · Eigenverantwortung</p>
+	  </div>
+	  <p class="text-white/90 text-sm md:text-base font-bold ml-auto max-w-sm hidden md:block leading-snug">Langfristige Konsequenzen, Datensouveränität und mentale Selbstregulation rücken in den Fokus.</p>
+	</div>
+
+	<div class="hidden md:flex flex-row gap-4 px-6 pt-4 pb-1 mt-6">
+	  <div class="w-[22%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Themen</div>
+	  <div class="w-[42%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Was tun / ansprechen</div>
+	  <div class="w-[36%] text-base md:text-base lg:text-lg font-bold text-slate-600 col-header">Hinweise & Dos/Don'ts</div>
+	</div>
+
+	<div class="px-4 md:px-6 pb-6 space-y-3 mt-2">
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age15light text-base lg:text-lg font-bold">Digitaler Ruf & Zukunft</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Arbeitgeber und Hochschulen schauen sich Profile an; alter Content kann wichtige Türen schließen</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Gemeinsam den eigenen digitalen Fußabdruck „aufräumen" und bewusst gestalten</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  LinkedIn & Co.: Was stellt man dort hin, und warum?</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Nicht moralisieren. Konkret beschriebene Szenarien oder Beispiele helfen mehr als Warnungen. „Hier ist jemand, dem ein altes Posting den Job oder Eingang in die Uni gekostet hat…"</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age15light text-base lg:text-lg font-bold">Mentale Gesundheit & Social Media</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Frühe Warnsignale erkennen: FOMO, Körperbild-Angst, sozialer Rückzug nach Online-Zeit</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  „Social Media Detox" ausprobieren: Wie fühlt sich eine Woche ohne bestimmte Apps an?</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Apps, die sich „schlecht" anfühlen, bewusst hinterfragen – und ggf. löschen</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">⚠️ Nicht verordnen, sondern als Angebot: „Wollen wir Detox mal zusammen ausprobieren?" Gemeinsam machen senkt die Hemmschwelle. Deutlich machen wie stark Körper und Sex-Appeal im Internet überspitzt werden, dass viele Tricks und Täuschungen eingesetzt werden, damit Körper perfekt aussehen.</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age15light text-base lg:text-lg font-bold">Datenschutz & Datensouveränität</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Was sammeln Apps wirklich über uns und was passiert damit?</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Zwei-Faktor-Authentifizierung einrichten, Drittanbieter-Logins überprüfen und deaktivieren</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Datenschutzeinstellungen auf allen genutzten Plattformen gemeinsam durchgehen</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 „Datenschutz-Abend" als Ritual einführen: einmal im Jahr alle Accounts und Einstellungen gemeinsam checken</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age15light text-base lg:text-lg font-bold">Komplexe KI-Verifikation</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Bei wichtigen Themen (Gesundheit, Recht, News) mehrere KI-Modelle befragen und Ergebnisse vergleichen</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Auf Aktualität prüfen: KI-Wissen hat ein Ablaufdatum</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Offizielle und wissenschaftliche Quellen als Gegenprobe nutzen</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 KI ist kein Orakel, sondern ein Werkzeug mit bestimmten Schwächen. Einen reflektierten Umgang damit zu lernen ist eine der wichtigsten Fähigkeiten dieser Generation</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age15light text-base lg:text-lg font-bold">Desinformation & politische Manipulation</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Deepfakes erklären: KI-generierte Videos und Stimmen können täuschend echt wirken</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Politische Werbung im Internet: Wer bezahlt das, was wollen die und warum?</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Reverse-Image-Search und Faktenchecker-Tools kennen und nutzen</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">💡 Konkret ein virales Video oder einen Post gemeinsam prüfen: „Ist das echt?" als gemeinsame Detektivarbeit</div>
+		</div>
+	  </div>
+
+	  <div class="row-3col flex flex-col md:flex-row gap-3 pb-6">
+		<div class="w-full md:w-[22%]">
+		  <div class="row-header bg-age15light text-base lg:text-lg font-bold">Beziehungen, Einwilligung & Grenzen</div>
+		</div>
+		<div class="w-full md:w-[42%] space-y-1.5">
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Digitale Einwilligung in Beziehungen: Fotos, Standorte, Passwörter teilen. Was ist okay, was ist Kontrolle?</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Toxische Online-Dynamiken erkennen: Wenn sich jemand durch Online-Verhalten kontrollierend verhält</span></div>
+		  <div class="flex gap-2"><span class="bullet-dot bg-age15b mt-1.5"></span><span class="text-sm lg:text-base/6">  Grenzen setzen und verteidigen, auch wenn der soziale Druck groß ist</span></div>
+		</div>
+		<div class="w-full md:w-[36%] text-sm lg:text-base/6">
+		  <div class="note-pill">⚠️ Offen und ohne Bewertung ansprechen. Ziel ist nicht, Beziehungen zu kontrollieren, sondern das Kind zu stärken, selbst zu entscheiden</div>
+		</div>
+	  </div>
+
+	</div>
+  </div>
+</div>
+
+
+<!-- FOOTER NOTE -->
+<div class="max-w-7xl mx-auto">
+  <div class="neo-card bg-cyblue text-white p-6 md:p-10 flex flex-col md:flex-row items-start gap-6">
+	<div class="text-5xl"></div>
+	<div>
+	  <p class="font-bold text-cyyellow text-lg mb-2">Cybear bringt Kindern Digitalkompetenz bei und macht auch Eltern fit.</p>
+	  <p class="text-white/85 leading-relaxed text-sm md:text-base">Praktischer Ratgeber für Eltern, spielerisches Training für Kinder. Zusammen navigiert ihr die digitale Welt sicherer, denn irgendwann sitzt kein Elternteil mehr daneben.</p>
+	</div>
+  </div>
+</div>
+
+</section>
+
+
+
+<!-- BEGIN: MainFooter -->
+<footer class="bg-dark-teal text-white py-16 px-16 sm:px-16 md:px-20 lg:px:48 lg:px-[16vw] " style="background-color: #3D5266;">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start mb-12">
+<!-- Brand Description -->
+<div>
+<p class="text-lg font-black leading-relaxed max-w-xs" style="font-size: 1.2rem; line-height: 1.425;">
+	Eine Lernapp damit Kinder verstehen wie man sicher in der online KI-Ära navigiert
+		  </p>
+</div>
+<!-- Quick Links -->
+
+<div class="flex flex-col gap-2">
+</div>
+
+<!-- Footer Logo & Tagline -->
+<div class="flex flex-col items-end gap-2">
+<div class="w-48 brightness-0 invert opacity-90">
+<!-- Using Logo SVG here with invert for dark background -->
+<svg viewBox="0 0 848.9 218.7" xmlns="http://www.w3.org/2000/svg">
+	<style>.st0{fill:#FB855A}.st1{fill:#A396B5}</style>
+	<g><path class="st0" d="M421.2 124.2c0 43.6-23.6 41.9-60.4 41.9-14.3 0-28.7-1.5-43-2.2-6.8-.5-9.5-2.6-10.1-9.5-2-21.4-2.6-43.4-2.6-64.8 0-15.7-.7-31.5.5-46.7.5-6.6 2.9-9.7 9.3-10.6 10.1-1.3 20.7-2 31.1-2 13.9 0 27.6.9 41.4 2 20.9 1.8 28.7 15.6 28.7 35.5 0 14.8-2.7 16.5-8.8 28.6 6 11.2 8.8 21.8 8.8 33.6zm-70.3 4.4c5.1-.4 25.4.2 25.4-6.8 0-8.8-8.4-9-15.2-9-3.5 0-6.8.2-10.3.5v15.3zm.4-60.4c.2 5.5.4 11.2.7 16.8 2.2.4 3.8.4 5.9.4 4.9 0 16.5-.7 16.5-7.3 0-9.3-9.2-10.1-16.3-10.1l-6.8.2z"></path><path class="st0" d="M484.5 70.9l.2 12.1c9.2 0 18.3-.5 27.8-.5 9.7 0 7.5 18.7 7.5 26 0 9.2-28 5.9-35.1 6.8v11h8.6c10.4 0 21.2-1.5 32-1.5 8.6 0 8.8 18.3 8.8 24.7 0 3.1-.2 5.9-.5 9-.9 5.5-4 7.5-9.3 7.7-17.9.5-35.9 1.1-53.8 1.1-25.8 0-32.8-.2-32.8-27.3 0-30.4 0-71.6 1.6-102.1.2-4 1.8-6.4 5.9-7.3 8.6-2.2 20.5-2 29.5-2 16.1 0 35.3-.7 50.9.4 5.3.4 8.1 1.3 8.6 6.8 1.1 8.4-1.1 18.7-1.1 26.9 0 12.4-21.8 8.4-30.6 8.4h-11z"></path><path class="st0" d="M600.7 140.3c-5.5 19.8-3.5 25.6-27.5 25.6-6.6 0-25.1.5-25.1-8.8 0-20.9 20.1-87.1 28.2-109.4 7.7-20.7 32.3-18.7 50.8-18.7 4.2 0 8.8.7 13 1.6 11.7 1.8 18.5 11 22.7 21.6 3.7 9.2 20.3 93.3 20.3 101.9 0 9.9-22.7 12.6-30.4 12.6-21.2 0-18.9-9-22-25.6-10.1.3-20.2.1-30.1 0zm26.9-37.2c-1.3-9-2.6-18.1-4.9-26.9-.4-2.2-1.8-3.3-4.8-3.3-2.6 0-3.3 1.1-3.7 2.9-2.6 9-4.8 18.3-6.4 27.3h19.8z"></path><path class="st0" d="M812.5 152.3c0 8.1-20.7 15.4-27.3 15.4-12.8 0-32.8-37.7-40.8-37.7-4.2 0-2.9 7.5-2.9 10.4 0 22.9.7 25.6-23.1 25.6-8.2 0-21.2.7-21.2-10.2 0-22.9 1.3-46.1 1.3-68.8 0-13-1.3-26-1.3-39 0-12.6 5.9-19.4 15.6-19.4 24.2 0 44.1-.2 63.9 1.1 6.6.5 14.6 1.6 20.5 4 13 4.2 15 28.2 15 40.3 0 7.1.2 17-1.3 26.4-1.8 11.3-11.2 20.3-21 19.6 11.3 5.4 29.7 25.9 29.7 32.1zm-43.1-72.3c0-11.9-3.1-16.5-13.2-16.5-4.2 0-10.1-.7-11 4.4-1.3 7-.7 22.3 0 24.7 1.3 2.1 17.7 3.3 17.7-10.8z"></path></g>
+<g><path class="st1" d="M78.2 120.2c.5 4 2.8 16.1 3.8 20.4 2.9 12.5 5.7 15 18.6 12.1 12.1-2.8 24.4-5.6 36-8.3 9.1-2.1 12.7 14.3 14.2 20.8 1.2 5.4 4.2 13.3-.6 17-6.8 5.7-38.6 12.5-47.9 14.6-10.5 2.4-21.1 3.7-31.9 4.9-22.2 2.3-36.4-64.3-40.1-80-1.8-7.8-3-16.2-3.7-24.1 0-11 5.2-18.6 14.8-23.2 20.5-10.4 44.8-16 67.4-21.2 8.4-1.9 11.9 1 13.6 5.9 1.5 4 1.7 9.2 6.4 27.6-29.5 13.8-84.9 14.7-82.5 34.1z"></path><path class="st1" d="M216.7 24.4c2.3-4 5-6.8 8.2-7.7 9.4-2.5 30.1 7.1 32.7 16.6.7 2.7.5 5.9-.5 9.4-4.4 16.7-27.1 48.9-23.5 60.9 1.8 6.1 4.4 15.1 6 21.1 5.8 21.7 10.6 29-14.3 35.7-25.5 6.8-21.1-.4-26.6-20.9-2.5-9.2-5.3-22.6-8.7-31.2-1.7-4.1-36.4-24-49.3-34.9-4.6-3.9-3.6-12.9-1.7-17.6 2.8-6.6 8.9-14.3 13.9-18.3 4.3-3.6 9.1-3.6 14-1.5 10.5 4.6 28.3 24.3 35.8 28.1.7.3 7.2-23.4 12.5-32.6z"></path></g>
+</svg>
+</div>
+<p class="text-cyorange font-bold text-sm italic">Learn navigating the digital AI world</p>
+<!-- SOCIAL MEDIA ICONS-->
+
+<button class="w-12 h-12 flex items-center justify-center bg-gradient-to-tr from-red-50 to-pink-50 cursor-pointer rounded-md shadow-md shadow-transparent transition-all duration-300 hover:border-gray-100 hover:shadow-red-200" >
+	<a href="https://instagram.com/cybearapp" target="_blank"
+	class="p-2 w-12 h-12 bg-white rounded-lg flex items-center border border-gray-300 justify-center transition-all duration-500 ">
+	<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 51 51" fill="none">
+	  <path d="M17.4456 25.7808C17.4456 21.1786 21.1776 17.4468 25.7826 17.4468C30.3875 17.4468 34.1216 21.1786 34.1216 25.7808C34.1216 30.383 30.3875 34.1148 25.7826 34.1148C21.1776 34.1148 17.4456 30.383 17.4456 25.7808ZM12.9377 25.7808C12.9377 32.8708 18.6883 38.618 25.7826 38.618C32.8768 38.618 38.6275 32.8708 38.6275 25.7808C38.6275 18.6908 32.8768 12.9436 25.7826 12.9436C18.6883 12.9436 12.9377 18.6908 12.9377 25.7808ZM36.1342 12.4346C36.1339 13.0279 36.3098 13.608 36.6394 14.1015C36.9691 14.595 37.4377 14.9797 37.9861 15.2069C38.5346 15.4342 39.1381 15.4939 39.7204 15.3784C40.3028 15.2628 40.8378 14.9773 41.2577 14.5579C41.6777 14.1385 41.9638 13.6041 42.0799 13.0222C42.1959 12.4403 42.1367 11.8371 41.9097 11.2888C41.6828 10.7406 41.2982 10.2719 40.8047 9.94202C40.3112 9.61218 39.7309 9.436 39.1372 9.43576H39.136C38.3402 9.43613 37.5771 9.75216 37.0142 10.3144C36.4514 10.8767 36.1349 11.6392 36.1342 12.4346ZM15.6765 46.1302C13.2377 46.0192 11.9121 45.6132 11.0311 45.2702C9.86323 44.8158 9.02993 44.2746 8.15381 43.4002C7.27768 42.5258 6.73536 41.6938 6.28269 40.5266C5.93928 39.6466 5.53304 38.3214 5.42217 35.884C5.3009 33.2488 5.27668 32.4572 5.27668 25.781C5.27668 19.1048 5.3029 18.3154 5.42217 15.678C5.53324 13.2406 5.94248 11.918 6.28269 11.0354C6.73736 9.86816 7.27888 9.03536 8.15381 8.15976C9.02873 7.28416 9.86123 6.74216 11.0311 6.28976C11.9117 5.94656 13.2377 5.54056 15.6765 5.42976C18.3133 5.30856 19.1054 5.28436 25.7826 5.28436C32.4598 5.28436 33.2527 5.31056 35.8916 5.42976C38.3305 5.54076 39.6539 5.94976 40.537 6.28976C41.7049 6.74216 42.5382 7.28536 43.4144 8.15976C44.2905 9.03416 44.8308 9.86816 45.2855 11.0354C45.6289 11.9154 46.0351 13.2406 46.146 15.678C46.2673 18.3154 46.2915 19.1048 46.2915 25.781C46.2915 32.4572 46.2673 33.2466 46.146 35.884C46.0349 38.3214 45.6267 39.6462 45.2855 40.5266C44.8308 41.6938 44.2893 42.5266 43.4144 43.4002C42.5394 44.2738 41.7049 44.8158 40.537 45.2702C39.6565 45.6134 38.3305 46.0194 35.8916 46.1302C33.2549 46.2514 32.4628 46.2756 25.7826 46.2756C19.1024 46.2756 18.3125 46.2514 15.6765 46.1302ZM15.4694 0.932162C12.8064 1.05336 10.9867 1.47536 9.39755 2.09336C7.75177 2.73156 6.35853 3.58776 4.9663 4.97696C3.57406 6.36616 2.71955 7.76076 2.08097 9.40556C1.46259 10.9948 1.04034 12.8124 0.919069 15.4738C0.795795 18.1394 0.767578 18.9916 0.767578 25.7808C0.767578 32.57 0.795795 33.4222 0.919069 36.0878C1.04034 38.7494 1.46259 40.5668 2.08097 42.156C2.71955 43.7998 3.57426 45.196 4.9663 46.5846C6.35833 47.9732 7.75177 48.8282 9.39755 49.4682C10.9897 50.0862 12.8064 50.5082 15.4694 50.6294C18.138 50.7506 18.9893 50.7808 25.7826 50.7808C32.5759 50.7808 33.4286 50.7526 36.0958 50.6294C38.759 50.5082 40.5774 50.0862 42.1676 49.4682C43.8124 48.8282 45.2066 47.9738 46.5989 46.5846C47.9911 45.1954 48.8438 43.7998 49.4842 42.156C50.1026 40.5668 50.5268 38.7492 50.6461 36.0878C50.7674 33.4202 50.7956 32.57 50.7956 25.7808C50.7956 18.9916 50.7674 18.1394 50.6461 15.4738C50.5248 12.8122 50.1026 10.9938 49.4842 9.40556C48.8438 7.76176 47.9889 6.36836 46.5989 4.97696C45.2088 3.58556 43.8124 2.73156 42.1696 2.09336C40.5775 1.47536 38.7588 1.05136 36.0978 0.932162C33.4306 0.810962 32.5779 0.780762 25.7846 0.780762C18.9913 0.780762 18.138 0.808962 15.4694 0.932162Z" fill="url(#paint0_radial_7092_54379)"/>
+	  <path d="M17.4456 25.7808C17.4456 21.1786 21.1776 17.4468 25.7826 17.4468C30.3875 17.4468 34.1216 21.1786 34.1216 25.7808C34.1216 30.383 30.3875 34.1148 25.7826 34.1148C21.1776 34.1148 17.4456 30.383 17.4456 25.7808ZM12.9377 25.7808C12.9377 32.8708 18.6883 38.618 25.7826 38.618C32.8768 38.618 38.6275 32.8708 38.6275 25.7808C38.6275 18.6908 32.8768 12.9436 25.7826 12.9436C18.6883 12.9436 12.9377 18.6908 12.9377 25.7808ZM36.1342 12.4346C36.1339 13.0279 36.3098 13.608 36.6394 14.1015C36.9691 14.595 37.4377 14.9797 37.9861 15.2069C38.5346 15.4342 39.1381 15.4939 39.7204 15.3784C40.3028 15.2628 40.8378 14.9773 41.2577 14.5579C41.6777 14.1385 41.9638 13.6041 42.0799 13.0222C42.1959 12.4403 42.1367 11.8371 41.9097 11.2888C41.6828 10.7406 41.2982 10.2719 40.8047 9.94202C40.3112 9.61218 39.7309 9.436 39.1372 9.43576H39.136C38.3402 9.43613 37.5771 9.75216 37.0142 10.3144C36.4514 10.8767 36.1349 11.6392 36.1342 12.4346ZM15.6765 46.1302C13.2377 46.0192 11.9121 45.6132 11.0311 45.2702C9.86323 44.8158 9.02993 44.2746 8.15381 43.4002C7.27768 42.5258 6.73536 41.6938 6.28269 40.5266C5.93928 39.6466 5.53304 38.3214 5.42217 35.884C5.3009 33.2488 5.27668 32.4572 5.27668 25.781C5.27668 19.1048 5.3029 18.3154 5.42217 15.678C5.53324 13.2406 5.94248 11.918 6.28269 11.0354C6.73736 9.86816 7.27888 9.03536 8.15381 8.15976C9.02873 7.28416 9.86123 6.74216 11.0311 6.28976C11.9117 5.94656 13.2377 5.54056 15.6765 5.42976C18.3133 5.30856 19.1054 5.28436 25.7826 5.28436C32.4598 5.28436 33.2527 5.31056 35.8916 5.42976C38.3305 5.54076 39.6539 5.94976 40.537 6.28976C41.7049 6.74216 42.5382 7.28536 43.4144 8.15976C44.2905 9.03416 44.8308 9.86816 45.2855 11.0354C45.6289 11.9154 46.0351 13.2406 46.146 15.678C46.2673 18.3154 46.2915 19.1048 46.2915 25.781C46.2915 32.4572 46.2673 33.2466 46.146 35.884C46.0349 38.3214 45.6267 39.6462 45.2855 40.5266C44.8308 41.6938 44.2893 42.5266 43.4144 43.4002C42.5394 44.2738 41.7049 44.8158 40.537 45.2702C39.6565 45.6134 38.3305 46.0194 35.8916 46.1302C33.2549 46.2514 32.4628 46.2756 25.7826 46.2756C19.1024 46.2756 18.3125 46.2514 15.6765 46.1302ZM15.4694 0.932162C12.8064 1.05336 10.9867 1.47536 9.39755 2.09336C7.75177 2.73156 6.35853 3.58776 4.9663 4.97696C3.57406 6.36616 2.71955 7.76076 2.08097 9.40556C1.46259 10.9948 1.04034 12.8124 0.919069 15.4738C0.795795 18.1394 0.767578 18.9916 0.767578 25.7808C0.767578 32.57 0.795795 33.4222 0.919069 36.0878C1.04034 38.7494 1.46259 40.5668 2.08097 42.156C2.71955 43.7998 3.57426 45.196 4.9663 46.5846C6.35833 47.9732 7.75177 48.8282 9.39755 49.4682C10.9897 50.0862 12.8064 50.5082 15.4694 50.6294C18.138 50.7506 18.9893 50.7808 25.7826 50.7808C32.5759 50.7808 33.4286 50.7526 36.0958 50.6294C38.759 50.5082 40.5774 50.0862 42.1676 49.4682C43.8124 48.8282 45.2066 47.9738 46.5989 46.5846C47.9911 45.1954 48.8438 43.7998 49.4842 42.156C50.1026 40.5668 50.5268 38.7492 50.6461 36.0878C50.7674 33.4202 50.7956 32.57 50.7956 25.7808C50.7956 18.9916 50.7674 18.1394 50.6461 15.4738C50.5248 12.8122 50.1026 10.9938 49.4842 9.40556C48.8438 7.76176 47.9889 6.36836 46.5989 4.97696C45.2088 3.58556 43.8124 2.73156 42.1696 2.09336C40.5775 1.47536 38.7588 1.05136 36.0978 0.932162C33.4306 0.810962 32.5779 0.780762 25.7846 0.780762C18.9913 0.780762 18.138 0.808962 15.4694 0.932162Z" fill="url(#paint1_radial_7092_54379)"/>
+	  <defs>
+		<radialGradient id="paint0_radial_7092_54379" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(7.41436 51.017) scale(65.31 65.2708)">
+		  <stop offset="0.09" stop-color="#FA8F21"/>
+		  <stop offset="0.78" stop-color="#D82D7E"/>
+		</radialGradient>
+		<radialGradient id="paint1_radial_7092_54379" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(31.1086 53.257) scale(51.4733 51.4424)">
+		  <stop offset="0.64" stop-color="#8C3AAA" stop-opacity="0"/>
+		  <stop offset="1" stop-color="#8C3AAA"/>
+		</radialGradient>
+	  </defs>
+	</svg>
+	</a>
+	</button>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="border-t border-slate-700 pt-8 text-center text-xs text-slate-400">
+<p>© 2026 Copyright. All rights reserved | <a class="hover:underline" href="privacypol_cy.html">Privacy Policy</a> | <a class="hover:underline" href="impr_cy.html">Imprint</a></p>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+
+					
+					<!-- Large Modal KINDER -->
+					
+					<div id="large-modal-kinder" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+						<div class="relative w-full max-w-4xl max-h-full mx-auto md:mt-[10vmax]">
+							<!-- Modal content -->
+							<div class="relative bg-parent-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-kinder">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+								
+								</div>
+								<!-- Modal body -->
+								<div class="space-y-4 md:space-y-6 py-4 md:py-6">
+									<h3 class="text-xl md:text-3xl lg:text-3xl font-bold">
+										Ein digitaler Kompass, der Kinder praxisnah vorbereitet. Bei Online-Risiken denken viele Eltern zuerst an:
+									</h3>
+									<ul class="leading-tight text-base md:text-xl lg:text-lg space-y-2 text-slate-700 line-h list-disc list-outside pl-6 md:pl-12 lg:pl-6 pr-1 lg:pr-3 xl:pr-6" style="line-height:1.2em;">
+									<li class="pl-3 lg:pl-0">Fremde Personen und gefährliche Chats </li>
+									<li class="pl-3 lg:pl-0">Cybermobbing / Hatespeech</li>
+									<li class="pl-3 lg:pl-0">Bildschirmzeit und App-Sucht </li>
+									<li class="pl-3 lg:pl-0">Passwörter und Phishing</li>
+									</ul>
+									<p class="leading-relaxed text-lg md:text-xl lg:text-xl md:pr-16">Natürlich sind diese alle wichtig. </p>
+									<p class="leading-relaxed text-lg md:text-xl lg:text-xl md:pr-16">Doch Risiken sind ebenso: Abhängig machende Benutzungsmuster; Desinformation beschleunigende Algorithmen, Verzerrte Realität durch KI-Inhalte, FOMO und Gruppendruck, manipulative Mechanismen, KI-gesteuerte Bots in Chats und somit veränderte Gewohnheiten, die Verhalten und Selbstverständnis langfristig beeinflussen. Damit Kinder ihr Online-sein nicht unkontrolliert+unkritisch unter digitalem Dauerfeuer verbringen, werden notwendige Kompetenzen mit praxisnahen Trainingsaufgaben vermittelt. 
+									</p>
+								</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Large Modal ELTERN -->
+					
+					<div id="large-modal-eltern" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+						<div class="relative w-full max-w-4xl max-h-full mx-auto md:mt-[10vmax]">
+							<!-- Modal content -->
+							<div class="relative bg-kid-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 ">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-eltern">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+								</div>
+								<!-- Modal body -->
+								<div class="space-y-4 md:space-y-6 py-4 md:py-6">
+									<h3 class="text-xl md:text-3xl lg:text-3xl font-bold">
+										Die Spielregeln ändern sich täglich.<br>Neue Plattformen. Neue Influencer Trends. Neue Risiken.
+									</h3>
+									<p class="leading-relaxed text-lg md:text-xl lg:text-xl md:pr-16">
+										Es ist schwer am Ball zu bleiben, schließlich haben Eltern nicht die Zeit jeder neuen Entwicklung hinterherzuhetzen. Deshalb gibt Cybear auch Eltern kompakte Informationsformate in die Hand.
+									</p>
+									<p class="leading-relaxed text-lg md:text-xl lg:text-xl md:pr-16">
+										Eltern erhalten kurz-gehaltene Erklärvideos, ebenso alters-adäquate Checklists (wie reglementiere ich gemeinsam, was sollte ich ansprechen) und Verhaltens-Guidelines. Kurz und praktisch an der Realität der Eltern orientiert, keine langen Textwände und Abhandlungen.
+									</p>
+								</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+<!-- ── Minimal JS (no framework, no build step) ───────────────── -->
+  <script>
+	const tabs   = document.querySelectorAll('.tab-card');
+	const panels = document.querySelectorAll('.tab-panel');
+
+	tabs.forEach(tab => {
+	  tab.addEventListener('click', () => {
+		// deactivate all
+		tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+		panels.forEach(p => p.classList.remove('active'));
+
+		// activate clicked
+		tab.classList.add('active');
+		tab.setAttribute('aria-selected', 'true');
+		document.getElementById(tab.dataset.panel).classList.add('active');
+	  });
+	});
+  </script>
+<!--
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const container = document.getElementById('main-map-container');
+		const overlay = document.getElementById('main-map-overlay');
+		
+		let hasTouched = false;
+		window.addEventListener('touchstart', () => {
+			hasTouched = true;
+		}, { passive: true });
+	
+		const activateOverlay = () => {
+			overlay.classList.remove('opacity-0', 'pointer-events-none');
+			overlay.classList.add('opacity-100');
+			container.classList.remove('lg:rotate-1');
+			container.classList.add('rotate-0');
+		};
+	
+		const deactivateOverlay = () => {
+			overlay.classList.add('opacity-0', 'pointer-events-none');
+			overlay.classList.remove('opacity-100');
+			container.classList.remove('rotate-0');
+			container.classList.add('lg:rotate-1');
+		};
+	
+		container.addEventListener('mouseenter', () => {
+			if (!hasTouched) activateOverlay();
+		});
+	
+		container.addEventListener('mouseleave', () => {
+			if (!hasTouched) deactivateOverlay();
+		});
+	
+		container.addEventListener('click', (e) => {
+			if (hasTouched) {
+				if (overlay.classList.contains('opacity-0')) {
+					activateOverlay();
+				}
+			}
+		});
+	
+		document.addEventListener('click', (e) => {
+			if (hasTouched && !overlay.classList.contains('opacity-0')) {
+				// Close if clicked completely outside the container
+				if (!container.contains(e.target)) {
+					deactivateOverlay();
+				}
+			}
+		});
+	
+		window.addEventListener('scroll', () => {
+			if (hasTouched && !overlay.classList.contains('opacity-0')) {
+				const rect = container.getBoundingClientRect();
+				// Close if container scrolls entirely out of view
+				if (rect.bottom < 0 || rect.top > window.innerHeight) {
+					deactivateOverlay();
+				}
+			}
+		}, { passive: true });
+	});
+	</script> -->
+</body></html>
