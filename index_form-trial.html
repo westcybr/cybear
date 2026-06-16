@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>	
+<style>
+  .scale-140-text {
+	transform: scale(1.4);
+	transform-origin: left center;
+	font-size: 19.6px !important; /* 14px * 1.4 */
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Gluten:wght@100..900&amp;family=Radio+Canada:ital,wght@0,300..700;1,300..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta http-equiv="content-language" content="de">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>cyBEAR - Kinder fit machen im Umgang mit Risiken rund um Apps, Social Media & Online KI</title>
+
+<meta name="description" content="Cybear – die spielerische Lernapp für digitale Kompetenzen. Kinder lernen sicher, kritisch und selbstbewusst mit Apps, Internet, KI und Medien umzugehen – Eltern erhalten praktische Hilfe für Risiken, Bildschirmzeit und den digitalen Familienalltag.">
+
+<meta name="keywords" content="Lernapp, spielerisch lernen, digitale Kompetenzen, digitale Bildung, Medienkompetenz Kinder, Medienkompetenz Eltern, Internet Sicherheit Kinder, Bildschirmzeit Kinder, App Sucht, digitale Erziehung, Kinderschutz Internet, Cybersicherheit Kinder, Online Risiken, Desinformation Kinder, Elternratgeber Medien, digitale Kompetenzen Kinder">
+
+<meta name="author" content="Cybear">
+<meta name="geo.country" content="DE">
+<meta name="country" content="Germany">
+<meta name="robots" content="all"/>
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cybear">
+<meta property="og:title" content="Cybear – Spielerische Lernapp für digitale Kompetenzen">
+<meta property="og:description" content="Die spielerische Lernapp für Familien: Kinder trainieren digitale Kompetenzen, Eltern erhalten praktische Unterstützung zu Risiken, Bildschirmzeit, Apps und sicherem Verhalten online.">
+<meta property="og:image" content="/images/og-image.jpg">
+<meta property="og:url" content="https://cybearapp.de">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cybear – Spielerisch digitale Kompetenzen lernen">
+<meta name="twitter:description" content="Spielerische Lernapp für Kinder und Eltern: Digitale Kompetenzen stärken, Risiken erkennen und sicher durch den digitalen Alltag navigieren.">
+<meta name="twitter:image" content="https://cybearapp.de/og-image.jpg">
+
+<!--<link rel="canonical" href="https://cybearapp.de/" />-->
+
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<!-- Tailwind Flowbite -->
+<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.2/dist/flowbite.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.2/dist/flowbite.min.css" rel="stylesheet">
+
+
+<script>
+	  tailwind.config = {
+		theme: {
+		  extend: {
+			fontFamily: {
+			  sans: ['Geist', 'ui-sans-serif', 'system-ui']
+			},
+			colors: {
+			  cyorange: '#FB855A',
+			  cyyellow: '#FFD166',
+			  cyblue: '#2B4162',
+			  cybeige: '#F9F4EE',
+			  'nav-orange': '#FFB347',
+			  'spot-orange': '#FFCC80',
+			  'protect-rose': '#FFD1DC',
+			  'safe-green': '#CCFF99',
+			  'parent-bg': '#FCE4EC',
+			  'kid-bg': '#E1F5FE',
+			  'spot-bg': '#ffead0',
+			  'protect-bg': '#fce3e9',
+			  'staysafe-bg': '#e9f7d1',
+			  'dark-teal': '#37474F',
+			  'dark-indigo': '#574d7d',
+			  'cygreen': '#dffaf8', //   #ceefed
+			  'cyteal': '#4ECDC4',
+			  'cypink': '#FF8FAB',
+			  'cylightpink': '#f5e9ee',
+			  'cylightbeige': '#f5e9da',
+			}
+		  }
+		}
+	  }
+</script>
+
+<style>
+:root {
+--mr_lg_bear: calc(-10vmin + 4vmax);
+--mr_xl_bear: calc(-1vmin + 3vmax);
+--mr_2xl_bear: calc(2vmin + 2vmax);
+}
+
+.gluten-font {
+	  font-family: "Gluten", cursive;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+	  font-variation-settings: "slnt" 0;
+}
+
+.geist-font {
+	  font-family: "Geist", sans-serif;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+}
+
+.playfair-font {
+	  font-family: "Playfair", serif;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+	  font-variation-settings: "wdth" 100;
+	}
+.radio-canada-font {
+	  font-family: "Radio Canada", sans-serif;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+	  font-variation-settings: "wdth" 100;
+	}
+.merriweather-font {
+	  font-family: "Merriweather", serif;
+	  font-optical-sizing: auto;
+	  font-weight: <weight>;
+	  font-style: normal;
+	  font-variation-settings: "wdth" 100;
+	}
+</style>
+<style data-purpose="custom-config">
+@import "tailwindcss";
+
+@theme {
+  --mr_lg_bear: calc(-10vmin + 4vmax);
+  --mr_xl_bear: calc(-1vmin + 3vmax);
+  --mr_2xl_bear: calc(2vmin + 12vmax);
+} 
+</style>
+<style data-purpose="neobrutalism-styles">
+	.neo-border {
+	  border: 3px solid #000000;
+	  box-shadow: 6px 6px 0px 0px #000000;
+	  transition: all 0.2s ease;
+	}
+	.neo-border:hover {
+	  transform: translate(-2px, -2px);
+	  box-shadow: 8px 8px 0px 0px #000000;
+	}
+	.neo-border:active {
+	  transform: translate(2px, 2px);
+	  box-shadow: 2px 2px 0px 0px #000000;
+	}
+	.neo-card {
+	  border: 2px solid #000000;
+	  box-shadow: 4px 4px 0px 0px #000000;
+	}
+	body {
+	  font-family: 'Geist', sans-serif;
+	  background: linear-gradient(180deg,rgba(166, 212, 237, 1) 1%, rgba(134, 194, 227, 1) 53%, rgba(131, 189, 230, 1) 100%);
+	  background-image: radial-gradient(#E5DACE 0.1px, transparent 0.1px), linear-gradient(180deg,rgba(166, 212, 237, 1) 1%, rgba(134, 194, 227, 1) 53%, rgba(131, 189, 230, 1) 100%);
+	  background-size: 30px 30px, 100% 100%;
+	  min-height: 100vh;
+	}
+	.tab-label {
+	  position: absolute;
+	  top: -18px;
+	  left: 20px;
+	  background: white;
+	  border: 2px solid #000;
+	  padding: 2px 12px;
+	  font-weight: 800;
+	  border-radius: 8px;
+	  font-size: 14px;
+	}
+	.modal-close-x {
+		  position: absolute;
+		  top: -12px;
+		  right: -12px;
+		  background: white;
+		  border: 2px solid #000;
+		  padding: 2px 12px;
+		  font-weight: 800;
+		  border-radius: 16px;
+		  font-size: 24px;
+		}
+	.modal-warning-triangle {
+		  position: absolute;
+		  top: -24px;
+		  left: -12px;
+		  
+		  border: 2px solid #000;
+		  padding: 2px 12px;
+		  font-weight: 800;
+		  border-radius: 16px;
+		  font-size: 24px;
+		}
+	
+	.nav-tab {
+	  margin-top: -0.75rem;
+	  border-top: 0;
+	  border-left: 2px solid #000;
+	  border-right: 2px solid #000;
+	  border-bottom: 2px solid #000;
+	  z-index: 60;
+	  height: calc(100% + 1rem);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+	.curved-underline {
+	  position: relative;
+	  display: inline-block;
+	}
+	.curved-underline::after {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: -6px;
+	  width: 100%;
+	  height: 8px;
+	  background: url("data:image/svg+xml,%3Csvg width='100' height='10' viewBox='0 0 100 10' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 Q 25 10 50 5 T 100 5' stroke='%23FB855A' stroke-width='4' fill='transparent'/%3E%3C/svg%3E");
+	  background-size: 100% 100%;
+	}
+
+
+.bg-red-pink-gradient {
+	background-image: linear-gradient(66.77deg,#d83333,#f041ff);
+}
+.bg-clip-text {
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+  </style>
+  
+  <style>
+		.bear-sideshow-wrapper {
+			  position: fixed;
+			  z-index: 1000;
+			  inset: 0;
+			  pointer-events: none;
+			}
+			
+			/* =============================================
+			   bear from left wrapper
+			============================================= */
+			.m1huat16 {
+			  position: fixed;
+			  z-index: 1000;
+			  left: 65px;
+			  bottom: 150px;
+			  -webkit-transform: translateX(-100%) rotate(0deg);
+			  -moz-transform: translateX(-100%) rotate(0deg);
+			  -ms-transform: translateX(-100%) rotate(0deg);
+			  transform: translateX(-100%) rotate(0deg);
+			  -webkit-backface-visibility: hidden;
+			  backface-visibility: hidden;
+			}
+			.m1huat16[data-status='open'],
+			.m1huat16[data-status='submitting'],
+			.m1huat16[data-status='submitted'] {
+			  -webkit-animation: toss-m1huat16 2000ms;
+			  animation: toss-m1huat16 2000ms;
+			  -webkit-animation-fill-mode: both;
+			  animation-fill-mode: both;
+			}
+			@-webkit-keyframes toss-m1huat16 {
+			  0% { transform: translateX(-50%) rotate(0deg); }
+			  14% { transform: translateX(-80%) rotate(25deg); }
+			  17% { transform: translateX(-80%) rotate(25deg); }
+			  30% { transform: translateX(-40%) rotate(50deg); }
+			  48% { transform: translateX(-45%) rotate(0deg); }
+			  70% { transform: translateX(-45%) rotate(0deg); animation-timing-function: ease-in; }
+			  100% { transform: translateX(-110%) rotate(0deg); }
+			}
+			@keyframes toss-m1huat16 {
+			  0% { transform: translateX(-50%) rotate(0deg); }
+			  14% { transform: translateX(-80%) rotate(25deg); }
+			  17% { transform: translateX(-80%) rotate(25deg); }
+			  30% { transform: translateX(-40%) rotate(50deg); }
+			  48% { transform: translateX(-45%) rotate(0deg); }
+			  70% { transform: translateX(-45%) rotate(0deg); animation-timing-function: ease-in; }
+			  100% { transform: translateX(-110%) rotate(0deg); }
+			}
+			.m1huat16[data-status='peeking'] {
+			  -webkit-animation: peek-m1huat16 1200ms;
+			  animation: peek-m1huat16 1200ms;
+			  -webkit-animation-fill-mode: both;
+			  animation-fill-mode: both;
+			}
+			@-webkit-keyframes peek-m1huat16 {
+			  0% { transform: translateX(-150%) rotate(0deg); }
+			  100% { transform: translateX(-50%) rotate(0deg); }
+			}
+			@keyframes peek-m1huat16 {
+			  0% { transform: translateX(-150%) rotate(0deg); }
+			  100% { transform: translateX(-50%) rotate(0deg); }
+			}
+			.m1huat16[data-status='denied'] {
+			  -webkit-animation: slinkAway-m1huat16 750ms;
+			  animation: slinkAway-m1huat16 750ms;
+			  -webkit-animation-fill-mode: both;
+			  animation-fill-mode: both;
+			}
+			@-webkit-keyframes slinkAway-m1huat16 {
+			  0% { transform: translateX(-50%) rotate(0deg); }
+			  100% { transform: translateX(-150%) rotate(0deg); }
+			}
+			@keyframes slinkAway-m1huat16 {
+			  0% { transform: translateX(-50%) rotate(0deg); }
+			  100% { transform: translateX(-150%) rotate(0deg); }
+			}
+			.s1dltx2z { position: fixed; z-index: 1001; left: 120px; bottom: 90px; }
+			@media print { .s1dltx2z { display: none; } }
+			
+			/* =============================================
+			   bear from left
+			============================================= */
+			.wvm4gg4 { position: relative; }
+			@media print { .wvm4gg4 { display: none; } }
+			.d1qadnsl { position: relative; }
+			.l1enswin {
+			  position: absolute;
+			  inset: 0;
+			  width: 100%;
+			  height: 100%;
+			  opacity: var(--opacity);
+			  -webkit-transition: opacity calc(var(--color-swap-duration) + 500ms) var(--color-swap-timing-function);
+			  transition: opacity calc(var(--color-swap-duration) + 500ms) var(--color-swap-timing-function);
+			}
+			html[data-color-mode='light'] .l1enswin[data-use-global-color-mode='true'] { opacity: 1; }
+			html[data-color-mode='dark'] .l1enswin[data-use-global-color-mode='true'] { opacity: 0; }
+			.mr2l5ys {
+			  display: block;
+			  top: 0;
+			  left: 0;
+			  width: 137.5px;
+			  height: 232px;
+			  -webkit-user-select: none;
+			  -moz-user-select: none;
+			  -ms-user-select: none;
+			  user-select: none;
+			  pointer-events: none;
+			}
+			.hjm134z {
+			  position: absolute;
+			  display: block;
+			  top: 0;
+			  left: 0;
+			  right: 0;
+			  width: 100%;
+			  -webkit-user-select: none;
+			  -moz-user-select: none;
+			  -ms-user-select: none;
+			  user-select: none;
+			  pointer-events: none;
+			}
+			
+			@media (prefers-reduced-motion: no-preference) {
+			  .wv8ehy8 {
+				-webkit-animation-name: fadeIn;
+				animation-name: fadeIn;
+				-webkit-animation-fill-mode: backwards;
+				animation-fill-mode: backwards;
+			  }
+			}
+			
+			/* =============================================
+			   speech bubble
+			============================================= */
+			.w1pd6ffd {
+			  position: relative;
+			  transform-origin: center left;
+			  will-change: transform;
+			}
+			.f1mhl5zj {
+			  position: relative;
+			  border-radius: 24px !important;
+			  padding: 24px 32px;
+			  z-index: 2;
+			  color: hsl(222deg 22% 5%);
+			  -webkit-filter: drop-shadow(0px 1px 4px hsl(0deg 0% 0% / 0.12)) drop-shadow(0px 2px 8px hsl(0deg 0% 0% / 0.06)) drop-shadow(0px 8px 32px hsl(0deg 0% 0% / 0.12));
+			  filter: drop-shadow(0px 1px 4px hsl(0deg 0% 0% / 0.12)) drop-shadow(0px 2px 8px hsl(0deg 0% 0% / 0.06)) drop-shadow(0px 8px 32px hsl(0deg 0% 0% / 0.12));
+			}
+			.t1c3tid0 {
+			  position: absolute;
+			  transform: scale(0.4) !important;
+			  left: -45px;
+			  -webkit-transform: translateX(-100%);
+			  -moz-transform: translateX(-100%);
+			  -ms-transform: translateX(-100%);
+			  transform: translateX(-100%);
+			  pointer-events: none;
+			}
+			#bear-sideshow {opacity:0;}
+			#bear-sideshow.is-visible {
+				opacity:1;
+			}
+			.c138z5kb[data-is-visible='false'] { opacity: 0; }
+			
+			.c138z5kb[data-is-visible='true'] {
+			  -webkit-animation: fadeIn 1200ms cubic-bezier(0.17, 0.67, 0.49, 1) both;
+			  animation: fadeIn 1200ms cubic-bezier(0.17, 0.67, 0.49, 1) both;
+			  -webkit-animation-delay: var(--delay);
+			  animation-delay: var(--delay);
+			}
+			
+			/* =============================================
+			   paragraph and prompt of speech bubble
+			============================================= */
+			.prg881n { font-size: var(--paragraph-font-size-override, 1.125rem); margin-bottom: 1.25em; }
+			.b1btlj5u .prg881n { font-size: 1rem; }
+			.b1btlj5u .prg881n:last-child { margin-bottom: 0; }
+			@media (min-width: 48.015625rem) { .w12kxl7t .prg881n { text-wrap: balance; text-align: center; } }
+			.w9k8ad0 .prg881n { font-size: 1rem; }
+			
+			.b19w5h5e {
+			  display: -webkit-box;
+			  display: -webkit-flex;
+			  display: -ms-flexbox;
+			  display: flex;
+			  margin-left: -1px;
+			  margin-bottom: -8px;
+			}
+			.buqgy6u {
+			  padding: 12px 16px;
+			  background: transparent;
+			  border-radius: 16px;
+			  font-weight: var(--font-weight-medium);
+			  color: var(--color-gray-800);
+			}
+			.buqgy6u:not(:last-of-type) { margin-right: 8px; }
+			.buqgy6u:hover { background: hsl(225deg 25% 92%); }
+			html[data-color-mode='dark'] .buqgy6u:hover { background: hsl(225deg 16% 86%); }
+			
+			/* =============================================
+			   color of speech bubble
+			============================================= */
+			.l17lpp8k {
+			  --color-text: hsl(222deg 22% 5%);
+			  --color-background: hsl(0deg 0% 100%);
+			  --color-adaptive-white: hsl(0deg 0% 100%);
+			  --color-gray-800: hsl(225deg 20% 30%);
+			  color: var(--color-text);
+			  background: var(--color-background);
+			  border-radius: 4px;
+			}
+			html[data-color-mode='dark'] .l17lpp8k[data-use-adaptive-colors='true'] {
+			  --color-adaptive-white: inherit !important;
+			  --color-background: var(--color-adaptive-white);
+			}
+			
+			.s1dltx2z, .s1dltx2z button, .s1dltx2z .buqgy6u {
+			  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+			}
+			.s1dltx2z button {
+			  display: block;
+			  margin: 0;
+			  padding: 12px;
+			  border: none;
+			  background: transparent;
+			  cursor: pointer;
+			  text-align: left;
+			  font: inherit;
+			  color: inherit;
+			  outline-color: var(--color-primary);
+			  font-size: 1.2em;
+			}
+			.s1dltx2z .buqgy6u:first-child {
+			  background: rgb(252,179,131);
+			}
+			.s1dltx2z .buqgy6u {
+			  background: rgb(251,168,195);
+			}
+			
+		</style>
+		<style>
+			  .split-flag {
+				  width: 20px;
+				  height: 14px;
+				  /* Load the SVG instead of the gradient */
+				  background-image: url('./images/language-auswahl.svg');
+				  background-size: 100% 100%; /* Ensures the SVG stretches/fits exactly to the 20x14 box */
+				  background-position: center;
+				  background-repeat: no-repeat;
+				  
+				  /* Kept all your original positioning and borders */
+				  position: relative;
+				  border-radius: 2px;
+				  display: inline-block;
+				  vertical-align: middle;
+				  margin-right: 8px;
+				  border: 1px solid rgba(0,0,0,0.1);
+			  }
+				  /* Hide scrollbar for cleaner look */
+				  ::-webkit-scrollbar { width: 8px; }
+				  ::-webkit-scrollbar-track { background: #f1f1f1; }
+				  ::-webkit-scrollbar-thumb { background: #2e2195; border-radius: 10px; }
+				  ::-webkit-scrollbar-thumb:hover { background: #1a135a; }
+			  </style>
+</head>
+<body class="text-slate-900 overflow-x-hidden overflow-y-scroll">
+
+	
+<!-- Decorative Right Blob 1 -->
+<div class="absolute w-[100%] h-auto pointer-events-none -z-10 overflow-hidden opacity-[0.2] top-[1680px] xl:top-[1380px]">
+<svg class="drop-shadow-2xl relative -right-[43%]" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M55.5,-11.4C64,8.2,57.5,39.2,43.1,46.7C28.7,54.3,6.2,38.3,-12.8,23.1C-31.8,8,-47.4,-6.2,-44.7,-17.8C-42,-29.4,-21,-38.3,1.2,-38.7C23.5,-39.1,47,-31,55.5,-11.4Z" fill="url(#rightBlobGradient)" transform="translate(100 100)"></path>
+<defs>
+<linearGradient gradientTransform="rotate(133)" id="rightBlobGradient">
+<stop offset="1%" stop-color="rgba(242, 225, 155, 0.47)"></stop>
+<stop offset="52%" stop-color="rgba(245, 232, 159, 0.23)"></stop>
+<stop offset="100%" stop-color="rgba(250, 240, 165, 0.03)"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<!-- Decorative Right Blob 2 -->
+<div class="absolute w-[100%] h-auto -left-[65%] pointer-events-none -z-10 overflow-hidden" style="top: 900px;">
+	<svg class="drop-shadow-2xl" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+	<path d="M62.6,-32.1C73.8,-16.8,70.3,10.9,57.5,34C44.6,57.1,22.3,75.6,3.1,73.8C-16.1,72,-32.2,50,-41.1,29.2C-49.9,8.4,-51.4,-11.1,-43.4,-24.6C-35.3,-38,-17.7,-45.5,4,-47.8C25.7,-50.1,51.5,-47.4,62.6,-32.1Z" fill="url(#blobGradient)" transform="translate(100 100)"></path>
+	<defs>
+	<linearGradient gradientTransform="rotate(133)" id="blobGradient">
+	<stop offset="1%" stop-color="rgba(207, 237, 166, 0.37)"></stop>
+	<stop offset="52%" stop-color="rgba(184, 227, 134, 0.17)"></stop>
+	<stop offset="100%" stop-color="rgba(192, 230, 131, 0.02)"></stop>
+	</linearGradient>
+	</defs>
+	</svg>
+	</div>
+<!-- Decorative Right Blob 3 -->
+<div class="absolute w-[100%] h-auto right-0 pointer-events-none -z-10 overflow-hidden opacity-[0.2]" style="top: 222px;">
+	<svg class="drop-shadow-2xl" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+	<path d="M61.7,-8C61.7,13.6,30.9,27.2,8,27.2C-14.9,27.2,-29.7,13.6,-29.7,-8C-29.7,-29.5,-14.9,-59,8,-59C30.9,-59,61.7,-29.5,61.7,-8Z" fill="url(#newRightBlobGradient)" transform="translate(100 100)"></path>
+	<defs>
+	<linearGradient gradientTransform="rotate(133)" id="newRightBlobGradient">
+	<stop offset="1%" stop-color="rgba(212, 155, 242, 0.39)"></stop>
+	<stop offset="52%" stop-color="rgba(216, 159, 245, 0.24)"></stop>
+	<stop offset="100%" stop-color="rgba(216, 165, 250, 0.04)"></stop>
+	</linearGradient>
+	</defs>
+	</svg>
+	</div>
+
+
+
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b-2 border-black px-4 md:px-8 py-3">
+	<div class="max-w-7xl mx-auto flex flex-wrap justify-between gap-1 sm:gap-4 md:items-stretch">
+<!-- Logo Container -->
+<div class="relative w-32 md:w-44 top-[0.5rem] md:top-0" data-purpose="logo">
+	<a href="./index.html" title="Cybear Home" class="">
+<svg viewBox="0 0 848.9 218.7" xmlns="http://www.w3.org/2000/svg">
+<style>.st0{fill:#FB855A}.st1{fill:#A396B5}</style>
+<g><path class="st0" d="M421.2 124.2c0 43.6-23.6 41.9-60.4 41.9-14.3 0-28.7-1.5-43-2.2-6.8-.5-9.5-2.6-10.1-9.5-2-21.4-2.6-43.4-2.6-64.8 0-15.7-.7-31.5.5-46.7.5-6.6 2.9-9.7 9.3-10.6 10.1-1.3 20.7-2 31.1-2 13.9 0 27.6.9 41.4 2 20.9 1.8 28.7 15.6 28.7 35.5 0 14.8-2.7 16.5-8.8 28.6 6 11.2 8.8 21.8 8.8 33.6zm-70.3 4.4c5.1-.4 25.4.2 25.4-6.8 0-8.8-8.4-9-15.2-9-3.5 0-6.8.2-10.3.5v15.3zm.4-60.4c.2 5.5.4 11.2.7 16.8 2.2.4 3.8.4 5.9.4 4.9 0 16.5-.7 16.5-7.3 0-9.3-9.2-10.1-16.3-10.1l-6.8.2z"></path><path class="st0" d="M484.5 70.9l.2 12.1c9.2 0 18.3-.5 27.8-.5 9.7 0 7.5 18.7 7.5 26 0 9.2-28 5.9-35.1 6.8v11h8.6c10.4 0 21.2-1.5 32-1.5 8.6 0 8.8 18.3 8.8 24.7 0 3.1-.2 5.9-.5 9-.9 5.5-4 7.5-9.3 7.7-17.9.5-35.9 1.1-53.8 1.1-25.8 0-32.8-.2-32.8-27.3 0-30.4 0-71.6 1.6-102.1.2-4 1.8-6.4 5.9-7.3 8.6-2.2 20.5-2 29.5-2 16.1 0 35.3-.7 50.9.4 5.3.4 8.1 1.3 8.6 6.8 1.1 8.4-1.1 18.7-1.1 26.9 0 12.4-21.8 8.4-30.6 8.4h-11z"></path><path class="st0" d="M600.7 140.3c-5.5 19.8-3.5 25.6-27.5 25.6-6.6 0-25.1.5-25.1-8.8 0-20.9 20.1-87.1 28.2-109.4 7.7-20.7 32.3-18.7 50.8-18.7 4.2 0 8.8.7 13 1.6 11.7 1.8 18.5 11 22.7 21.6 3.7 9.2 20.3 93.3 20.3 101.9 0 9.9-22.7 12.6-30.4 12.6-21.2 0-18.9-9-22-25.6-10.1.3-20.2.1-30.1 0zm26.9-37.2c-1.3-9-2.6-18.1-4.9-26.9-.4-2.2-1.8-3.3-4.8-3.3-2.6 0-3.3 1.1-3.7 2.9-2.6 9-4.8 18.3-6.4 27.3h19.8z"></path><path class="st0" d="M812.5 152.3c0 8.1-20.7 15.4-27.3 15.4-12.8 0-32.8-37.7-40.8-37.7-4.2 0-2.9 7.5-2.9 10.4 0 22.9.7 25.6-23.1 25.6-8.2 0-21.2.7-21.2-10.2 0-22.9 1.3-46.1 1.3-68.8 0-13-1.3-26-1.3-39 0-12.6 5.9-19.4 15.6-19.4 24.2 0 44.1-.2 63.9 1.1 6.6.5 14.6 1.6 20.5 4 13 4.2 15 28.2 15 40.3 0 7.1.2 17-1.3 26.4-1.8 11.3-11.2 20.3-21 19.6 11.3 5.4 29.7 25.9 29.7 32.1zm-43.1-72.3c0-11.9-3.1-16.5-13.2-16.5-4.2 0-10.1-.7-11 4.4-1.3 7-.7 22.3 0 24.7 1.3 2.1 17.7 3.3 17.7-10.8z"></path></g>
+<g><path class="st1" d="M78.2 120.2c.5 4 2.8 16.1 3.8 20.4 2.9 12.5 5.7 15 18.6 12.1 12.1-2.8 24.4-5.6 36-8.3 9.1-2.1 12.7 14.3 14.2 20.8 1.2 5.4 4.2 13.3-.6 17-6.8 5.7-38.6 12.5-47.9 14.6-10.5 2.4-21.1 3.7-31.9 4.9-22.2 2.3-36.4-64.3-40.1-80-1.8-7.8-3-16.2-3.7-24.1 0-11 5.2-18.6 14.8-23.2 20.5-10.4 44.8-16 67.4-21.2 8.4-1.9 11.9 1 13.6 5.9 1.5 4 1.7 9.2 6.4 27.6-29.5 13.8-84.9 14.7-82.5 34.1z"></path><path class="st1" d="M216.7 24.4c2.3-4 5-6.8 8.2-7.7 9.4-2.5 30.1 7.1 32.7 16.6.7 2.7.5 5.9-.5 9.4-4.4 16.7-27.1 48.9-23.5 60.9 1.8 6.1 4.4 15.1 6 21.1 5.8 21.7 10.6 29-14.3 35.7-25.5 6.8-21.1-.4-26.6-20.9-2.5-9.2-5.3-22.6-8.7-31.2-1.7-4.1-36.4-24-49.3-34.9-4.6-3.9-3.6-12.9-1.7-17.6 2.8-6.6 8.9-14.3 13.9-18.3 4.3-3.6 9.1-3.6 14-1.5 10.5 4.6 28.3 24.3 35.8 28.1.7.3 7.2-23.4 12.5-32.6z"></path></g>
+</svg>
+	</a>
+</div>
+<div class="absolute top-[4.5rem] md:top-0 right-4 md:right-8 flex items-start gap-0 z-25">
+	<button class="bg-[#FDA4AF] border-x-2 border-b-2 border-black px-1 mt-[0rem] md:mt-[4.4rem] lg:mt-0 lg:px-4 md:px-5 py-1 lg:pb-6 lg:pt-4 rounded-b-2xl font-[#CD1E2D] text-lg uppercase shadow-[4px_4px_0_0_#000] hover:-translate-y-1 hover:shadow-none transition-all h-[2.2em] lg:h-[6em] font-['Gluten'] font-bold" data-modal-target="large-modal-kinder" data-modal-toggle="large-modal-kinder">Kinder</button>
+	<button class="bg-[#93C5FD] border-x-2 border-b-2 border-black px-1 mt-[0rem] md:mt-[4.4rem] lg:mt-0 lg:px-4 md:px-5 py-1 lg:pb-6 lg:pt-4 rounded-b-2xl font-[#185AA8] text-lg uppercase shadow-[4px_4px_0_0_#000] -ml-[2px] hover:-translate-y-1 hover:shadow-none transition-all h-[2.2em] lg:h-[6em] font-['Gluten'] font-bold" data-modal-target="large-modal-eltern" data-modal-toggle="large-modal-eltern">Eltern</button>
+	</div>
+	
+	 <div class="relative hidden md:flex right-0 md:right-[0rem] lg:right-[13rem]">
+		<div class="flex items-center gap-4 lg:gap-8">
+			<a href="#features" title="Wie CyBear hilft" class="font-semibold text-base hover:text-cyorange transition">Was man lernt</a>
+			<a href="./team_ueber-uns.html" title="Über das CyBear team" class="font-semibold text-base hover:text-cyorange transition">Über uns</a>
+			<a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" title="Guides und Ressourcen für Eltern" class="font-semibold text-base hover:text-cyorange transition">Eltern-Guides</a>
+	
+		   <button class="hidden">
+			 <a href="#waitlist" class="hidden md:block bg-cyyellow text-black px-5 py-2 rounded-full font-bold hover:scale-105 transition active:scale-95 shadow-lg shadow-black/20 text-sm sm:text-base">
+				 In die Warteliste
+			 </a>
+		   </button>
+		</div>
+		<div class="hidden md:flex items-center ml-4 pr-4 mr-2">
+			<a class="flex items-center text-slate-600 hover:text-navy-900 transition-colors duration-200 font-medium text-sm" href="./index_en.html" title="English Language Cybear Website">
+			<span aria-hidden="true" class="split-flag"></span>
+			<span>EN / <b>DE</b></span>
+			</a>
+		</div>
+	 </div>
+	<!-- <div class="relative flex md:hidden"> TEMPORARY -->
+		<div class="relative hidden"> 
+		 <button class="">
+			  <a href="#waitlist" class="block md:hidden bg-cyyellow text-black px-5 py-2 rounded-full font-bold hover:scale-105 transition active:scale-95 shadow-lg shadow-black/20 text-sm sm:text-base">
+				 Auf die Warteliste
+			 </a>
+		 </button>
+	 </div>
+	<!-- MOBILE NAV -->
+	<div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-900 absolute w-full left-0 pl-6 animate-in slide-in-from-top duration-300 z-26">
+		  <div class="flex flex-col p-6 space-y-4">
+			  <div class="w-32 md:w-44" data-purpose="logo">
+					<svg viewBox="0 0 848.9 218.7" xmlns="http://www.w3.org/2000/svg">
+					<style>.st0{fill:#FB855A}.st1{fill:#A396B5}</style>
+					<g><path class="st0" d="M421.2 124.2c0 43.6-23.6 41.9-60.4 41.9-14.3 0-28.7-1.5-43-2.2-6.8-.5-9.5-2.6-10.1-9.5-2-21.4-2.6-43.4-2.6-64.8 0-15.7-.7-31.5.5-46.7.5-6.6 2.9-9.7 9.3-10.6 10.1-1.3 20.7-2 31.1-2 13.9 0 27.6.9 41.4 2 20.9 1.8 28.7 15.6 28.7 35.5 0 14.8-2.7 16.5-8.8 28.6 6 11.2 8.8 21.8 8.8 33.6zm-70.3 4.4c5.1-.4 25.4.2 25.4-6.8 0-8.8-8.4-9-15.2-9-3.5 0-6.8.2-10.3.5v15.3zm.4-60.4c.2 5.5.4 11.2.7 16.8 2.2.4 3.8.4 5.9.4 4.9 0 16.5-.7 16.5-7.3 0-9.3-9.2-10.1-16.3-10.1l-6.8.2z"></path><path class="st0" d="M484.5 70.9l.2 12.1c9.2 0 18.3-.5 27.8-.5 9.7 0 7.5 18.7 7.5 26 0 9.2-28 5.9-35.1 6.8v11h8.6c10.4 0 21.2-1.5 32-1.5 8.6 0 8.8 18.3 8.8 24.7 0 3.1-.2 5.9-.5 9-.9 5.5-4 7.5-9.3 7.7-17.9.5-35.9 1.1-53.8 1.1-25.8 0-32.8-.2-32.8-27.3 0-30.4 0-71.6 1.6-102.1.2-4 1.8-6.4 5.9-7.3 8.6-2.2 20.5-2 29.5-2 16.1 0 35.3-.7 50.9.4 5.3.4 8.1 1.3 8.6 6.8 1.1 8.4-1.1 18.7-1.1 26.9 0 12.4-21.8 8.4-30.6 8.4h-11z"></path><path class="st0" d="M600.7 140.3c-5.5 19.8-3.5 25.6-27.5 25.6-6.6 0-25.1.5-25.1-8.8 0-20.9 20.1-87.1 28.2-109.4 7.7-20.7 32.3-18.7 50.8-18.7 4.2 0 8.8.7 13 1.6 11.7 1.8 18.5 11 22.7 21.6 3.7 9.2 20.3 93.3 20.3 101.9 0 9.9-22.7 12.6-30.4 12.6-21.2 0-18.9-9-22-25.6-10.1.3-20.2.1-30.1 0zm26.9-37.2c-1.3-9-2.6-18.1-4.9-26.9-.4-2.2-1.8-3.3-4.8-3.3-2.6 0-3.3 1.1-3.7 2.9-2.6 9-4.8 18.3-6.4 27.3h19.8z"></path><path class="st0" d="M812.5 152.3c0 8.1-20.7 15.4-27.3 15.4-12.8 0-32.8-37.7-40.8-37.7-4.2 0-2.9 7.5-2.9 10.4 0 22.9.7 25.6-23.1 25.6-8.2 0-21.2.7-21.2-10.2 0-22.9 1.3-46.1 1.3-68.8 0-13-1.3-26-1.3-39 0-12.6 5.9-19.4 15.6-19.4 24.2 0 44.1-.2 63.9 1.1 6.6.5 14.6 1.6 20.5 4 13 4.2 15 28.2 15 40.3 0 7.1.2 17-1.3 26.4-1.8 11.3-11.2 20.3-21 19.6 11.3 5.4 29.7 25.9 29.7 32.1zm-43.1-72.3c0-11.9-3.1-16.5-13.2-16.5-4.2 0-10.1-.7-11 4.4-1.3 7-.7 22.3 0 24.7 1.3 2.1 17.7 3.3 17.7-10.8z"></path></g>
+					<g><path class="st1" d="M78.2 120.2c.5 4 2.8 16.1 3.8 20.4 2.9 12.5 5.7 15 18.6 12.1 12.1-2.8 24.4-5.6 36-8.3 9.1-2.1 12.7 14.3 14.2 20.8 1.2 5.4 4.2 13.3-.6 17-6.8 5.7-38.6 12.5-47.9 14.6-10.5 2.4-21.1 3.7-31.9 4.9-22.2 2.3-36.4-64.3-40.1-80-1.8-7.8-3-16.2-3.7-24.1 0-11 5.2-18.6 14.8-23.2 20.5-10.4 44.8-16 67.4-21.2 8.4-1.9 11.9 1 13.6 5.9 1.5 4 1.7 9.2 6.4 27.6-29.5 13.8-84.9 14.7-82.5 34.1z"></path><path class="st1" d="M216.7 24.4c2.3-4 5-6.8 8.2-7.7 9.4-2.5 30.1 7.1 32.7 16.6.7 2.7.5 5.9-.5 9.4-4.4 16.7-27.1 48.9-23.5 60.9 1.8 6.1 4.4 15.1 6 21.1 5.8 21.7 10.6 29-14.3 35.7-25.5 6.8-21.1-.4-26.6-20.9-2.5-9.2-5.3-22.6-8.7-31.2-1.7-4.1-36.4-24-49.3-34.9-4.6-3.9-3.6-12.9-1.7-17.6 2.8-6.6 8.9-14.3 13.9-18.3 4.3-3.6 9.1-3.6 14-1.5 10.5 4.6 28.3 24.3 35.8 28.1.7.3 7.2-23.4 12.5-32.6z"></path></g>
+					</svg>
+			  </div>
+			  <a href="#features" title="Wie CyBear hilft" class="font-semibold text-lg pb-2 border-b border-slate-50">Was man lernt</a>
+			  <a href="./team_ueber-uns.html" title="Über das CyBear team" class="font-semibold text-lg pb-2 border-b border-slate-50">Über uns</a>
+			  <a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" title="Guides und Ressourcen für Eltern" class="font-semibold text-lg pb-2 border-b border-slate-50">Eltern-Guides</a>
+			  <a class="flex items-center text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white transition-colors duration-200 font-medium text-base" href="./index_en.html" title="English Language Cybear Website"><span aria-hidden="true" class="split-flag"></span>
+			  <span>EN / <b>DE</b></span></a>
+		  </div>
+	</div>
+	
+	<button id="menu-toggle" class="relative md:hidden text-primary focus:outline-none p-2 z-51" aria-label="Mobile-only navigation">
+		<svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+		  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+		</svg>
+	  </button>
+	</div>
+</header>
+	<script>
+		  const btn = document.getElementById('menu-toggle');
+		  const menu = document.getElementById('mobile-menu');
+		  const icon = document.getElementById('menu-icon');
+	  
+		  btn.addEventListener('click', () => {
+			  menu.classList.toggle('hidden');
+			  
+			  // Simple icon swap (Hamburger to X)
+			  if (menu.classList.contains('hidden')) {
+				  icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />';
+			  } else {
+				  icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+			  }
+		  });
+	  
+		  // Close menu when clicking a link
+		  document.querySelectorAll('#mobile-menu a').forEach(link => {
+			  link.addEventListener('click', () => {
+				  menu.classList.add('hidden');
+			  });
+		  });
+	  </script>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<main class="sm:max-w-[90vw] md:max-w-[80vw] mx-auto px-4 md:px-8 py-16 pt-20 md:py-20 relative">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- Text & Mascot Content -->
+<div class="space-y-8">
+<div data-purpose="hero-text">
+	
+	
+<!-- <p class="text-[#fb6746] font-bold mb-4 bg-clip-text bg-red-pink-gradient">Kids für die Online KI-Welt vorbereiten</p> -->
+<p class="text-transparent font-bold mb-4 bg-clip-text bg-red-pink-gradient">Kids für die Online KI-Welt vorbereiten</p>
+<h1 class="text-3xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-[800] leading-tight text-slate-800 font-sans leading-[1.2] xl:max-w-[11em]" style="line-height: 1.24;">
+			Kinder im sicheren Umgang mit Apps, <span class="text-[#fb6746]"><span class="curved-underline">Social Media</span></span>, KI
+&amp; Online-Risiken fit machen.
+</h1>
+<!-- <p class="mt-8 text-slate-800 max-w-lg leading-relaxed text-xl lg:text-xl pr-0 lg:pr-12 xl:pr-3 font-['Merriweather'] font-[#64748b]" style="line-height: 1.5;"> -->
+<p class="mt-8 max-w-lg leading-relaxed text-xl lg:text-xl pr-0 lg:pr-12 xl:pr-3 font-['Geist'] text-[#44546b]" style="line-height: 1.5;">
+			Cybear macht euch bereit. <strong>Kinder</strong> lernen spielerisch die Online-Welt und ihre Risiken kennen. Dabei werden Kompetenzen und Verhaltensweisen trainiert. 
+			<strong>Eltern</strong> lernen mehr über Gefahren und App-spezifisches Knowhow, um proaktiv handeln zu können - inklusive Tipps wie sich Probleme zusammen lösen lassen.
+			*<i class="text-base font-bold">Unsere App ist noch in Entwicklung. Schaut auf unser <a href="https://instagram.com/cybearapp" target="_blank" title="Cybear auf Instagram" class="underline text-blue-800">Instagram-Profil</a> für Tipps und Hilfestellungen.</i> 
+			
+		  </p>
+</div>
+<!-- Call to Action Buttons & Mascot -->
+<div class="relative pt-12 flex items-start gap-8">
+<div class="flex flex-col gap-4 w-48 lg:w-40 z-20 ml-[0.2em] lg:ml-[0.5em] xl:ml-[0em]" style="">
+<button class="bg-spot-orange neo-border py-2 px-2 lg:py-4 lg:px-6 font-bold text-2xl lg:text-3xl rounded-2xl w-40 lg:w-48 xl:w-60 hover:bg-gray-950/1 hover:font-white" data-modal-target="large-modal-1" data-modal-toggle="large-modal-1" style="background-color: #FFD8A8;">Spot</button>
+<button class="bg-protect-rose neo-border py-2 px-2 lg:py-4 lg:px-6 font-bold text-2xl lg:text-3xl rounded-2xl w-40 lg:w-48 xl:w-60 hover:bg-gray-950/1 hover:font-white" data-modal-target="large-modal-2" data-modal-toggle="large-modal-2" style="background-color: #FFD1DC;">Protect</button>
+<button class="bg-spot-orange neo-border py-2 px-2 lg:py-4 lg:px-6 font-bold text-2xl lg:text-3xl rounded-2xl w-40 lg:w-48 xl:w-60 hover:bg-gray-950/1 hover:font-white" data-modal-target="large-modal-3" data-modal-toggle="large-modal-3" style="background-color: #D9F99D;">Stay Safe</button>
+
+<div class="absolute left-[144px] lg:left-[212px] top-[188px] transform rotate-12 z-30">
+<img alt="hcur" class="w-1/2 h-auto" src="./images/cybear_button_hand_cursor.svg">
+</div>
+</div>
+<!-- Tap Hand Cursor Icon -->
+<div class="absolute left-32 top-32 pointer-events-none z-30"></div>
+<!-- Lab Bear Mascot - Shrunk to 50% scale relative to container -->
+<div class="relative w-32 md:w-40 lg:w-36 xl:w-32 2xl:w-40 ml-auto mr-1 md:mr-20 lg:mr-[--mr_lg_bear] xl:mr-[--mr_xl_bear] 2xl:mr-[--mr_2xl_bear] mt-[0px] lg:mt-[36px] xl:mt-[20px] scale-[1.625]">
+<img alt="Lab Bear Mascot" class="w-full h-auto" src="./images/cybear_lab-bear.gif"/>
+</div>
+</div>
+<div class="mt-12 text-center w-full transform rotate-[5deg]">
+<p class="relative top-[2rem] lg:left-[202px] lg:top-[18px] xl:top-[36px] mb-[3em] lg:mb-0 font-['Gluten'] text-3xl font-normal text-slate-800">
+	 klüger handeln und <br>umsichtiger agieren
+  </p>
+</div>
+</div>
+<!-- App Visuals -->
+<div class="relative lg:-translate-x-0 xl:-translate-x-8" data-purpose="app-visual-showcase">
+<!-- Main Game Map Image -->
+<div id="main-map-container" class="relative group sm:scale-[1.2] md:scale-[1.0] w-full md:w-full lg:w-full neo-border rounded-3xl overflow-hidden bg-white lg:rotate-1 shadow-2xl transition-transform duration-300 cursor-pointer">
+<img alt="CyBear Learning Map" class="w-full block" src="./images/cybear_game_screen.jpg"/>
+
+<!-- Hover Overlay with video button -->
+<div id="main-map-overlay" class="absolute inset-0 bg-nav-orange p-6 lg:p-8 xl:p-16 overflow-hidden opacity-0 flex flex-col justify-center transition-opacity duration-300 pointer-events-none rounded-3xl">
+	<div class="w-full pointer-events-auto pl-0 md:pl-2">
+		<span class="inline-block bg-white text-nav-orange font-bold px-4 py-1 rounded-full text-base md:text-base xl:text-lg uppercase mb-3 shadow-sm">App Sneak Peek</span>
+		<h3 class="text-2xl md:text-3xl lg:text-3xl xl:text-5xl font-black text-black mb-2 font-['Geist'] leading-tight">Wie Kinder spielerisch lernen, sicher im Netz unterwegs zu sein</h3>
+		<p class="text-black text-lg md:text-lg lg:text-lg xl:text-xl font-medium w-full md:w-3/3 xl:w-2/3 mb-6 font-['Geist']">Wirf einen Blick in die App (in Entwicklung) und entdecke, wie Kinder spielerisch die digitale Welt meistern.</p>
+		
+		<button data-modal-target="video-modal" data-modal-toggle="video-modal" class="inline-flex items-center bg-protect-rose rounded-full p-1.5 pr-6 hover:scale-105 transition-transform shadow-lg group/btn border-2 border-[#000000]">
+			<div class="bg-white text-red-500 rounded-full w-12 h-12 flex items-center justify-center mr-3 group-hover/btn:text-pink-500 transition-colors">
+				<svg class="w-12 h-12 ml-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+			</div>
+			<span class="text-black font-bold text-base sm:text-base md:text-lg lg:text-xl tracking-wide">Play video</span>
+		</button>
+	</div>
+</div>
+</div>
+<!-- Overlapping Puzzle/Challenge Image -->
+<div class="absolute -bottom-12 right-[3rem] md:-right-8 w-3/4 md:w-2/3 border-4 border-[#FFCC80] rounded-2xl overflow-hidden bg-white lg:-rotate-1 z-10 shadow-2xl translate-y-28 hover:scale-[1.5] transition duration-700 ease-in-out">
+<img alt="CyBear Quiz Interface" class="w-full" src="./images/cybear_game_screen2_small.jpg"/>
+</div>
+</div>
+</div>
+</main>
+<!-- END: HeroSection -->
+
+
+
+
+<!-- BEGIN: EducationalCards -->
+<section id="features" class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+<!-- Card for Parents -->
+<div class="relative bg-parent-bg neo-border rounded-[40px] p-8 md:p-12 min-h-[400px]" data-purpose="parents-learning-card" style="background-color: #FFF0F3;">
+<span class="tab-label text-cypink text-base sm:text-lg md:text-lg xl:text-xl">Was Eltern lernen</span>
+<h3 class="text-3xl lg:text-4xl font-black mb-6" style="line-height: 1.24;">Mehr Insider-Wissen, bessere Maßnahmen und ein ruhiges Gewissen</h3>
+<div class="">
+<p class="text-xl font-medium mb-4 text-2xl">Praktische Hilfen, die Unsicherheit in Sicherheit verwandeln. </p>
+<ul class="leading-tight text-base lg:text-lg space-y-2 text-[#44546b] line-h list-disc list-outside pl-3 lg:pl-6 pr-1 lg:pr-3 xl:pr-6" style="line-height:1.2em;">
+<li class="pl-3 lg:pl-0">Risiken und Warnzeichen besser verstehen</li>
+<li class="pl-3 lg:pl-0">Typische Probleme und Stolperfallen in Apps</li>
+<li class="pl-3 lg:pl-0">Kinder bei gesünderen Gewohnheiten unterstützen</li>
+<li class="pl-3 lg:pl-0">Bildschirmzeit besprechen, ohne Wutausbrüche</li>
+<li class="pl-3 lg:pl-0">Verfolgen, was das eigene Kind bereits gelernt hat</li>
+</ul>
+<div class="bg-white/80 border-2 border-black/0 rounded-[10px] p-2 mt-6 font-['Geist'] font-[#64748b]">
+<strong class="text-lg">➜ Besser App-Benutzung, Sicherheit und Bildschirmzeit von Kindern im Griff haben, ohne dass jedes Gespräch zur Verhandlung wird.</strong>
+</div>
+</div>
+</div>
+<!-- Card for Kids -->
+<div class="relative bg-kid-bg neo-border rounded-[40px] p-8 md:p-12 min-h-[400px]" data-purpose="kids-learning-card" style="background-color: #E0F2FE;">
+<span class="tab-label text-cyteal text-base sm:text-lg md:text-lg xl:text-xl">Was Kinder lernen</span>
+<h3 class="text-3xl lg:text-4xl font-black mb-6" style="line-height: 1.24;">Sicheres Verhalten, stärkere Impulskontrolle und klügeres Online-sein</h3>
+<div class="">
+<p class="text-xl font-medium mb-4 text-2xl">Spielerische Inhalte und kleine Herausforderungen, die digitale Resilienz fördern.</p>
+<ul class="leading-tight text-base lg:text-lg space-y-2 text-[#44546b] list-disc list-outside pl-3 lg:pl-6 pr-1 lg:pr-6 xl:pr-12" style="line-height:1.2em;">
+<li class="pl-3 lg:pl-0">Apps: Sicheres & umsichtiges Verhalten lernen</li>
+<li class="pl-3 lg:pl-0">Schwierige Situationen üben, bevor sie passieren</li>
+<li class="pl-3 lg:pl-0">Fakes, Betrugsmaschen, Desinformation erkennen</li>
+<li class="pl-3 lg:pl-0">Gefühl für Bildschirmzeit + Selbstkontrolle entwickeln</li>
+<li class="pl-3 lg:pl-0">Urteilsvermögen und kritisches Denken stärken</li>
+</ul>
+<div class="bg-white/80 border-2 border-black/0 rounded-[10px] p-2 mt-6 font-['Geist'] font-[#64748b]">
+<strong class="text-lg">➜ Denn digitale Resilienz- und Kommunikationsfähigkeiten sind heute Lebenskompetenzen.</strong>
+</div>
+</div>
+</div>
+</section>
+<!-- END: EducationalCards -->
+<!-- BEGIN: SkillsSection -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<!-- Placeholder for Spider Graphic -->
+<div class="w-full md:w-1/2 flex justify-center">
+<img alt="Cybear Spider Graphic" class="max-w-full h-auto" src="./images/cybear_spider.gif"/>
+</div>
+<!-- Skills Text -->
+<div class="w-4/5 md:w-1/2">
+<h2 class="text-3xl md:text-3xl font-normal text-slate/900 leading-tight italic" style="line-height: 1.44;">
+	Kontroll-Apps sind toll, verhindern aber nicht, dass Kinder online Mist bauen. <strong class="font-black">Eigenständigkeit lernen ist <br class="hidden xl:inline">das A und O.</strong>
+</h2>
+</div>
+</div>
+</section>
+<!-- END: SkillsSection -->
+
+<section class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
+<div class="relative bg-cygreen neo-border rounded-[40px] p-10 md:p-16" data-purpose="waitlist-card">
+<span class="tab-label bg-white text-base sm:text-lg md:text-lg xl:text-xl">Was wirklich wichtig ist</span>
+	<h2 class="text-3xl md:text-4xl font-black mb-12" style="line-height: 1.24;">Viele achten darauf, wie lange Kinder online sind... Bildschirmzeit ist nur die halbe Geschichte..</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-full">
+	<div class="flex justify-center flex-wrap">
+		<img alt="Cybear Krokodil wartet auf Hamster" class="max-w-[100%] h-fit aspect-auto" src="./images/cybear_crocodile_phone.png"/>
+	</div>
+	<div class="">
+	
+	<p class="text-xl font-normal mb-8 leading-tight px-1 lg:px-[2em] text-[#44546b]" style="line-height: 1.5;">Mindestens genauso wichtig ist aber, wie sie Apps und Plattformen nutzen.<br><br>
+		
+		Kontroll- oder Monitoring-Apps lösen nur einen Teil des Problems. <u class="text-cyblue">Kinder brauchen auch digitale Kompetenzen</u>: Manipulation erkennen, Gruppendruck verstehen, Informationen hinterfragen und eigenständig gute Entscheidungen treffen.<br><br>
+		
+		<strong class="font-['Merriweather']">Denn irgendwann sitzt kein Elternteil mehr daneben.</strong></p>
+
+
+	</div>	
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Begin Brevo Form -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
+	<div class="relative bg-cylightbeige neo-border rounded-[40px] p-10 md:p-16" data-purpose="waitlist-card">
+
+<!-- START - We recommend to place the below code in head tag of your website html  -->
+
+<style>
+  @font-face {
+	font-display: block;
+	font-family: Geist;
+  }
+
+  @font-face {
+	font-display: fallback;
+	font-family: Geist;
+	font-weight: 600;
+  }
+
+  @font-face {
+	font-display: fallback;
+	font-family: Geist;
+	font-weight: 700;
+  }
+
+  :where(.sib-form-message-panel) {
+	display: none;
+  }
+
+  :where(.sib-form-message-panel .sib-notification__icon) {
+	width: 20px;
+	height: 20px;
+  }
+
+
+  #sib-container input:-ms-input-placeholder {
+	font-family: Helvetica, sans-serif;
+	text-align: left;
+	color: #c0ccda;
+  }
+
+  #sib-container input::placeholder {
+	font-family: Helvetica, sans-serif;
+	text-align: left;
+	color: #c0ccda;
+  }
+
+  #sib-container textarea::placeholder {
+	font-family: Helvetica, sans-serif;
+	text-align: left;
+	color: #c0ccda;
+  }
+
+
+  #sib-container a {
+	text-decoration: underline;
+	color: #2BB2FC;
+  }
+</style>
+<!-- <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"> -->
+
+
+<!--  END - We recommend to place the above code in head tag of your website html -->
+
+<!-- START - We recommend to place the below code where you want the form in your website html  -->
+<div class="sib-form w-full flex justify-center bg-transparent antialiased">
+	  <div id="sib-form-container" class="sib-form-container w-full max-w-5xl px-4 sm:px-0">
+		
+		<div id="error-message" class="sib-form-message-panel hidden my-3 p-4 rounded-lg bg-red-50 border border-red-400 text-red-900 text-sm font-medium">
+		  <div class="sib-form-message-panel__text sib-form-message-panel__text--center flex items-start gap-3">
+			<svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon w-5 h-5 fill-current shrink-0 mt-0.5">
+			  <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+			</svg>
+			<span class="sib-form-message-panel__inner-text text-left">
+			  Ihre Anmeldung konnte nicht fertiggestellt werden. Versuchen Sie es bitte nochmal. 
+			</span>
+		  </div>
+		</div>
+	
+		<div id="success-message" class="sib-form-message-panel hidden my-3 p-4 rounded-lg bg-green-50 border border-green-400 text-green-900 text-sm font-medium">
+		  <div class="sib-form-message-panel__text sib-form-message-panel__text--center flex items-start gap-3">
+			<svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon w-5 h-5 fill-current shrink-0 mt-0.5">
+			  <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+			</svg>
+			<span class="sib-form-message-panel__inner-text text-left">
+			  Ihre Anmeldung für Cybears Launch-Updates war erfolgreich.
+			</span>
+		  </div>
+		</div>
+	
+		<div id="sib-container" class="sib-container--large sib-container--vertical w-full rounded-2xl p-6 sm:p-8 text-left">
+		  
+		  <form id="sib-form" method="POST" action="https://572ad0c8.sibforms.com/serve/MUIFAIZlP5kroZq12ONE4myg6gQxNeqYXSIA49d3wF7FSNPUmGoyuXOREaCJiY1CZBsiO59Hw3me6X7g6RRWPQXxAdQCRdOb6Ad3BUVJTrpLAJ71sM38ClxfB_esc8wOggp6jcoZUIwuFEVLK6nyGFwfPJE-lgN7eyJaf78GpJAM592TKgapYTUM91272oPbuQdgovOhyNhnKQcqWw==" data-type="subscription" class="space-y-5">
+			
+			<div class="space-y-1">
+			  <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-slate-800 dark:text-slate-100 tracking-tight">
+				Nichts verpassen...
+			  </h2>
+			  <p class="text-sm sm:text-base lg:text-xl xl:text-2xl font-semibold text-green-800">
+				... Launch-Updates erhalten <br>+ PDF-Link zum Mediennutzungsvertrag für Familien ins Postfach
+			  </p>
+			</div>
+	
+			<div class="sib-input sib-form-block pr-1 md:mr-12 lg:mr-40 xl:mr-64 2xl:mr-80">
+			  <div class="form__entry entry_block flex flex-col gap-1.5 ">
+				<label class="entry__label text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-slate-700 dark:text-slate-300" for="EMAIL" data-required="*">
+				  Email eingeben ➔ Postfach checken ➔ Bestätigen
+				</label>
+				<div class="entry__field relative mt-1 ">
+				  <input class="input w-full px-4 py-3 border border-slate-300 dark:border-slate-700 rounded-2xl bg-slate-50 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all text-sm sm:text-base md:text-base lg:text-lg" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="Deine E-Mail-Adresse" data-required="true" required />
+				</div>
+				<span class="entry__specification text-[11px] text-slate-400 leading-tight">
+					<label class="mt-2  text-red-800 text-xs">
+				  * Kann auch ganz einfach durch einen Link in der Email wieder abbestellt werden.
+				  </label>
+				</span>
+			  </div>
+			</div>
+	
+			<div class="sib-optin sib-form-block" data-required="true">
+			  <div class="form__entry entry_mcq flex flex-col gap-1">
+				<div class="form__label-row">
+				  <label class="flex items-start gap-3 cursor-pointer group">
+					<input type="checkbox" class="scale-[1.0] lg:scale-[1.8] input_replaced mt-1 shrink-0 accent-green-600 h-4 w-4 rounded border-slate-300 text-green-600 focus:ring-green-500" value="1" id="GDPR_CONFIRM" name="GDPR_CONFIRM" required />
+					<span class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-normal group-hover:text-slate-800 dark:group-hover:text-slate-200 transition-colors">
+					  Ich stimme zu den Newsletter zu erhalten und bestätige die Cybear Datenschutz-Bestimmungen hiermit.
+					</span>
+				  </label>
+				</div>
+				<label class="entry__error entry__error--primary empty:hidden mt-1 p-2 rounded bg-red-50 text-red-800 text-xs border border-red-200"></label>
+			  </div>
+			</div>
+	
+			<div class="flex flex-col sm:flex-row-reverse sm:items-center sm:justify-between gap-4 pt-2">
+			  
+			  <div class="sib-form-block text-right shrink-0">
+				<button class="sib-form-block__button sib-form-block__button-with-loader inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-green-700 hover:bg-green-200 hover:text-black text-white font-bold text-sm sm:text-base md:text-lg xl:text-xl rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 cursor-pointer" form="sib-form" type="submit">
+				  <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon w-4 h-4 fill-current animate-spin hidden" viewBox="0 0 512 512">
+					<path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+				  </svg>
+				  JETZT ANMELDEN
+				</button>
+			  </div>
+	
+			  <div class="sib-captcha sib-form-block">
+				<div class="form__entry entry_block">
+				  <div class="form__label-row flex justify-center sm:justify-start">
+					<script>
+					  function handleCaptchaResponse() {
+						var event = new Event('captchaChange');
+						document.getElementById('sib-captcha').dispatchEvent(event);
+						window.grecaptcha = window.turnstile;
+					  }
+					</script>
+					<div class="cf-turnstile g-recaptcha scale-90 origin-left" data-sitekey="0x4AAAAAADlapgzxkhkhunAX" id="sib-captcha" data-callback="handleCaptchaResponse" data-language="en"></div>
+				  </div>
+				  <label class="entry__error entry__error--primary empty:hidden mt-1 p-2 rounded bg-red-50 text-red-800 text-xs border border-red-200"></label>
+				</div>
+			  </div>
+	
+			</div>
+	
+			<input type="text" name="email_address_check" value="" class="hidden">
+			<input type="hidden" name="locale" value="en">
+	
+		  </form>
+		</div>
+	  </div>
+	</div>
+<!-- END - We recommend to place the above code where you want the form in your website html  -->
+
+<!-- START - We recommend to place the below code in footer or bottom of your website html  -->
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Etwas stimmt nicht mit Ihrer Eingabe. Bitte nochmal prüfen und abermals versuchen.";
+  window.REQUIRED_ERROR_MESSAGE = "Dieses Feld kann nicht leer bleiben. ";
+  window.GENERIC_INVALID_MESSAGE = "Etwas stimmt nicht mit Ihrer Eingabe. Bitte nochmal prüfen und abermals versuchen.";
+  window.INVALID_NUMBER = "Etwas stimmt nicht mit Ihrer Eingabe. Bitte nochmal prüfen und abermals versuchen.";
+  window.INVALID_DATE = "Please enter a valid date";
+  window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
+
+  window.translation = {
+	common: {
+	  selectedList: '{quantity} list selected',
+	  selectedLists: '{quantity} lists selected',
+	  selectedOption: '{quantity} selected',
+	  selectedOptions: '{quantity} selected',
+	}
+  };
+
+  var AUTOHIDE = Boolean(0);
+</script>
+
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<!-- END - We recommend to place the above code in footer or bottom of your website html  -->
+
+
+	</div>
+</section>
+<!-- End Brevo Form -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN: MainFooter -->
+<footer class="bg-dark-teal text-white py-16 px-16 sm:px-16 md:px-20 lg:px:48 lg:px-[16vw] " style="background-color: #3D5266;">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start mb-12">
+<!-- Brand Description -->
+<div>
+<p class="text-lg font-black leading-relaxed max-w-xs" style="font-size: 1.2rem; line-height: 1.425;">
+	Eine Lernapp damit Kinder verstehen wie man sicher in der online KI-Ära navigiert
+		  </p>
+</div>
+<!-- Quick Links -->
+
+<div class="flex flex-col gap-2">
+	<h4 class="font-black text-slate-300 mb-2">Mehr...</h4>
+	<a class="hover:text-cyorange transition-colors" href="./regulation.html">Ideen zur effektiven Regulierung</a>
+	<!--
+<h4 class="font-black text-slate-300 mb-2">Mehr über uns</h4>
+<a class="hover:text-cyorange transition-colors" href="#">Team</a>
+<a class="hover:text-cyorange transition-colors" href="#">Die Cybear App</a>
+<a class="hover:text-cyorange transition-colors" href="#">Platform</a>
+-->
+</div>
+
+<!-- Footer Logo & Tagline -->
+<div class="flex flex-col items-end gap-2">
+<div class="w-48 brightness-0 invert opacity-90">
+<!-- Using Logo SVG here with invert for dark background -->
+<svg viewBox="0 0 848.9 218.7" xmlns="http://www.w3.org/2000/svg">
+	<style>.st0{fill:#FB855A}.st1{fill:#A396B5}</style>
+	<g><path class="st0" d="M421.2 124.2c0 43.6-23.6 41.9-60.4 41.9-14.3 0-28.7-1.5-43-2.2-6.8-.5-9.5-2.6-10.1-9.5-2-21.4-2.6-43.4-2.6-64.8 0-15.7-.7-31.5.5-46.7.5-6.6 2.9-9.7 9.3-10.6 10.1-1.3 20.7-2 31.1-2 13.9 0 27.6.9 41.4 2 20.9 1.8 28.7 15.6 28.7 35.5 0 14.8-2.7 16.5-8.8 28.6 6 11.2 8.8 21.8 8.8 33.6zm-70.3 4.4c5.1-.4 25.4.2 25.4-6.8 0-8.8-8.4-9-15.2-9-3.5 0-6.8.2-10.3.5v15.3zm.4-60.4c.2 5.5.4 11.2.7 16.8 2.2.4 3.8.4 5.9.4 4.9 0 16.5-.7 16.5-7.3 0-9.3-9.2-10.1-16.3-10.1l-6.8.2z"></path><path class="st0" d="M484.5 70.9l.2 12.1c9.2 0 18.3-.5 27.8-.5 9.7 0 7.5 18.7 7.5 26 0 9.2-28 5.9-35.1 6.8v11h8.6c10.4 0 21.2-1.5 32-1.5 8.6 0 8.8 18.3 8.8 24.7 0 3.1-.2 5.9-.5 9-.9 5.5-4 7.5-9.3 7.7-17.9.5-35.9 1.1-53.8 1.1-25.8 0-32.8-.2-32.8-27.3 0-30.4 0-71.6 1.6-102.1.2-4 1.8-6.4 5.9-7.3 8.6-2.2 20.5-2 29.5-2 16.1 0 35.3-.7 50.9.4 5.3.4 8.1 1.3 8.6 6.8 1.1 8.4-1.1 18.7-1.1 26.9 0 12.4-21.8 8.4-30.6 8.4h-11z"></path><path class="st0" d="M600.7 140.3c-5.5 19.8-3.5 25.6-27.5 25.6-6.6 0-25.1.5-25.1-8.8 0-20.9 20.1-87.1 28.2-109.4 7.7-20.7 32.3-18.7 50.8-18.7 4.2 0 8.8.7 13 1.6 11.7 1.8 18.5 11 22.7 21.6 3.7 9.2 20.3 93.3 20.3 101.9 0 9.9-22.7 12.6-30.4 12.6-21.2 0-18.9-9-22-25.6-10.1.3-20.2.1-30.1 0zm26.9-37.2c-1.3-9-2.6-18.1-4.9-26.9-.4-2.2-1.8-3.3-4.8-3.3-2.6 0-3.3 1.1-3.7 2.9-2.6 9-4.8 18.3-6.4 27.3h19.8z"></path><path class="st0" d="M812.5 152.3c0 8.1-20.7 15.4-27.3 15.4-12.8 0-32.8-37.7-40.8-37.7-4.2 0-2.9 7.5-2.9 10.4 0 22.9.7 25.6-23.1 25.6-8.2 0-21.2.7-21.2-10.2 0-22.9 1.3-46.1 1.3-68.8 0-13-1.3-26-1.3-39 0-12.6 5.9-19.4 15.6-19.4 24.2 0 44.1-.2 63.9 1.1 6.6.5 14.6 1.6 20.5 4 13 4.2 15 28.2 15 40.3 0 7.1.2 17-1.3 26.4-1.8 11.3-11.2 20.3-21 19.6 11.3 5.4 29.7 25.9 29.7 32.1zm-43.1-72.3c0-11.9-3.1-16.5-13.2-16.5-4.2 0-10.1-.7-11 4.4-1.3 7-.7 22.3 0 24.7 1.3 2.1 17.7 3.3 17.7-10.8z"></path></g>
+<g><path class="st1" d="M78.2 120.2c.5 4 2.8 16.1 3.8 20.4 2.9 12.5 5.7 15 18.6 12.1 12.1-2.8 24.4-5.6 36-8.3 9.1-2.1 12.7 14.3 14.2 20.8 1.2 5.4 4.2 13.3-.6 17-6.8 5.7-38.6 12.5-47.9 14.6-10.5 2.4-21.1 3.7-31.9 4.9-22.2 2.3-36.4-64.3-40.1-80-1.8-7.8-3-16.2-3.7-24.1 0-11 5.2-18.6 14.8-23.2 20.5-10.4 44.8-16 67.4-21.2 8.4-1.9 11.9 1 13.6 5.9 1.5 4 1.7 9.2 6.4 27.6-29.5 13.8-84.9 14.7-82.5 34.1z"></path><path class="st1" d="M216.7 24.4c2.3-4 5-6.8 8.2-7.7 9.4-2.5 30.1 7.1 32.7 16.6.7 2.7.5 5.9-.5 9.4-4.4 16.7-27.1 48.9-23.5 60.9 1.8 6.1 4.4 15.1 6 21.1 5.8 21.7 10.6 29-14.3 35.7-25.5 6.8-21.1-.4-26.6-20.9-2.5-9.2-5.3-22.6-8.7-31.2-1.7-4.1-36.4-24-49.3-34.9-4.6-3.9-3.6-12.9-1.7-17.6 2.8-6.6 8.9-14.3 13.9-18.3 4.3-3.6 9.1-3.6 14-1.5 10.5 4.6 28.3 24.3 35.8 28.1.7.3 7.2-23.4 12.5-32.6z"></path></g>
+</svg>
+</div>
+<p class="text-cyorange font-bold text-sm italic">Learn navigating the digital AI world</p>
+
+<!-- SOCIAL MEDIA ICONS-->
+
+<button class="w-12 h-12 flex items-center justify-center bg-gradient-to-tr from-red-50 to-pink-50 cursor-pointer rounded-md shadow-md shadow-transparent transition-all duration-300 hover:border-gray-100 hover:shadow-red-200" >
+	<a href="https://instagram.com/cybearapp" target="_blank"
+	class="p-2 w-12 h-12 bg-white rounded-lg flex items-center border border-gray-300 justify-center transition-all duration-500 ">
+	<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 51 51" fill="none">
+	  <path d="M17.4456 25.7808C17.4456 21.1786 21.1776 17.4468 25.7826 17.4468C30.3875 17.4468 34.1216 21.1786 34.1216 25.7808C34.1216 30.383 30.3875 34.1148 25.7826 34.1148C21.1776 34.1148 17.4456 30.383 17.4456 25.7808ZM12.9377 25.7808C12.9377 32.8708 18.6883 38.618 25.7826 38.618C32.8768 38.618 38.6275 32.8708 38.6275 25.7808C38.6275 18.6908 32.8768 12.9436 25.7826 12.9436C18.6883 12.9436 12.9377 18.6908 12.9377 25.7808ZM36.1342 12.4346C36.1339 13.0279 36.3098 13.608 36.6394 14.1015C36.9691 14.595 37.4377 14.9797 37.9861 15.2069C38.5346 15.4342 39.1381 15.4939 39.7204 15.3784C40.3028 15.2628 40.8378 14.9773 41.2577 14.5579C41.6777 14.1385 41.9638 13.6041 42.0799 13.0222C42.1959 12.4403 42.1367 11.8371 41.9097 11.2888C41.6828 10.7406 41.2982 10.2719 40.8047 9.94202C40.3112 9.61218 39.7309 9.436 39.1372 9.43576H39.136C38.3402 9.43613 37.5771 9.75216 37.0142 10.3144C36.4514 10.8767 36.1349 11.6392 36.1342 12.4346ZM15.6765 46.1302C13.2377 46.0192 11.9121 45.6132 11.0311 45.2702C9.86323 44.8158 9.02993 44.2746 8.15381 43.4002C7.27768 42.5258 6.73536 41.6938 6.28269 40.5266C5.93928 39.6466 5.53304 38.3214 5.42217 35.884C5.3009 33.2488 5.27668 32.4572 5.27668 25.781C5.27668 19.1048 5.3029 18.3154 5.42217 15.678C5.53324 13.2406 5.94248 11.918 6.28269 11.0354C6.73736 9.86816 7.27888 9.03536 8.15381 8.15976C9.02873 7.28416 9.86123 6.74216 11.0311 6.28976C11.9117 5.94656 13.2377 5.54056 15.6765 5.42976C18.3133 5.30856 19.1054 5.28436 25.7826 5.28436C32.4598 5.28436 33.2527 5.31056 35.8916 5.42976C38.3305 5.54076 39.6539 5.94976 40.537 6.28976C41.7049 6.74216 42.5382 7.28536 43.4144 8.15976C44.2905 9.03416 44.8308 9.86816 45.2855 11.0354C45.6289 11.9154 46.0351 13.2406 46.146 15.678C46.2673 18.3154 46.2915 19.1048 46.2915 25.781C46.2915 32.4572 46.2673 33.2466 46.146 35.884C46.0349 38.3214 45.6267 39.6462 45.2855 40.5266C44.8308 41.6938 44.2893 42.5266 43.4144 43.4002C42.5394 44.2738 41.7049 44.8158 40.537 45.2702C39.6565 45.6134 38.3305 46.0194 35.8916 46.1302C33.2549 46.2514 32.4628 46.2756 25.7826 46.2756C19.1024 46.2756 18.3125 46.2514 15.6765 46.1302ZM15.4694 0.932162C12.8064 1.05336 10.9867 1.47536 9.39755 2.09336C7.75177 2.73156 6.35853 3.58776 4.9663 4.97696C3.57406 6.36616 2.71955 7.76076 2.08097 9.40556C1.46259 10.9948 1.04034 12.8124 0.919069 15.4738C0.795795 18.1394 0.767578 18.9916 0.767578 25.7808C0.767578 32.57 0.795795 33.4222 0.919069 36.0878C1.04034 38.7494 1.46259 40.5668 2.08097 42.156C2.71955 43.7998 3.57426 45.196 4.9663 46.5846C6.35833 47.9732 7.75177 48.8282 9.39755 49.4682C10.9897 50.0862 12.8064 50.5082 15.4694 50.6294C18.138 50.7506 18.9893 50.7808 25.7826 50.7808C32.5759 50.7808 33.4286 50.7526 36.0958 50.6294C38.759 50.5082 40.5774 50.0862 42.1676 49.4682C43.8124 48.8282 45.2066 47.9738 46.5989 46.5846C47.9911 45.1954 48.8438 43.7998 49.4842 42.156C50.1026 40.5668 50.5268 38.7492 50.6461 36.0878C50.7674 33.4202 50.7956 32.57 50.7956 25.7808C50.7956 18.9916 50.7674 18.1394 50.6461 15.4738C50.5248 12.8122 50.1026 10.9938 49.4842 9.40556C48.8438 7.76176 47.9889 6.36836 46.5989 4.97696C45.2088 3.58556 43.8124 2.73156 42.1696 2.09336C40.5775 1.47536 38.7588 1.05136 36.0978 0.932162C33.4306 0.810962 32.5779 0.780762 25.7846 0.780762C18.9913 0.780762 18.138 0.808962 15.4694 0.932162Z" fill="url(#paint0_radial_7092_54379)"/>
+	  <path d="M17.4456 25.7808C17.4456 21.1786 21.1776 17.4468 25.7826 17.4468C30.3875 17.4468 34.1216 21.1786 34.1216 25.7808C34.1216 30.383 30.3875 34.1148 25.7826 34.1148C21.1776 34.1148 17.4456 30.383 17.4456 25.7808ZM12.9377 25.7808C12.9377 32.8708 18.6883 38.618 25.7826 38.618C32.8768 38.618 38.6275 32.8708 38.6275 25.7808C38.6275 18.6908 32.8768 12.9436 25.7826 12.9436C18.6883 12.9436 12.9377 18.6908 12.9377 25.7808ZM36.1342 12.4346C36.1339 13.0279 36.3098 13.608 36.6394 14.1015C36.9691 14.595 37.4377 14.9797 37.9861 15.2069C38.5346 15.4342 39.1381 15.4939 39.7204 15.3784C40.3028 15.2628 40.8378 14.9773 41.2577 14.5579C41.6777 14.1385 41.9638 13.6041 42.0799 13.0222C42.1959 12.4403 42.1367 11.8371 41.9097 11.2888C41.6828 10.7406 41.2982 10.2719 40.8047 9.94202C40.3112 9.61218 39.7309 9.436 39.1372 9.43576H39.136C38.3402 9.43613 37.5771 9.75216 37.0142 10.3144C36.4514 10.8767 36.1349 11.6392 36.1342 12.4346ZM15.6765 46.1302C13.2377 46.0192 11.9121 45.6132 11.0311 45.2702C9.86323 44.8158 9.02993 44.2746 8.15381 43.4002C7.27768 42.5258 6.73536 41.6938 6.28269 40.5266C5.93928 39.6466 5.53304 38.3214 5.42217 35.884C5.3009 33.2488 5.27668 32.4572 5.27668 25.781C5.27668 19.1048 5.3029 18.3154 5.42217 15.678C5.53324 13.2406 5.94248 11.918 6.28269 11.0354C6.73736 9.86816 7.27888 9.03536 8.15381 8.15976C9.02873 7.28416 9.86123 6.74216 11.0311 6.28976C11.9117 5.94656 13.2377 5.54056 15.6765 5.42976C18.3133 5.30856 19.1054 5.28436 25.7826 5.28436C32.4598 5.28436 33.2527 5.31056 35.8916 5.42976C38.3305 5.54076 39.6539 5.94976 40.537 6.28976C41.7049 6.74216 42.5382 7.28536 43.4144 8.15976C44.2905 9.03416 44.8308 9.86816 45.2855 11.0354C45.6289 11.9154 46.0351 13.2406 46.146 15.678C46.2673 18.3154 46.2915 19.1048 46.2915 25.781C46.2915 32.4572 46.2673 33.2466 46.146 35.884C46.0349 38.3214 45.6267 39.6462 45.2855 40.5266C44.8308 41.6938 44.2893 42.5266 43.4144 43.4002C42.5394 44.2738 41.7049 44.8158 40.537 45.2702C39.6565 45.6134 38.3305 46.0194 35.8916 46.1302C33.2549 46.2514 32.4628 46.2756 25.7826 46.2756C19.1024 46.2756 18.3125 46.2514 15.6765 46.1302ZM15.4694 0.932162C12.8064 1.05336 10.9867 1.47536 9.39755 2.09336C7.75177 2.73156 6.35853 3.58776 4.9663 4.97696C3.57406 6.36616 2.71955 7.76076 2.08097 9.40556C1.46259 10.9948 1.04034 12.8124 0.919069 15.4738C0.795795 18.1394 0.767578 18.9916 0.767578 25.7808C0.767578 32.57 0.795795 33.4222 0.919069 36.0878C1.04034 38.7494 1.46259 40.5668 2.08097 42.156C2.71955 43.7998 3.57426 45.196 4.9663 46.5846C6.35833 47.9732 7.75177 48.8282 9.39755 49.4682C10.9897 50.0862 12.8064 50.5082 15.4694 50.6294C18.138 50.7506 18.9893 50.7808 25.7826 50.7808C32.5759 50.7808 33.4286 50.7526 36.0958 50.6294C38.759 50.5082 40.5774 50.0862 42.1676 49.4682C43.8124 48.8282 45.2066 47.9738 46.5989 46.5846C47.9911 45.1954 48.8438 43.7998 49.4842 42.156C50.1026 40.5668 50.5268 38.7492 50.6461 36.0878C50.7674 33.4202 50.7956 32.57 50.7956 25.7808C50.7956 18.9916 50.7674 18.1394 50.6461 15.4738C50.5248 12.8122 50.1026 10.9938 49.4842 9.40556C48.8438 7.76176 47.9889 6.36836 46.5989 4.97696C45.2088 3.58556 43.8124 2.73156 42.1696 2.09336C40.5775 1.47536 38.7588 1.05136 36.0978 0.932162C33.4306 0.810962 32.5779 0.780762 25.7846 0.780762C18.9913 0.780762 18.138 0.808962 15.4694 0.932162Z" fill="url(#paint1_radial_7092_54379)"/>
+	  <defs>
+		<radialGradient id="paint0_radial_7092_54379" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(7.41436 51.017) scale(65.31 65.2708)">
+		  <stop offset="0.09" stop-color="#FA8F21"/>
+		  <stop offset="0.78" stop-color="#D82D7E"/>
+		</radialGradient>
+		<radialGradient id="paint1_radial_7092_54379" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(31.1086 53.257) scale(51.4733 51.4424)">
+		  <stop offset="0.64" stop-color="#8C3AAA" stop-opacity="0"/>
+		  <stop offset="1" stop-color="#8C3AAA"/>
+		</radialGradient>
+	  </defs>
+	</svg>
+	</a>
+	</button>
+
+
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="border-t border-slate-700 pt-8 text-center text-xs text-slate-400">
+<p>© 2026 Copyright. All rights reserved | <a class="hover:underline" href="privacypol_cy.html">Privacy Policy</a> | <a class="hover:underline" href="impr_cy.html">Imprint</a></p>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+<!--BEAR SIDESHOW IMAGE START-->
+<div class="bear-sideshow-wrapper" id="bear-sideshow">
+	<div class="s1dltx2z" id="sidespeechbubble" style="pointer-events: auto;">
+	  <div class="w1pd6ffd" style="opacity: 1; transform: scaleX(1) translateX(0px);">
+		<div data-use-adaptive-colors="true" class="f1mhl5zj l17lpp8k w-[16.5rem] sm:w-[16.5rem] md:w-[20.5rem]">
+		  <div class="t1c3tid0" style="top: -10px;">
+			<svg width="65" height="78" viewBox="0 0 95 95" fill="none" preserveAspectRatio="none">
+			  <path d="M0 0C0 0 24.8936 38.9937 47 58C57.5966 67.1106 73.8292 77.0249 84.1762 83C90.03 86.3804 94 95 94 95L94.5 36C94.5 36 88.5727 43.1045 81 41.4825C70.8874 39.3165 56.9488 35.8549 47 31.5C26.7586 22.6397 0 0 0 0Z" fill="var(--color-adaptive-white)"></path>
+			</svg>
+		  </div>
+		  <div data-is-visible="true" class="c138z5kb" style="--delay: 1250ms;">
+			<p class="prg881n">Bald!!! Für Eltern mit wenig Zeit: Kompakte Guides, die bei den ersten Schritten helfen.</p>
+			<div class="b19w5h5e">
+			  <button data-cy="speech-bubble-accept" class="buqgy6u" style="color: rgb(66, 66, 250); display:none;">Will ich!</button>
+			  <button data-cy="speech-bubble-deny" class="buqgy6u" data-modal-target="bear-sideshow" data-modal-toggle="bear-sideshow" style="display:none;">Jetzt nicht</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+<div>
+	  <div data-status="peeking" class="m1huat16">
+		<div class="wvm4gg4 wv8ehy8" style="animation-duration: 600ms; animation-delay: 200ms;">
+		  <div class="d1qadnsl">
+			<picture>
+			  <img alt="" loading="lazy" class="mr2l5ys" src="./images/cybear_mascot_bear_sideshow.png">
+			</picture>
+		  </div>
+		  <div data-use-global-color-mode="true" class="l1enswin" style="--opacity: 1;">
+			<picture>
+			  <img alt="" loading="lazy" class="mr2l5ys" src="./images/cybear_mascot_bear_sideshow.png">
+			</picture>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+<!--BEAR SIDESHOW IMAGE END-->
+<script>
+	(function() {
+	  var bearSideshow = document.getElementById('bear-sideshow');
+
+	  function checkScroll() {
+		if (!bearSideshow) return;
+
+		var scrollY = window.scrollY || window.pageYOffset;
+		var isMobile = window.innerWidth <= 1024;
+		
+		// Appear when scrolled > 1400px on desktop, or > 800px on mobile
+		var threshold = isMobile ? 1600 : 1800;
+
+		if (scrollY > threshold) {
+		  bearSideshow.classList.add('is-visible');
+		} else {
+		  bearSideshow.classList.remove('is-visible');
+		}
+	  }
+
+	  window.addEventListener('scroll', checkScroll);
+	  window.addEventListener('resize', checkScroll);
+	  
+	  // Check on load
+	  checkScroll();
+	})();
+  </script>
+					
+					<!-- free popover -->
+					<!-- Large Modal 1 -->
+					<div id="large-modal-1" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.6-30vmax/1.2)] md:top-0">
+							<!-- Modal content -->
+							<div class="relative bg-spot-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 sm:my-8 sm:w-full lg:w-4/5 xl:w-3/4 2xl:w-1/2 data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-1">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+
+								</div>
+								<!-- Modal body -->
+								<div class="modal-warning-triangle mx-auto flex shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 size-16 sm:size-16 2xl:size-20">
+									  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-12 text-red-600">
+										<path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" stroke-linecap="round" stroke-linejoin="round" />
+									  </svg>
+									</div>
+									<div class="mt-3 sm:mt-0 sm:ml-4 text-left">
+									  <h3 id="dialog-title" class="text-xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold text-gray-900">Verführerische Benutzungs-Mechanismen, KI Inhalte und Akteure, welche diese Inhalte für verschiedenste Absichten benutzen. Risiken sind zahlreicher denn je.</h3>
+									  <div class="mt-4 sm:mt-4 md:mt-6 lg:mt-6 xl:mt-8">
+										<p class="text-base lg:text-lg text-black-300 font-['Merriweather']">Es ist schwierig all dem zu widerstehen.. In-App Purchases, Skins &amp; Lootboxes, Scams, Influencer-Welten, Click-Bait, süchtig-machende Belohnungsmuster. Inhalte oder Funktionen, die Benutzer bei der Stange halten oder zum Weitermachen animieren, sind bis auf kleinste Detail optimiert. </p><blockquote class="max-w-3/4 text-lg lg:text-xl text-[#ED546F] italic font-semibold text-left text-heading font-['Geist'] my-2 lg:my-3">Mit für Kinder visuell ansprechenden Anreizen wird die Versuchung nochmal vergrößert. Dazu kommen mehr und mehr algorithmisch und KI generierte Inhalte, die personalisiert noch stärker wirken.</blockquote> <p class="text-base lg:text-lg text-black-300  font-['Merriweather']">
+										<strong class="underline">Unmittelbarer Effekt:</strong><br>
+										Viele dieser Mechanismen lösen instinktives Impulsverhalten aus, also Handeln ohne Rücksicht auf die Konsequenzen. Aber ebenso kompulsives Verhalten ("ich muss noch...") wird gefördert. Es ist so von den Machern gewollt. Das Internet ist voll davon.<br><br>
+										
+										<strong>Diese Mechanismen kindgerecht zu erlernen und das Erkennen dieser zu schärfen ist ungeheuer wichtig, damit Kinder grundlegend verstehen, welche Absichten oder Risiken dahinterstecken. Cybear hilft dabei Kids kritisch darauf vorzubereiten.</strong> </p>
+									  </div>
+									</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Large Modal 2 -->
+					<div id="large-modal-2" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.6-30vmax/1.2)] md:top-0">
+							<!-- Modal content -->
+							<div class="relative bg-protect-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 sm:my-8 sm:w-full lg:w-4/5 xl:w-3/4 2xl:w-1/2 data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-2">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+
+								</div>
+								<!-- Modal body -->
+								<div class="modal-warning-triangle mx-auto flex shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 size-16 sm:size-16 2xl:size-20">
+									  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-12 text-red-600">
+										<path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" stroke-linecap="round" stroke-linejoin="round" />
+									  </svg>
+									</div>
+									<div class="mt-3 sm:mt-0 sm:ml-4 text-left">
+									  <h3 id="dialog-title" class="text-xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold text-gray-900">Szenarien und Akteure besser einschätzen, Verhaltensweisen lernen: sich selbst und andere gezielt schützen </h3>
+									  <div class="mt-4 sm:mt-4 md:mt-6 lg:mt-6 xl:mt-8">
+										<p class="text-base lg:text-lg text-black-300 font-['Merriweather']">Wenn Kinder wissen, wie man sich in verschiedenen Situationen verhalten sollte und die Motivationen oder Absichten von Akteuren besser nachvollziehen können, dann ist auch Selbstschutz einfacher. Ob bei Mobbing von Mitschülern in der Klassen-Whatsapp-Gruppe, zwielichtige Gestalten in Game Chats oder idiotischen Hassnachrichten gleichaltriger. </p><blockquote class="max-w-3/4 text-lg lg:text-xl text-[#ED546F] italic font-semibold text-left text-heading font-['Geist'] my-2 lg:my-3">Für jede dieser Situationen gibt es bestmögliche Verhaltensweisen.</blockquote> <p class="text-base lg:text-lg text-black-300  font-['Merriweather']">
+										
+										<strong>Kinder, die gelernt haben, sich kritischer zu verhalten und diesen Dingen entgegenzuwirken, können auch gemeinsam sich selbst und andere besser schützen.</strong> </p>
+									  </div>
+									</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<!-- Large Modal 3 -->
+					<div id="large-modal-3" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.6-30vmax/1.2)] md:top-0">
+							<!-- Modal content -->
+							<div class="relative bg-staysafe-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 sm:my-8 sm:w-full lg:w-4/5 xl:w-3/4 2xl:w-1/2 data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-3">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+
+								</div>
+								<!-- Modal body -->
+								<div class="modal-warning-triangle mx-auto flex shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 size-16 sm:size-16 2xl:size-20">
+									  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-12 text-red-600">
+										<path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" stroke-linecap="round" stroke-linejoin="round" />
+									  </svg>
+									</div>
+									<div class="mt-3 sm:mt-0 sm:ml-4 text-left">
+									  <h3 id="dialog-title" class="text-xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold text-gray-900">Risiken und Gefahren richtig im Voraus erkennen, damit dem sicheren Online-sein nichts im Wege steht</h3>
+									  <div class="mt-4 sm:mt-4 md:mt-6 lg:mt-6 xl:mt-8">
+										<p class="text-base lg:text-lg text-black-300 font-['Merriweather']">Online machen Kinder und Jugendlichen schnell mal etwas Unüberlegtes. Herausgegebene Adressdaten oder persönliche Details der Familie, ungeschützte Account-Passwörter, Herunterladen Viren-verseuchter Dateien oder falsche Verhaltensweisen in Chats.<br><br>
+										
+										 </p><blockquote class="max-w-3/4 text-lg lg:text-xl text-[#ED546F] italic font-semibold text-left text-heading font-['Geist'] my-2 lg:my-3">Brenzlige Situationen und Absichten anderer im Voraus zu erkennen ist eine der Kompetenzen, die Kinder durch praktische Übungen erwerben können.</blockquote> <p class="text-base lg:text-lg text-black-300  font-['Merriweather']">
+										
+										<strong>Altersgerechte Verhaltens-Übungen helfen Kindern nicht nur achtsamer und umsichtiger zu werden, sondern besser auf sich selbst aufzupassen. Eltern lernen auch etwas dabei.</strong> </p>
+									  </div>
+									</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+					
+					<!-- Large Modal KINDER -->
+					
+					<div id="large-modal-kinder" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+						<div class="relative w-full max-w-4xl max-h-full mx-auto md:mt-[10vmax]">
+							<!-- Modal content -->
+							<div class="relative bg-parent-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-kinder">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+								
+								</div>
+								<!-- Modal body -->
+								<div class="space-y-4 md:space-y-6 py-4 md:py-6">
+									<h3 class="text-xl md:text-3xl lg:text-3xl font-bold">
+										Ein digitaler Kompass, der Kinder praxisnah vorbereitet. Bei Online-Risiken denken viele Eltern zuerst an:
+									</h3>
+									<ul class="leading-tight text-base md:text-xl lg:text-lg space-y-2 text-slate-700 line-h list-disc list-outside pl-6 md:pl-12 lg:pl-6 pr-1 lg:pr-3 xl:pr-6" style="line-height:1.2em;">
+									<li class="pl-3 lg:pl-0">Fremde Personen und gefährliche Chats </li>
+									<li class="pl-3 lg:pl-0">Cybermobbing / Hatespeech</li>
+									<li class="pl-3 lg:pl-0">Bildschirmzeit und App-Sucht </li>
+									<li class="pl-3 lg:pl-0">Passwörter und Phishing</li>
+									</ul>
+									<p class="leading-relaxed text-lg md:text-xl lg:text-xl md:pr-16">Natürlich sind diese alle wichtig. </p>
+									<p class="leading-relaxed text-lg md:text-xl lg:text-xl md:pr-16">Doch Risiken sind ebenso: Abhängig machende Benutzungsmuster; Desinformation beschleunigende Algorithmen, Verzerrte Realität durch KI-Inhalte, FOMO und Gruppendruck, manipulative Mechanismen, KI-gesteuerte Bots in Chats und somit veränderte Gewohnheiten, die Verhalten und Selbstverständnis langfristig beeinflussen. Damit Kinder ihr Online-sein nicht unkontrolliert+unkritisch unter digitalem Dauerfeuer verbringen, werden notwendige Kompetenzen mit praxisnahen Trainingsaufgaben vermittelt. 
+									</p>
+								</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Large Modal ELTERN -->
+					
+					<div id="large-modal-eltern" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+						<div class="relative w-full max-w-4xl max-h-full mx-auto md:mt-[10vmax]">
+							<!-- Modal content -->
+							<div class="relative bg-kid-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 ">
+								<!-- Modal header -->
+								<div class="flex items-center border-b border-default pb-4 md:pb-5">
+									
+									<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="large-modal-eltern">
+										<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+										<span class="sr-only">Close modal</span>
+									</button>
+								</div>
+								<!-- Modal body -->
+								<div class="space-y-4 md:space-y-6 py-4 md:py-6">
+									<h3 class="text-xl md:text-3xl lg:text-3xl font-bold">
+										Die Spielregeln ändern sich täglich.<br>Neue Plattformen. Neue Influencer Trends. Neue Risiken.
+									</h3>
+									<p class="leading-relaxed text-lg md:text-xl lg:text-xl md:pr-16">
+										Es ist schwer am Ball zu bleiben, schließlich haben Eltern nicht die Zeit jeder neuen Entwicklung hinterherzuhetzen. Deshalb gibt Cybear auch Eltern kompakte Informationsformate in die Hand.
+									</p>
+									<p class="leading-relaxed text-lg md:text-xl lg:text-xl md:pr-16">
+										Eltern erhalten kurz-gehaltene Erklärvideos, ebenso alters-adäquate Checklists (wie reglementiere ich gemeinsam, was sollte ich ansprechen) und Verhaltens-Guidelines. Kurz und praktisch an der Realität der Eltern orientiert, keine langen Textwände und Abhandlungen.
+									</p>
+								</div>
+								<!-- Modal footer -->
+								<div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+<!-- Video Modal -->
+<!--<div id="video-modal" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
+	<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+	<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.6-30vmax/1.2)] md:top-0">
+		<div class="relative w-full lg:w-3/4 xl:w-2/3 max-w-4xl bg-white neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-8 sm:my-8 z-10">
+			<div class="flex items-center border-b border-default pb-4">
+				<h3 class="text-xl md:text-2xl font-bold font-['Geist'] text-gray-900">App Preview</h3>
+				<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="video-modal">
+					<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+					<span class="sr-only">Close modal</span>
+				</button>
+			</div>
+			<div class="mt-6 flex justify-center items-center h-48 sm:h-64 md:h-96 bg-black rounded-3xl border border-gray-800 w-full overflow-hidden">
+				<span class="text-white text-lg font-['Geist'] opacity-50"><video src="./video/cybear_prototype-vid.mp4" controls autoplay muted playsinline class="w-full h-full object-cover">
+					  Your browser does not support the video tag.
+					</video></span>
+			</div>
+		</div>
+	</div>
+</div>-->
+
+<div id="video-modal" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-[95%] md:w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
+	<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+	<div class="relative w-full xl:h-7/8 max-w-full max-h-auto flex justify-center top-0 md:top-0">
+		<div class="relative w-full lg:w-3/4 xl:w-2/3 max-w-4xl bg-white neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-8 sm:my-8 z-10">
+			<div class="flex items-center border-b border-default pb-4">
+				<h3 class="text-xl md:text-2xl font-bold font-['Geist'] text-gray-900">CyBear-App Preview</h3>
+				<button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="video-modal">
+					<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+					<span class="sr-only">Close modal</span>
+				</button>
+			</div>
+			<div class="mt-6 flex justify-center items-center aspect-[7/8] max-h-[60vh] md:max-h-[70vh] max-w-sm xl:max-w-xl mx-auto bg-black rounded-3xl border border-gray-800 w-full overflow-hidden">
+				<span class="text-white text-lg font-['Geist'] opacity-1"><video src="./video/cybear_prototype-vid.mp4" controls autoplay muted playsinline class="w-full h-full object-cover">
+					  Your browser does not support the video tag.
+					</video></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const container = document.getElementById('main-map-container');
+		const overlay = document.getElementById('main-map-overlay');
+		
+		let hasTouched = false;
+		window.addEventListener('touchstart', () => {
+			hasTouched = true;
+		}, { passive: true });
+	
+		const activateOverlay = () => {
+			overlay.classList.remove('opacity-0', 'pointer-events-none');
+			overlay.classList.add('opacity-100');
+			container.classList.remove('lg:rotate-1');
+			container.classList.add('rotate-0');
+		};
+	
+		const deactivateOverlay = () => {
+			overlay.classList.add('opacity-0', 'pointer-events-none');
+			overlay.classList.remove('opacity-100');
+			container.classList.remove('rotate-0');
+			container.classList.add('lg:rotate-1');
+		};
+	
+		container.addEventListener('mouseenter', () => {
+			if (!hasTouched) activateOverlay();
+		});
+	
+		container.addEventListener('mouseleave', () => {
+			if (!hasTouched) deactivateOverlay();
+		});
+	
+		container.addEventListener('click', (e) => {
+			if (hasTouched) {
+				if (overlay.classList.contains('opacity-0')) {
+					activateOverlay();
+				}
+			}
+		});
+	
+		document.addEventListener('click', (e) => {
+			if (hasTouched && !overlay.classList.contains('opacity-0')) {
+				// Close if clicked completely outside the container
+				if (!container.contains(e.target)) {
+					deactivateOverlay();
+				}
+			}
+		});
+	
+		window.addEventListener('scroll', () => {
+			if (hasTouched && !overlay.classList.contains('opacity-0')) {
+				const rect = container.getBoundingClientRect();
+				// Close if container scrolls entirely out of view
+				if (rect.bottom < 0 || rect.top > window.innerHeight) {
+					deactivateOverlay();
+				}
+			}
+		}, { passive: true });
+	});
+	</script>
+</body></html>
