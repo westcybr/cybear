@@ -869,6 +869,13 @@
 <!-- <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"> -->
 
 
+
+
+<!-- START - We recommend to place the below code where you want the form in your website html  -->
+
+	
+	
+	
 <!--  END - We recommend to place the above code in head tag of your website html -->
 
 <!-- START - We recommend to place the below code where you want the form in your website html  -->
@@ -903,9 +910,9 @@
 			
 			<div class="space-y-1">
 			  <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-slate-800 dark:text-slate-100 tracking-tight">
-				Nichts verpassen...
+				Bleib auf dem neusten Stand
 			  </h2>
-			  <p class="text-sm sm:text-base lg:text-xl xl:text-2xl font-semibold text-green-800">
+			  <p class="text-sm sm:text-base lg:text-xl xl:text-xl font-bold text-green-800">
 				... Launch-Updates erhalten <br>+ PDF-Link zum Mediennutzungsvertrag für Familien ins Postfach
 			  </p>
 			</div>
@@ -913,13 +920,14 @@
 			<div class="sib-input sib-form-block pr-1 md:mr-12 lg:mr-40 xl:mr-64 2xl:mr-80">
 			  <div class="form__entry entry_block flex flex-col gap-1.5 ">
 				<label class="entry__label text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-slate-700 dark:text-slate-300" for="EMAIL" data-required="*">
-				  Email eingeben ➔ Postfach checken ➔ Bestätigen
+				  Email eingeben ➔ Postfach checken ➔ <u>Bestätigen</u> (NICHT VERGESSEN)
 				</label>
 				<div class="entry__field relative mt-1 ">
 				  <input class="input w-full px-4 py-3 border border-slate-300 dark:border-slate-700 rounded-2xl bg-slate-50 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all text-sm sm:text-base md:text-base lg:text-lg" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="Deine E-Mail-Adresse" data-required="true" required />
 				</div>
+				<label class="entry__error entry__error--primary" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;">
 				<span class="entry__specification text-[11px] text-slate-400 leading-tight">
-					<label class="mt-2  text-red-800 text-xs">
+					<label class="mt-2  text-black-400 text-xs">
 				  * Kann auch ganz einfach durch einen Link in der Email wieder abbestellt werden.
 				  </label>
 				</span>
@@ -931,7 +939,7 @@
 				<div class="form__label-row">
 				  <label class="flex items-start gap-3 cursor-pointer group">
 					<input type="checkbox" class="scale-[1.0] lg:scale-[1.8] input_replaced mt-1 shrink-0 accent-green-600 h-4 w-4 rounded border-slate-300 text-green-600 focus:ring-green-500" value="1" id="GDPR_CONFIRM" name="GDPR_CONFIRM" required />
-					<span class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-normal group-hover:text-slate-800 dark:group-hover:text-slate-200 transition-colors">
+					<span class="text-xs sm:text-sm text-slate-700 leading-normal group-hover:text-slate-800 transition-colors">
 					  Ich stimme zu den Newsletter zu erhalten und bestätige die Cybear Datenschutz-Bestimmungen hiermit.
 					</span>
 				  </label>
@@ -943,12 +951,12 @@
 			<div class="flex flex-col sm:flex-row-reverse sm:items-center sm:justify-between gap-4 pt-2">
 			  
 			  <div class="sib-form-block text-right shrink-0">
-				<button class="sib-form-block__button sib-form-block__button-with-loader inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-green-700 hover:bg-green-200 hover:text-black text-white font-bold text-sm sm:text-base md:text-lg xl:text-xl rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 cursor-pointer" form="sib-form" type="submit">
-				  <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon w-4 h-4 fill-current animate-spin hidden" viewBox="0 0 512 512">
-					<path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
-				  </svg>
-				  JETZT ANMELDEN
-				</button>
+				<button class="sib-form-block__button sib-form-block__button-with-loader inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-green-700 hhover:bg-green-200 hover:text-black text-white font-bold text-sm sm:text-base md:text-lg xl:text-xl rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 cursor-pointer animate-[pulse_3s_infinite]" form="sib-form" type="submit">
+					  <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon w-4 h-4 fill-current animate-spin hidden" viewBox="0 0 512 512">
+						<path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+					  </svg>
+					  JETZT ANMELDEN
+					</button>
 			  </div>
 	
 			  <div class="sib-captcha sib-form-block">
