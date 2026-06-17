@@ -880,6 +880,17 @@
   .sib-icon{contain:strict;display:inline-block;fill:currentColor}
   
   .sib-form-message-panel__text .sib-notification__icon{height:1.5em;width:1.5em;flex-shrink:0;margin-right:calc(1rem - 1px)}
+  
+  .entry__specification{display:inline-block}
+  
+  .sib-form .sib-entry_errored{margin-left:-0.5rem;padding-left:.5rem}
+  .sib-form .sib-entry_errored:before{background:#ff4949;bottom:0;content:"";position:absolute;right:100%;top:0;width:.25rem}
+  .sib-form .entry__error,.sib-form .entry__label,.sib-form .entry__specification,.sib-form .form__error{max-width:40em}
+  .sib-form .entry__error,.sib-form .entry__specification,.sib-form .form__error{display:block}
+  .sib-form .entry__choice+.entry__error,.sib-form .entry__choice+.entry__specification,.sib-form .entry__error+.entry__error,.sib-form .entry__error+.entry__specification,.sib-form .entry__specification+.entry__error,.sib-form .entry__specification+.entry__specification{margin-top:.5rem}
+  .sib-form .entry__label+.entry__specification{margin-top:4px}
+  .sib-form .entry__error{display:none;color:#ff4949;font-size:.87055056rem;line-height:1rem}
+  .sib-form .entry__specification{color:#687484;margin:0}
 </style>
 <!-- <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"> -->
 
@@ -942,7 +953,7 @@
 				</div>
 				<label class="entry__error entry__error--primary" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;">
 				</label>
-				<span class="entry__specification text-[11px] text-slate-400 leading-tight">
+				<span class="entry__specification text-slate-400 leading-tight">
 					<label class="mt-2  text-black-400 text-xs">
 				  * Kann auch ganz einfach durch einen Link in der Email wieder abbestellt werden.
 				  </label>
