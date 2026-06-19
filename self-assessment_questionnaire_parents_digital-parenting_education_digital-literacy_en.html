@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Parenting Self-Assessment · Ages 6–12</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* ─────────────────────────────────────────────
+     DESIGN TOKENS
+     Palette: off-white ground, slate text, a single
+     warm teal accent. Clean, parental-advice-booklet
+     feel — not clinical, not playful.
+  ───────────────────────────────────────────── */
+  :root {
+    --c-ground:   #F7F6F3;   /* page background      */
+    --c-surface:  #FFFFFF;   /* card / question bg   */
+    --c-border:   #E2E0DA;   /* default borders      */
+    --c-border-hover: #B8B4AA;
+    --c-text:     #1A1917;   /* primary text         */
+    --c-muted:    #6B6860;   /* secondary / hints    */
+    --c-accent:   #1A7A6E;   /* teal — single accent */
+    --c-accent-light: #EBF5F3;
+    --c-accent-border: #A8D5CF;
+    --c-warn:     #92400E;
+    --c-warn-bg:  #FEF3C7;
+    --c-success:  #166534;
+    --c-success-bg: #DCFCE7;
+    --c-danger:   #991B1B;
+    --c-danger-bg: #FEE2E2;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--c-ground);
+    color: var(--c-text);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── Layout ── */
+  .shell {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  /* ── Header ── */
+  .form-header {
+    margin-bottom: 2.5rem;
+  }
+  .form-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: 0.5rem;
+  }
+  .form-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--c-text);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+  .form-subtitle {
+    font-size: 14px;
+    color: var(--c-muted);
+    line-height: 1.6;
+  }
+
+  /* ── Age tab selector ── */
+  .tab-row {
+    display: flex;
+    gap: 0;
+    background: var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 3px;
+    margin-bottom: 2.5rem;
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--c-muted);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    text-align: center;
+  }
+  .tab-btn.active {
+    background: var(--c-surface);
+    color: var(--c-text);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .tab-btn:hover:not(.active) {
+    color: var(--c-text);
+  }
+
+  /* ── Progress ── */
+  .progress-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+  }
+  .progress-track {
+    flex: 1;
+    height: 3px;
+    background: var(--c-border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--c-accent);
+    border-radius: 2px;
+    transition: width 0.35s ease;
+  }
+  .progress-label {
+    font-size: 12px;
+    color: var(--c-muted);
+    white-space: nowrap;
+    min-width: 48px;
+    text-align: right;
+  }
+
+  /* ── Question card ── */
+  .q-card {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem 1.75rem 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .q-dim-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: 0.6rem;
+  }
+
+  .q-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--c-text);
+    line-height: 1.5;
+    margin-bottom: 0.35rem;
+  }
+
+  .q-subtext {
+    font-size: 13px;
+    color: var(--c-muted);
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Scenario callout */
+  .scenario-box {
+    background: var(--c-accent-light);
+    border-left: 3px solid var(--c-accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 0.875rem 1.125rem;
+    margin-bottom: 1.25rem;
+    font-size: 14px;
+    color: var(--c-text);
+    line-height: 1.6;
+  }
+  .scenario-box .scenario-speaker {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: 4px;
+  }
+  .scenario-quote {
+    font-style: italic;
+    color: var(--c-text);
+  }
+
+  /* ── Answer options — single choice ── */
+  .options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .option-btn {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 12px 14px;
+    background: var(--c-ground);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.12s, background 0.12s;
+    width: 100%;
+    font-family: inherit;
+  }
+  .option-btn:hover {
+    border-color: var(--c-border-hover);
+    background: #F0EFEB;
+  }
+  .option-btn.selected {
+    border-color: var(--c-accent);
+    background: var(--c-accent-light);
+    border-width: 1.5px;
+  }
+
+  .radio-dot {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 1.5px solid var(--c-border-hover);
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.12s;
+  }
+  .option-btn.selected .radio-dot {
+    border-color: var(--c-accent);
+    background: var(--c-accent);
+  }
+  .radio-inner {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+    display: none;
+  }
+  .option-btn.selected .radio-inner {
+    display: block;
+  }
+
+  .option-label {
+    font-size: 14px;
+    color: var(--c-text);
+    line-height: 1.5;
+  }
+
+  /* ── Answer options — multi-select ── */
+  .check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .check-btn {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 12px 14px;
+    background: var(--c-ground);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.12s, background 0.12s;
+    width: 100%;
+    font-family: inherit;
+  }
+  .check-btn:hover {
+    border-color: var(--c-border-hover);
+    background: #F0EFEB;
+  }
+  .check-btn.selected {
+    border-color: var(--c-accent);
+    background: var(--c-accent-light);
+    border-width: 1.5px;
+  }
+  .check-btn.none-opt {
+    border-style: dashed;
+    background: transparent;
+  }
+  .check-btn.none-opt .option-label {
+    color: var(--c-muted);
+  }
+  .check-btn.none-opt.selected {
+    border-color: var(--c-border-hover);
+    background: #F0EFEB;
+  }
+
+  .check-box {
+    width: 17px;
+    height: 17px;
+    border-radius: 4px;
+    border: 1.5px solid var(--c-border-hover);
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.12s, background 0.12s;
+  }
+  .check-btn.selected .check-box {
+    border-color: var(--c-accent);
+    background: var(--c-accent);
+  }
+  .check-btn.none-opt.selected .check-box {
+    border-color: var(--c-border-hover);
+    background: var(--c-border-hover);
+  }
+  .check-tick {
+    width: 9px;
+    height: 9px;
+    display: none;
+  }
+  .check-btn.selected .check-tick {
+    display: block;
+  }
+
+  /* ── Navigation ── */
+  .nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+  }
+  .btn-back {
+    font-size: 13px;
+    color: var(--c-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: inherit;
+    transition: color 0.12s;
+  }
+  .btn-back:hover { color: var(--c-text); }
+  .btn-back svg { width: 14px; height: 14px; }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .btn-skip {
+    font-size: 13px;
+    color: var(--c-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-family: inherit;
+    transition: color 0.12s;
+  }
+  .btn-skip:hover { color: var(--c-text); }
+
+  .btn-next {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    background: var(--c-accent);
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 10px 22px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: opacity 0.12s, transform 0.1s;
+  }
+  .btn-next:hover { opacity: 0.88; }
+  .btn-next:active { transform: scale(0.98); }
+  .btn-next:disabled {
+    opacity: 0.32;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* ── Results screen ── */
+  .results-header {
+    margin-bottom: 1.75rem;
+  }
+  .results-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--c-text);
+    margin-bottom: 0.4rem;
+  }
+  .results-sub {
+    font-size: 14px;
+    color: var(--c-muted);
+    line-height: 1.6;
+  }
+
+  .dim-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 1.75rem;
+  }
+
+  .dim-card {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.125rem;
+  }
+  .dim-card-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--c-muted);
+    margin-bottom: 4px;
+  }
+  .dim-card-status {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+  .status-strong { color: var(--c-success); }
+  .status-building { color: var(--c-warn); }
+  .status-attention { color: var(--c-danger); }
+
+  .bar-track {
+    height: 3px;
+    background: var(--c-border);
+    border-radius: 2px;
+    margin-bottom: 8px;
+  }
+  .bar-fill {
+    height: 3px;
+    border-radius: 2px;
+  }
+  .bar-strong { background: #16a34a; }
+  .bar-building { background: #d97706; }
+  .bar-attention { background: #dc2626; }
+
+  .dim-card-note {
+    font-size: 12.5px;
+    color: var(--c-muted);
+    line-height: 1.5;
+  }
+
+  .btn-restart {
+    font-size: 13px;
+    color: var(--c-muted);
+    background: none;
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 8px 18px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 0.12s, color 0.12s;
+  }
+  .btn-restart:hover {
+    border-color: var(--c-border-hover);
+    color: var(--c-text);
+  }
+</style>
+</head>
+<body>
+
+<div class="shell max-w-5xl">
+
+  <!-- ── Header ── -->
+  <div class="form-header">
+    <div class="form-eyebrow">Digital parenting · Self-assessment</div>
+    <h1 class="form-title">How prepared is your family for the online world?</h1>
+    <p class="form-subtitle">Eight short questions to help you see where things stand — and where it's worth focusing next. There are no right or wrong answers.</p>
+  </div>
+
+  <!-- ── Age tab selector (not scored — routing only) ── -->
+  <div class="tab-row" role="tablist" aria-label="Child's age group">
+    <button class="tab-btn active" role="tab" aria-selected="true" onclick="switchTab(0)" id="tab-a">My child is 6–12</button>
+    <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab(1)" id="tab-b">My child is 13–17</button>
+  </div>
+
+  <!-- ── Quiz area ── -->
+  <div id="quizArea">
+
+    <div class="progress-wrap">
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width: 12.5%"></div>
+      </div>
+      <div class="progress-label" id="progressLabel">1 of 8</div>
+    </div>
+
+    <div id="questionArea"></div>
+
+    <div class="nav-row" id="navRow">
+      <button class="btn-back" id="btnBack" onclick="goBack()">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg>
+        Back
+      </button>
+      <div class="nav-right">
+        <button class="btn-skip" id="btnSkip" onclick="skipQ()">Skip</button>
+        <button class="btn-next" id="btnNext" onclick="goNext()" disabled>Next</button>
+      </div>
+    </div>
+
+  </div><!-- /quizArea -->
+
+  <!-- ── Results screen (hidden until complete) ── -->
+  <div id="resultScreen" style="display:none">
+    <div class="results-header">
+      <h2 class="results-title">Your digital parenting profile</h2>
+      <p class="results-sub" id="resultsSub"></p>
+    </div>
+    <div class="dim-grid" id="dimGrid"></div>
+    <button class="btn-restart" onclick="restart()">Start again</button>
+  </div>
+
+</div><!-- /shell -->
+
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════
+   QUESTION DATA — PATHWAY A · Ages 6–12
+   Each question object:
+     id         unique key
+     dim        scoring dimension (awareness | setup | disclosure | topics | modelling)
+     dimLabel   human-readable label for results
+     type       "single" | "checklist"
+     scenario   optional { speaker, text } for callout box
+     text       question stem
+     subtext    optional clarifying note below stem
+     options[]  { text, hint?, score, isNone? }
+
+   HOW TO COMPARE / EDIT:
+   Beneath each LIVE question block you will find a commented-out
+   2ALTERNATIVE: ... block containing your (the advisor's)
+   original refined wording. Toggle comments to swap versions.
+═══════════════════════════════════════════════════════════════════ */
+
+const QS_A = [
+
+  /* ─── Q1 · Digital awareness — visibility ─────────────────── */
+  {
+    id: "q1", dim: "awareness", dimLabel: "Digital awareness",
+    type: "checklist",
+    text: "Which of these do you actually know about your child's current online activity?",
+    subtext: "Select everything that genuinely applies — \"I'm not sure\" is a valid answer.",
+    options: [
+      { text: "I know which <b>apps, games or platforms they use most</b>",             score: 1 },
+      { text: "I know roughly <b>how much time they spend on each</b>",                           score: 1 },
+      { text: "I have a reasonable idea <b>who they regularly play or chat with</b>",             score: 1 },
+      { text: "I would notice quickly if a <b>new app or platform became important to them</b>",  score: 1 },
+      { text: "I know what kind of <b>content they watch or engage with</b>",                     score: 1 },
+      { text: "I'm not sure about most of this",  isNone: true,                           score: 0 }
+      /* { text: "I'm not sure about most of this", isNone: true,                            score: 0 } */
+    ]
+  },
+
+  /*
+  ALTERNATIVE Q1 — your refined version:
+  {
+    id: "q1", dim: "awareness", dimLabel: "Digital awareness",
+    type: "checklist",
+    text: "Which of these do you actually know about your child's current online activity?",
+    subtext: "(Select everything that genuinely applies — \"I'm not sure\" is a valid answer.)",
+    options: [
+      { text: "I know which apps, games or platforms they use most right now",             score: 1 },
+      { text: "I know roughly how much time they spend on each",                           score: 1 },
+      { text: "I have a reasonable idea who they regularly play or chat with",             score: 1 },
+      { text: "I would notice quickly if a new app or platform became important to them",  score: 1 },
+      { text: "I know what kind of content they watch or engage with",                     score: 1 },
+      { text: "I'm not sure about most of this", isNone: true,                            score: 0 }
+    ]
+  },
+  */
+
+
+  /* ─── Q2 · Digital awareness — online identity ────────────── */
+  {
+    id: "q2", dim: "awareness", dimLabel: "Digital awareness",
+    type: "single",
+    text: "When random online friends or players come up in conversation, which feels most true?",
+    subtext: "My child…",
+    options: [
+      { text: "…understands people online might not be who they claim and would tell me if something felt off",         score: 3 },
+      { text: "…knows people can pretend online, but it's more something we've mentioned than really discussed",          score: 2 },
+      { text: "…usually assumes online contacts are who they say they are",                                               score: 1 },
+      { text: "…generally sees online people as friendly and trustworthy",                                                score: 0 },
+      { text: "We've never really talked about this",                                                                     score: 0 },
+      { text: "My child doesn't use online games or apps with other people",                                              score: null }
+    ]
+  },
+
+  /*
+  ALTERNATIVE Q2 — your refined version:
+  {
+    id: "q2", dim: "awareness", dimLabel: "Digital awareness",
+    type: "single",
+    text: "When random online friends or players come up in conversation, which feels most true?",
+    subtext: "My child…",
+    options: [
+      { text: "...cautiously understands that people online may not be who they claim to be",  score: 3 },
+      { text: "…usually assumes online people are who they say they are",                      score: 1 },
+      { text: "…knows that people can pretend online, but doesn't always think about it",      score: 2 },
+      { text: "…believes most are friendly and trustworthy",                                   score: 0 },
+      { text: "We've never really discussed it",                                               score: 0 },
+      { text: "My child does not use online games/apps",                                       score: null }
+    ]
+  },
+  */
+
+
+  /* ─── Q3 · Setup & safety — new app behaviour ─────────────── */
+  {
+    id: "q3", dim: "setup", dimLabel: "Setup & safety",
+    type: "single",
+    scenario: {
+      speaker: "Picture this:",
+      text: "Your child asks if they can install a new game tonight. Their friend already has it."
+    },
+    text: "What would most likely happen?",
+    options: [
+      { text: "I'd look through the key settings (chat, privacy, purchases) before they start",  score: 3 },
+      { text: "I'd check the app store rating and reviews, but not go further than that",           score: 2 },
+      { text: "I'd let them install it and check the settings within the next few days",            score: 1 },
+      { text: "I'd say yes and assume the default settings are probably fine",                      score: 0 },
+      { text: "I wouldn't really know what to look for",                                            score: 0 }
+    ]
+  },
+
+  /*
+  ALTERNATIVE Q3 — your refined version:
+  {
+    id: "q3", dim: "setup", dimLabel: "Setup & safety",
+    type: "single",
+    text: "Your child asks if they can install a new game tonight. Their friend already has it. What would most likely happen?",
+    options: [
+      { text: "I'd immediately look through the key settings (chat, privacy, purchases)",    score: 3 },
+      { text: "I'd let them install it and check the settings within the next few days",     score: 1 },
+      { text: "I'd check the key settings before they start using it",                       score: 3 },
+      { text: "I'd say yes and assume the default settings are probably fine",               score: 0 },
+      { text: "I wouldn't really know what to look for",                                     score: 0 }
+    ]
+  },
+  */
+
+
+  /* ─── Q4 · Safe disclosure — trust & communication ────────── */
+  {
+    id: "q4", dim: "disclosure", dimLabel: "Safe disclosure",
+    type: "single",
+    scenario: {
+      speaker: "Imagine this:",
+      text: "Your child comes home quieter than usual. After a while they mention they saw something upsetting in a game chat — something that made them feel embarrassed, or worried they might get in trouble."
+    },
+    text: "What would most likely happen? They would…",
+    options: [
+      { text: "…tell me straight away and we'd work through it together",                              score: 4 },
+      { text: "…tell me, but leave out some of the details",                                           score: 3 },
+      { text: "…wait a while before saying anything — they'd need to feel it was safe",                score: 2 },
+      { text: "…try to handle it themselves or talk to a friend first",                                score: 1 },
+      { text: "…probably keep it to themselves — it's easier than risking consequences",               score: 0 },
+      { text: "I honestly don't know what they'd do",                                                  score: 1 }
+    ]
+  },
+
+  /*
+  ALTERNATIVE Q4 — your refined version:
+  {
+    id: "q4", dim: "disclosure", dimLabel: "Safe disclosure",
+    type: "single",
+    text: "Your child comes home quieter than usual. After a while they mention they saw something upsetting in a game chat, something that made them feel embarrassed, or worried they might get in trouble. What would most likely happen? They would…",
+    options: [
+      { text: "tell me straight away and we'd work through it together",   score: 4 },
+      { text: "tell me in a nice way, but leave out some of the details",  score: 3 },
+      { text: "wait a while before saying anything",                       score: 2 },
+      { text: "try to handle it themselves or talk to a friend first",     score: 1 },
+      { text: "probably keep it to themselves",                            score: 0 }
+    ]
+  },
+  */
+
+
+  /* ─── Q5 · Safe disclosure — stranger risk recognition ─────── */
+  {
+    id: "q5", dim: "disclosure", dimLabel: "Safe disclosure",
+    type: "single",
+    scenario: {
+      speaker: "In a game your child plays regularly:",
+      text: "A player with a Star Wars Yoda profile picture has been friendly with them for a few weeks. One day they get a message: \"You always tell funny stories 😄. Can you send me a picture of yourself at the pool or with an ice cream? Let's keep it between us for now.\""
+    },
+    text: "What would your child most likely do?",
+    options: [
+      { text: "Recognise it as a red flag and tell me straight away. We've talked about this.",  score: 3 },
+      { text: "Feel that something was off and stop but probably not tell me about it",                                  score: 2 },
+      { text: "Be unsure what to do. We've never really prepared for something like this",                                score: 1 },
+      { text: "Probably go along with it. I don't think they'd see the problem",                                         score: 0 }
+    ]
+  },
+
+  /*
+  ALTERNATIVE Q5 — your refined version:
+  {
+    id: "q5", dim: "disclosure", dimLabel: "Safe disclosure",
+    type: "single",
+    scenario: {
+      speaker: "In a game your child plays regularly:",
+      text: "A player with a StarWars-Yoda profile picture has been friendly with them for a few weeks. One day they get a message: \"You always tell funny stories 😄. Can you send me a picture of yourself at the pool or with an ice cream? Let's keep it between us for now.\""
+    },
+    text: "What would your child most likely do?",
+    options: [
+      { text: "Recognise it as a red flag and tell me straight away (we discussed this)",     score: 3 },
+      { text: "Feel that something was off and probably stop (and never spill a word)",       score: 2 },
+      { text: "Be unsure what to do. We've never really prepared for something like this",    score: 1 },
+      { text: "Probably go along with it.",                                                   score: 0 }
+    ]
+  },
+  */
+
+
+  /* ─── Q6 · Setup & safety — platform audit ─────────────────── */
+  {
+    id: "q6", dim: "setup", dimLabel: "Setup & safety",
+    type: "single",
+    text: "Have you looked inside the apps and games your child uses to see what features are available, who can contact them, and what information can be shared?",
+    options: [
+      { text: "Yes, I've looked through the main ones recently and adjusted what I could",    score: 3 },
+      { text: "I check some settings, but I'm often not sure what they actually do",           score: 2 },
+      { text: "I mainly fiddle with one or two things once in a while",                        score: 1 },
+      { text: "I've only looked at the app store description or age rating",                   score: 0 },
+      { text: "I wouldn't know what I'm looking for",                                          score: 0 }
+    ]
+  },
+
+  /*
+  ALTERNATIVE Q6 — your refined version:
+  {
+    id: "q6", dim: "setup", dimLabel: "Setup & safety",
+    type: "single",
+    text: "Have you looked inside the apps and games your child uses to see what features are available, who can contact them, and what information can be shared?",
+    options: [
+      { text: "I mainly check privacy settings",                                             score: 1 },
+      { text: "Yes, I've looked through the main ones recently and adjusted what I could",   score: 3 },
+      { text: "I've looked at some settings, but its hard to know what these actually do",   score: 2 },
+      { text: "I usually fiddle with one or two settings once in a while",                   score: 1 },
+      { text: "I wouldn't know what I'm looking for",                                        score: 0 }
+    ]
+  },
+  */
+
+
+  /* ─── Q7 · Topic coverage — conversations had ───────────────── */
+  {
+    id: "q7", dim: "topics", dimLabel: "Topics covered",
+    type: "checklist",
+    text: "Which of these risk scenarios have you talked about with your child?",
+    subtext: "What to do if… (not a one-off mention but enough that they'd know what to do or who to tell)",
+    options: [
+      { text: "someone online <b>asks personal questions</b> or wants to know where they live or go to school",    score: 1 },
+      { text: "they see <b>scary or upsetting content</b>",                                             score: 1 },
+      { text: "they're <b>bullied, harassed</b> or excluded online",                                               score: 1 },
+      { text: "<b>someone asks for photos</b> or a live webcam video",                                             score: 1 },
+      { text: "someone posts <b>maliciously doctored or fake photos of them</b>",                                  score: 1 },
+      { text: "they want to <b>buy something in a game or app</b>",                                               score: 1 },
+      { text: "someone online or a friend <b>pressures them into doing something</b>",                        score: 1 },
+      { text: "an <b>influencer asks them to post, do or buy something</b>",                                      score: 1 },
+      { text: "they <b>accidentally share personal information</b> online",            score: 1 },
+      { text: "None of these yet", isNone: true,                                                           score: 0 }
+    ]
+  },
+
+  /*
+  ALTERNATIVE Q7 — your refined version:
+  {
+    id: "q7", dim: "topics", dimLabel: "Topics covered",
+    type: "checklist",
+    text: "Which of these have you genuinely talked about with your child?",
+    subtext: "What to do if ..",
+    options: [
+      { text: "someone online asks personal questions",                       score: 1 },
+      { text: "they see scary or upsetting content",                          score: 1 },
+      { text: "they're bullied, harassed or excluded online",                 score: 1 },
+      { text: "someone asks for photos or webcam live video",                 score: 1 },
+      { text: "somebody posts maliciously doctored photos of them",           score: 1 },
+      { text: "wanting to buy something in the game or app",                  score: 1 },
+      { text: "someone (or friends) pressures them to do something",          score: 1 },
+      { text: "influencers ask you to post, do or buy something",             score: 1 },
+      { text: "accidentally having posted personal details publicly",         score: 1 },
+      { text: "None of these yet", isNone: true,                             score: 0 }
+    ]
+  },
+  */
+
+
+  /* ─── Q8 · Role modelling — parent's own habits ─────────────── */
+  {
+    id: "q8", dim: "modelling", dimLabel: "Role modelling",
+    type: "single",
+    text: "When you think honestly about your own screen habits at home — on a weekday evening — which feels most true?",
+    options: [
+      { text: "I put my phone away during meals and when my child wants to talk",                                    score: 4 },
+      { text: "I know I sometimes get distracted. I pick my phone up more than I'd like",                          score: 3 },
+      { text: "I use my phone a fair amount at home and my child has probably noticed",                           score: 2 },
+      { text: "I expect my child to follow screen habits that I don't always manage to follow myself",              score: 1 },
+      { text: "I haven't really thought about my own habits in contrast to what I ask of them",                    score: 0 }
+    ]
+  }
+
+  /*
+  ALTERNATIVE Q8 — your refined version:
+  {
+    id: "q8", dim: "modelling", dimLabel: "Role modelling",
+    type: "single",
+    text: "When you think honestly about your own screen habits at home.. like on a weekday evening… which feels most true?",
+    options: [
+      { text: "I put my phone away during meals and when my child wants to talk",                                    score: 4 },
+      { text: "I know I sometimes get distracted. I pick my phone up more than I'd like.",                          score: 3 },
+      { text: "I have to use my phone a fair amount at home (my child definitely noticed!)",                        score: 2 },
+      { text: "I expect my child to follow screen habits that I don't always manage to follow myself",              score: 1 },
+      { text: "I haven't really thought about my own habits in contrast to what I ask of them",                    score: 0 }
+    ]
+  }
+  */
+
+]; /* end QS_A */
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   PLACEHOLDER — PATHWAY B (Ages 13–17)
+   Questions to be added in next phase.
+   Routing via tab selector already functional.
+═══════════════════════════════════════════════════════════════════ */
+const QS_B = [];
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   SCORING & RESULTS
+   Dimension thresholds — pct of max achievable score per dimension:
+     ≥ 0.70  → strong
+     ≥ 0.40  → building
+     <  0.40 → attention
+═══════════════════════════════════════════════════════════════════ */
+const DIM_FEEDBACK = {
+  awareness: {
+    strong:    { label: "Good visibility",    note: "You have a clear picture of what your child does online and who they interact with." },
+    building:  { label: "Partial picture",    note: "You know the basics but there may be apps or contacts you're not yet fully across." },
+    attention: { label: "Blind spots here",   note: "Your child's online world is still largely a black box. This is common but worth addressing directly." }
+  },
+  setup: {
+    strong:    { label: "Actively managed",   note: "You're reviewing and configuring the tools your child uses. That's more than most parents do." },
+    building:  { label: "Partial setup",      note: "Some settings are in place, but app defaults drift. A regular check-in would make a real difference." },
+    attention: { label: "Gap here",           note: "Most apps ship with permissive defaults. Reviewing settings is one of the highest-impact steps you can take." }
+  },
+  disclosure: {
+    strong:    { label: "Open door",          note: "Your child would likely come to you when something goes wrong. That's the most protective thing you can build." },
+    building:  { label: "Developing trust",   note: "Trust is there, but your child might hesitate before sharing something difficult. Worth reinforcing." },
+    attention: { label: "At risk",            note: "If your child won't come to you, they'll handle problems alone or not at all. This is the area to focus on first." }
+  },
+  topics: {
+    strong:    { label: "Well covered",       note: "You've worked through the core conversations. Keep revisiting: The situations change as they get older." },
+    building:  { label: "Partially covered",  note: "Some topics have been addressed. The ones still missing tend to be the ones children most need to hear about." },
+    attention: { label: "Conversations needed", note: "Several important topics haven't come up yet. These don't need to be big talks — small, specific moments work." }
+  },
+  modelling: {
+    strong:    { label: "Consistent",         note: "You model what you ask of your child. Children notice this more than any rule you set." },
+    building:  { label: "Some inconsistency", note: "There's a gap between what you ask and what you do. Your child has probably noticed. Naming it honestly helps." },
+    attention: { label: "Worth revisiting",   note: "The gap between your habits and your expectations is wider than you'd like. Your own behaviour is the fastest lever here." }
+  }
+};
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   STATE
+═══════════════════════════════════════════════════════════════════ */
+let currentPath = 0;   // 0 = A (6-12), 1 = B (13-17)
+let currentQ    = 0;
+let answers     = {};  // { qid: selectedIndex (single) | [indexes] (checklist) }
+
+function activeQS() { return currentPath === 0 ? QS_A : QS_B; }
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   TAB SWITCHING
+═══════════════════════════════════════════════════════════════════ */
+function switchTab(idx) {
+  currentPath = idx;
+  currentQ    = 0;
+  answers     = {};
+  document.getElementById('tab-a').classList.toggle('active', idx === 0);
+  document.getElementById('tab-a').setAttribute('aria-selected', idx === 0);
+  document.getElementById('tab-b').classList.toggle('active', idx === 1);
+  document.getElementById('tab-b').setAttribute('aria-selected', idx === 1);
+  document.getElementById('quizArea').style.display   = '';
+  document.getElementById('resultScreen').style.display = 'none';
+  render();
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   RENDER
+═══════════════════════════════════════════════════════════════════ */
+function render() {
+  const qs    = activeQS();
+  const total = qs.length;
+  const q     = qs[currentQ];
+
+  /* progress */
+  const pct = Math.round((currentQ + 1) / total * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = (currentQ + 1) + ' of ' + total;
+
+  /* back / skip / next visibility */
+  const btnBack = document.getElementById('btnBack');
+  const btnSkip = document.getElementById('btnSkip');
+  const btnNext = document.getElementById('btnNext');
+
+  btnBack.style.visibility = currentQ === 0 ? 'hidden' : 'visible';
+  btnSkip.style.display    = currentQ === total - 1 ? 'none' : 'inline';
+  btnNext.textContent      = currentQ === total - 1 ? 'See my results' : 'Next';
+  btnNext.disabled         = !hasAnswer(q);
+
+  /* build question HTML */
+  let html = '';
+  html += `<div class="q-card">`;
+  html += `<div class="q-dim-label">${q.dimLabel}</div>`;
+
+  if (q.scenario) {
+    html += `<div class="scenario-box">
+      <div class="scenario-speaker">${q.scenario.speaker}</div>
+      <div class="scenario-quote">${q.scenario.text}</div>
+    </div>`;
+  }
+
+  html += `<div class="q-text">${q.text}</div>`;
+  if (q.subtext) html += `<div class="q-subtext">${q.subtext}</div>`;
+
+  if (q.type === 'single') {
+    html += `<div class="options-list" role="radiogroup">`;
+    q.options.forEach((opt, i) => {
+      const sel = answers[q.id] === i;
+      html += `<button
+        class="option-btn${sel ? ' selected' : ''}"
+        role="radio"
+        aria-checked="${sel}"
+        onclick="selectSingle('${q.id}', ${i})"
+      >
+        <div class="radio-dot"><div class="radio-inner"></div></div>
+        <span class="option-label">${opt.text}</span>
+      </button>`;
+    });
+    html += `</div>`;
+
+  } else {
+    /* checklist */
+    const sel = answers[q.id] || [];
+    html += `<div class="check-list" role="group">`;
+    q.options.forEach((opt, i) => {
+      const isSelected = sel.includes(i);
+      html += `<button
+        class="check-btn${opt.isNone ? ' none-opt' : ''}${isSelected ? ' selected' : ''}"
+        role="checkbox"
+        aria-checked="${isSelected}"
+        onclick="${opt.isNone ? `selectNone('${q.id}', ${i})` : `toggleCheck('${q.id}', ${i}, ${q.options.length})`}"
+      >
+        <div class="check-box">
+          <svg class="check-tick" viewBox="0 0 10 10" fill="none" stroke="white" stroke-width="1.8" aria-hidden="true">
+            <polyline points="1.5,5 4,7.5 8.5,2.5"/>
+          </svg>
+        </div>
+        <span class="option-label">${opt.text}</span>
+      </button>`;
+    });
+    html += `</div>`;
+  }
+
+  html += `</div>`; /* /q-card */
+
+  document.getElementById('questionArea').innerHTML = html;
+
+  /* re-sync next button after re-render */
+  document.getElementById('btnNext').disabled = !hasAnswer(q);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   ANSWER HELPERS
+═══════════════════════════════════════════════════════════════════ */
+function hasAnswer(q) {
+  if (q.type === 'single')    return answers[q.id] !== undefined;
+  return (answers[q.id] || []).length > 0;
+}
+
+function selectSingle(qid, idx) {
+  answers[qid] = idx;
+  render();
+}
+
+function toggleCheck(qid, idx, noneIdx) {
+  let sel = answers[qid] ? [...answers[qid]] : [];
+  /* remove none-option if present */
+  sel = sel.filter(i => i !== noneIdx);
+  const pos = sel.indexOf(idx);
+  if (pos > -1) sel.splice(pos, 1); else sel.push(idx);
+  answers[qid] = sel;
+  render();
+}
+
+function selectNone(qid, noneIdx) {
+  answers[qid] = [noneIdx];
+  render();
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════════════════════════════════════ */
+function goNext() {
+  const qs = activeQS();
+  if (currentQ < qs.length - 1) { currentQ++; render(); }
+  else showResults();
+}
+
+function goBack() {
+  if (currentQ > 0) { currentQ--; render(); }
+}
+
+function skipQ() {
+  const qs = activeQS();
+  if (currentQ < qs.length - 1) { currentQ++; render(); }
+}
+
+function restart() {
+  currentQ = 0;
+  answers  = {};
+  document.getElementById('quizArea').style.display    = '';
+  document.getElementById('resultScreen').style.display = 'none';
+  render();
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESULTS — SCORING & DISPLAY
+═══════════════════════════════════════════════════════════════════ */
+function showResults() {
+  document.getElementById('quizArea').style.display    = 'none';
+  document.getElementById('resultScreen').style.display = '';
+
+  const qs = activeQS();
+
+  /* tally per dimension */
+  const dimScore = {};
+  const dimMax   = {};
+
+  qs.forEach(q => {
+    if (!dimScore[q.dim]) { dimScore[q.dim] = 0; dimMax[q.dim] = 0; }
+
+    if (q.type === 'single') {
+      const scoredOptions = q.options.filter(o => o.score !== null);
+      const max = Math.max(...scoredOptions.map(o => o.score));
+      dimMax[q.dim] += max;
+      if (answers[q.id] !== undefined) {
+        const sc = q.options[answers[q.id]].score;
+        if (sc !== null) dimScore[q.dim] += sc;
+      }
+    } else {
+      /* checklist: each checked non-none option adds its score */
+      const nonNoneOpts = q.options.filter(o => !o.isNone);
+      dimMax[q.dim] += nonNoneOpts.reduce((a, o) => a + o.score, 0);
+      const sel = answers[q.id] || [];
+      sel.forEach(i => {
+        if (!q.options[i].isNone) dimScore[q.dim] += q.options[i].score;
+      });
+    }
+  });
+
+  /* overall pct for summary line */
+  const totalScore = Object.values(dimScore).reduce((a, v) => a + v, 0);
+  const totalMax   = Object.values(dimMax).reduce((a, v) => a + v, 0);
+  const overallPct = totalMax > 0 ? totalScore / totalMax : 0;
+
+  const summaryLine =
+    overallPct >= 0.70 ? "You've built solid foundations. The areas below show where to focus next." :
+    overallPct >= 0.40 ? "There's good practice here alongside real gaps. The profile below points to where to start." :
+    "This is a useful starting point. Small, focused changes in the areas below can make a real difference.";
+
+  document.getElementById('resultsSub').textContent = summaryLine;
+
+  /* build dimension cards */
+  let gridHTML = '';
+  /* preserve insertion order from QS_A */
+  const orderedDims = [...new Set(qs.map(q => q.dim))];
+
+  orderedDims.forEach(dim => {
+    const pct  = dimMax[dim] > 0 ? dimScore[dim] / dimMax[dim] : 0;
+    const tier = pct >= 0.70 ? 'strong' : pct >= 0.40 ? 'building' : 'attention';
+    const fb   = DIM_FEEDBACK[dim][tier];
+    const dimLabel = qs.find(q => q.dim === dim).dimLabel;
+
+    gridHTML += `
+      <div class="dim-card">
+        <div class="dim-card-eyebrow text-lg md:text-lg lg:text-xl">${dimLabel}</div>
+        <div class="dim-card-status text-xl md:text-lg lg:text-xl xl:text-2xl status-${tier}">${fb.label}</div>
+        <div class="bar-track">
+          <div class="bar-fill bar-${tier}" style="width: ${Math.round(pct * 100)}%"></div>
+        </div>
+        <div class="dim-card-note text-lg xl:text-base">${fb.note}</div>
+      </div>`;
+  });
+
+  document.getElementById('dimGrid').innerHTML = gridHTML;
+}
+
+
+/* ── Boot ── */
+render();
+</script>
+</body>
+</html>

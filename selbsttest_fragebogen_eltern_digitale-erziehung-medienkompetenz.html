@@ -1,0 +1,266 @@
+<div class="min-h-[400px]">
+		
+	  <div class="relative bg-cylightpink neo-border rounded-[20px] md:rounded-[40px] px-5 py-5 md:p-10 lg:p-16" data-purpose="waitlist-card">
+		  
+		  <div class="flex flex-row flex-wrap">
+			  
+			  <div class="shell">
+				  
+					<div class="form-header">
+					  <div class="form-eyebrow text-base lg:text-sm font-bold">Digitale Medienerziehung · Selbsttest</div>
+					  <h1 class="form-title text-2xl md:text-2xl lg:text-2xl xl:text-4xl">Wie fit ist deine Familie für die Online-Welt?</h1>
+					  <p class="form-subtitle text-base lg:text-lg">Acht kurze Fragen, die dir zeigen, wo ihr gerade steht – und wo es sich lohnt, als Nächstes anzusetzen. Es gibt kein Richtig oder Falsch.</p>
+					</div>
+				  
+					<div class="tab-row" role="tablist" aria-label="Altersgruppe des Kindes">
+					  <button class="tab-btn active" role="tab" aria-selected="true" onclick="switchTab(0)" id="tab-a">Kinder von 6–12</button>
+					  <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab(1)" id="tab-b">Kinder von 13–17</button>
+					</div> 
+				  
+					<div id="quizArea">
+				  
+					  <div class="progress-wrap">
+						<div class="progress-track">
+						  <div class="progress-fill" id="progressFill" style="width: 12.5%"></div>
+						</div>
+						<div class="progress-label" id="progressLabel">1 von 8</div>
+					  </div>
+				  
+					  <div id="questionArea"></div>
+				  
+					  <div class="nav-row" id="navRow">
+						<button class="btn-back" id="btnBack" onclick="goBack()">
+						  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg>
+						  Zurück
+						</button>
+						<div class="nav-right">
+						  <button class="btn-skip" id="btnSkip" onclick="skipQ()">Überspringen</button>
+						  <button class="btn-next" id="btnNext" onclick="goNext()" disabled>Weiter</button>
+						</div>
+					  </div>
+				  
+					</div><div id="resultScreen" style="display:none">
+					  <div class="results-header">
+						<h2 class="results-title text-lg xl:text-lg">Dein digitales Eltern-Profil</h2>
+						<p class="results-sub text-lg xl:text-base" id="resultsSub"></p>
+					  </div>
+					  <div class="grid grid-cols-1 md:grid-cols-2 gap-[10px] mb-7" id="dimGrid"></div>
+					  <button class="btn-restart hover:border-2 hover:border-black-200" onclick="restart()">Nochmal starten</button>
+					</div>
+				  
+				  </div><script>
+			  
+				  const QS_A = [
+				  
+					/* ─── Q1 · Digital awareness — visibility ─────────────────── */
+					{
+					  id: "q1", dim: "awareness", dimLabel: "Digitaler Durchblick",
+					  type: "checklist",
+					  text: "Was davon weißt du aktuell wirklich über die Online-Aktivitäten deines Kindes?",
+					  subtext: "Wähle alles aus, was tatsächlich zutrifft: \"Ich bin mir nicht sicher\" ist eine völlig normale Antwort.",
+					  options: [
+						{ text: "Ich weiß, welche <b>Apps, Spiele oder Plattformen am meisten genutzt werden</b>",             score: 1 },
+						{ text: "Ich weiß ungefähr, <b>wie viel Zeit auf den einzelnen Plattformen verbracht wird</b>",                           score: 1 },
+						{ text: "Ich habe eine gute Vorstellung davon, <b>mit wem regelmäßig gespielt oder gechattet wird</b>",             score: 1 },
+						{ text: "Ich würde schnell merken, wenn eine <b>neue App oder Plattform plötzlich wichtig wird</b>",  score: 1 },
+						{ text: "Ich weiß, welche Art von <b>Inhalten geschaut oder konsumiert wird</b>",                     score: 1 },
+						{ text: "Ich bin mir bei den meisten dieser Punkte nicht sicher",  isNone: true,                           score: 0 }
+					  ]
+					},
+				  
+				  
+				  
+					/* ─── Q2 · Digital awareness — online identity ────────────── */
+					{
+					  id: "q2", dim: "awareness", dimLabel: "Digitaler Durchblick",
+					  type: "single",
+					  text: "Wenn das Gespräch auf zufällige Online-Freunde oder Mitspieler kommt – was trifft am ehesten zu?",
+					  subtext: "Mein Kind…",
+					  options: [
+						{ text: "…versteht, dass Leute im Netz nicht immer die sind, für die sie sich ausgeben, und würde es mir sagen, wenn sich etwas komisch anfühlt",         score: 3 },
+						{ text: "…weiß, dass man sich online verstellen kann – aber das haben wir eher mal am Rande erwähnt, als richtig darüber gesprochen",          score: 2 },
+						{ text: "…geht meistens davon aus, dass Online-Kontakte genau die sind, die sie vorgeben zu sein",                                               score: 1 },
+						{ text: "…sieht Leute im Internet generell als nett und vertrauenswürdig an",                                                score: 0 },
+						{ text: "Wir haben über dieses Thema noch nie wirklich gesprochen",                                                                     score: 0 },
+						{ text: "Mein Kind nutzt keine Online-Spiele oder Apps, bei denen man mit anderen zu tun hat",                                              score: null }
+					  ]
+					},
+				  
+				  
+				  
+					/* ─── Q3 · Setup & safety — new app behaviour ─────────────── */
+					{
+					  id: "q3", dim: "setup", dimLabel: "Einstellungen & Sicherheit",
+					  type: "single",
+					  scenario: {
+						speaker: "Stell dir vor:",
+						text: "Dein Kind fragt dich, ob es heute Abend ein neues Spiel installieren darf. Ein Freund hat es auch schon."
+					  },
+					  text: "Was würde am wahrscheinlichsten passieren?",
+					  options: [
+						{ text: "Ich würde mir vor dem Start die wichtigsten Einstellungen (Chat, Privatsphäre, In-App-Käufe) ansehen",  score: 3 },
+						{ text: "Ich würde kurz die Altersfreigabe und die Bewertungen im App Store checken, mehr aber nicht",           score: 2 },
+						{ text: "Ich würde die Installation erlauben und mir die Einstellungen in den nächsten Tagen mal anschauen",            score: 1 },
+						{ text: "Ich würde Ja sagen und darauf vertrauen, dass die Standardeinstellungen schon passen werden",                      score: 0 },
+						{ text: "Ich wüsste gar nicht genau, worauf ich bei den Einstellungen achten soll",                                            score: 0 }
+					  ]
+					},
+				  
+				  
+				  
+					/* ─── Q4 · Safe disclosure — trust & communication ────────── */
+					{
+					  id: "q4", dim: "disclosure", dimLabel: "Offener Umgang",
+					  type: "single",
+					  scenario: {
+						speaker: "Stell dir vor:",
+						text: "Dein Kind kommt nach Hause und ist viel ruhiger als sonst. Nach einer Weile erzählt es dir, dass es in einem Spiele-Chat etwas Verstörendes gesehen hat – etwas, das ihm peinlich ist oder weswegen es Angst hat, Ärger zu bekommen."
+					  },
+					  text: "Was würde am wahrscheinlichsten passieren? Mein Kind würde…",
+					  options: [
+						{ text: "…es mir sofort erzählen und wir würden das Problem gemeinsam lösen",                              score: 4 },
+						{ text: "…es mir zwar erzählen, aber ein paar Details weglassen",                                           score: 3 },
+						{ text: "…erst mal abwarten, um sicherzugehen, dass es keinen Ärger gibt, bevor es etwas sagt",                score: 2 },
+						{ text: "…versuchen, die Sache selbst zu regeln oder zuerst mit Freunden darüber sprechen",                                score: 1 },
+						{ text: "…es wahrscheinlich für sich behalten (einfacher, als Konsequenzen zu riskieren)",               score: 0 },
+						{ text: "Ich weiß ehrlich gesagt nicht, wie mein Kind reagieren würde",                                                  score: 1 }
+					  ]
+					},
+				  
+				  
+				  
+					/* ─── Q5 · Safe disclosure — stranger risk recognition ─────── */
+					{
+					  id: "q5", dim: "disclosure", dimLabel: "Offener Umgang",
+					  type: "single",
+					  scenario: {
+						speaker: "In einem Spiel, das dein Kind regelmäßig spielt:",
+						text: "Ein Spieler mit einem Star-Wars-Yoda-Profilbild verhält sich seit ein paar Wochen sehr nett. Eines Tages kommt eine Nachricht: \"Du erzählst immer so lustige Geschichten 😄. Kannst du mir mal ein Bild von dir im Schwimmbad oder beim Eisessen schicken? Lass das aber erst mal unser Geheimnis bleiben.\""
+					  },
+					  text: "Wie würde dein Kind am wahrscheinlichsten reagieren?",
+					  options: [
+						{ text: "Es erkennt sofort, dass hier eine rote Linie überschritten wurde, und sagt es mir direkt. Wir haben über so etwas gesprochen.",  score: 3 },
+						{ text: "Es merkt, dass etwas faul ist und bricht den Kontakt ab, würde es mir aber wahrscheinlich nicht erzählen",                                  score: 2 },
+						{ text: "Es wäre unsicher, was zu tun ist. Auf so eine Situation haben wir uns nie wirklich vorbereitet",                                score: 1 },
+						{ text: "Es würde der Bitte wahrscheinlich nachkommen. Ich glaube nicht, dass es darin ein Problem sehen würde",                                         score: 0 }
+					  ]
+					},
+				  
+				  
+				  
+					/* ─── Q6 · Setup & safety — platform audit ─────────────────── */
+					{
+					  id: "q6", dim: "setup", dimLabel: "Einstellungen & Sicherheit",
+					  type: "single",
+					  text: "Hast du dir die Apps und Spiele deines Kindes schon mal von innen angesehen, um zu prüfen, welche Funktionen an sind, wer dein Kind kontaktieren kann und welche Daten geteilt werden?",
+					  options: [
+						{ text: "Ja, ich habe mir die wichtigsten neulich angeschaut und angepasst, was ging",    score: 3 },
+						{ text: "Ich überfliege manche Einstellungen, bin mir aber oft unsicher, was sie genau bewirken",           score: 2 },
+						{ text: "Ich verändere ab und zu mal ein oder zwei Kleinigkeiten",                        score: 1 },
+						{ text: "Ich habe mir bisher nur die Beschreibung oder Altersfreigabe im App Store durchgelesen",                   score: 0 },
+						{ text: "Ich wüsste gar nicht genau, wonach ich da suchen soll",                                          score: 0 }
+					  ]
+					},
+				  
+
+				  
+				  
+					/* ─── Q7 · Topic coverage — conversations had ───────────────── */
+					{
+					  id: "q7", dim: "topics", dimLabel: "Besprochene Themen",
+					  type: "checklist",
+					  text: "Über welche dieser Risikoszenarien hast du mit deinem Kind schon gesprochen?",
+					  subtext: "Und zwar so, was zu tun ist, wenn… (keine bloße Erwähnung im Vorbeigehen, sondern so, dass dein Kind wüsste, wie es reagieren oder wem es Bescheid sagen soll)",
+					  options: [
+						{ text: "jemand online <b>persönliche Fragen stellt</b> oder wissen will, wo es wohnt oder zur Schule geht",    score: 1 },
+						{ text: "es auf <b>beängstigende oder verstörende Inhalte</b> stößt",                                             score: 1 },
+						{ text: "es online <b>gemobbt, belästigt</b> oder ausgeschlossen wird",                                               score: 1 },
+						{ text: "<b>jemand nach Fotos</b> oder einem Live-Webcam-Video fragt",                                             score: 1 },
+						{ text: "jemand <b>gemein bearbeitete oder gefälschte Fotos (Fake-Bilder) von ihm</b> verbreitet",                                  score: 1 },
+						{ text: "es <b>etwas in einem Spiel oder einer App kaufen</b> möchte",                                               score: 1 },
+						{ text: "jemand im Netz oder ein Freund <b>Druck ausübt, etwas Bestimmtes zu tun</b>",                        score: 1 },
+						{ text: "ein <b>Influencer dazu aufruft, etwas zu posten, zu machen oder zu kaufen</b>",                                      score: 1 },
+						{ text: "es aus Versehen <b>persönliche Informationen im Netz geteilt</b> hat",            score: 1 },
+						{ text: "Bisher noch keines dieser Themen", isNone: true,                                                           score: 0 }
+					  ]
+					},
+				  
+
+				  
+				  
+					/* ─── Q8 · Role modelling — parent's own habits ─────────────── */
+					{
+					  id: "q8", dim: "modelling", dimLabel: "Vorbildfunktion",
+					  type: "single",
+					  text: "Wenn du ganz ehrlich an deine eigenen Bildschirmzeiten zu Hause denkst – zum Beispiel an einem Wochentag abends – was trifft am ehesten zu?",
+					  options: [
+						{ text: "Ich lege mein Smartphone beim Essen und bei Gesprächen mit meinem Kind konsequent weg",                                    score: 4 },
+						{ text: "Ich weiß, dass ich mich manchmal ablenken lasse und öfter zum Handy greife, als mir lieb ist",                          score: 3 },
+						{ text: "Ich nutze mein Smartphone zu Hause ziemlich viel, und das ist meinem Kind bestimmt auch schon aufgefallen",                           score: 2 },
+						{ text: "Ich erwarte von meinem Kind Bildschirmregeln, die ich selbst nicht immer ganz einhalten kann",              score: 1 },
+						{ text: "Ich habe mir noch keine großen Gedanken darüber gemacht, wie sich meine eigenen Gewohnheiten von meinen Regeln fürs Kind unterscheiden",                    score: 0 }
+					  ]
+					}
+				  
+
+				  
+				  ]; /* end QS_A */
+				  
+				  
+				  /* ═══════════════════════════════════════════════════════════════════
+					 PLACEHOLDER — PATHWAY B (Ages 13–17)
+					 Questions to be added in next phase.
+					 Routing via tab selector already functional.
+				  ═══════════════════════════════════════════════════════════════════ */
+				  const QS_B = [];
+				  
+				  
+				  /* ═══════════════════════════════════════════════════════════════════
+					 SCORING & RESULTS
+					 Dimension thresholds — pct of max achievable score per dimension:
+					   ≥ 0.70  → strong
+					   ≥ 0.40  → building
+					   <  0.40 → attention
+				  ═══════════════════════════════════════════════════════════════════ */
+				  const DIM_FEEDBACK = {
+					awareness: {
+					  strong:    { label: "Guter Durchblick",    note: "Du hast ein klares Bild davon, was dein Kind online macht und mit wem es sich austauscht." },
+					  building:  { label: "Teilweise im Bilde",    note: "Die Grundlagen hast du im Blick, aber bei manchen Apps oder Kontakten bist du vielleicht noch nicht ganz auf dem Laufenden." },
+					  attention: { label: "Noch ein paar blinde Flecken",   note: "Die Online-Welt deines Kindes ist für dich aktuell noch eine Blackbox. Das geht vielen so, ist aber ein guter Ansatzpunkt." }
+					},
+					setup: {
+					  strong:    { label: "Aktiv abgesichert",   note: "Du prüfst und konfigurierst die Tools, die dein Kind nutzt. Das ist schon deutlich mehr, als die meisten Eltern tun." },
+					  building:  { label: "Basis-Schutz steht",      note: "Einige Einstellungen passen, aber App-Standards ändern sich oft. Ein regelmäßiger Check würde hier viel bewirken." },
+					  attention: { label: "Sicherheitslücke",           note: "Die meisten Apps sind ab Werk sehr offen eingestellt. Die Privatsphäre-Einstellungen zu prüfen, ist einer der wichtigsten Schritte überhaupt." }
+					},
+					disclosure: {
+					  strong:    { label: "Offene Tür",          note: "Dein Kind würde wahrscheinlich sofort zu dir kommen, wenn etwas schiefläuft. Das ist der beste Schutz, den du aufbauen kannst." },
+					  building:  { label: "Vertrauen wächst",   note: "Das Vertrauen ist da, aber dein Kind zögert vielleicht noch, wenn es um unangenehme Themen geht. Bleib dran!" },
+					  attention: { label: "Hier wird es riskant",            note: "Wenn dein Kind nicht zu dir kommt, versucht es Probleme allein oder gar nicht zu lösen. Das ist der Bereich, auf den du dich zuerst konzentrieren solltest." }
+					},
+					topics: {
+					  strong:    { label: "Bestens besprochen",       note: "Du hast die wichtigsten Themen bereits abgehakt. Bleib weiter im Gespräch: Die Herausforderungen ändern sich, wenn sie älter werden." },
+					  building:  { label: "Einiges geschafft",  note: "Manche Themen habt ihr schon besprochen. Oft fehlen aber genau die Punkte, über die Kinder am dringendsten etwas hören müssten." },
+					  attention: { label: "Gesprächsbedarf", note: "Einige wichtige Themen kamen noch gar nicht zur Sprache. Das müssen keine riesigen Vorträge sein – kurze, spontane Momente im Alltag reichen oft schon." }
+					},
+					modelling: {
+					  strong:    { label: "Gutes Vorbild",         note: "Du lebst vor, was du von deinem Kind verlangst. Kinder orientieren sich viel mehr an Taten als an aufgestellten Regeln." },
+					  building:  { label: "Kleine Widersprüche", note: "Es gibt eine Lücke zwischen dem, was du einforderst, und dem, was du tust. Dein Kind merkt das wahrscheinlich. Das einfach mal offen anzusprechen, hilft schon." },
+					  attention: { label: "Eigener Check lohnt sich",   note: "Der Unterschied zwischen deinen eigenen Gewohnheiten und deinen Erwartungen ans Kind ist größer, als dir lieb ist. Dein eigenes Verhalten ist hier der schnellste Hebel." }
+					}
+				  };
+				  
+				  
+					btnBack.style.visibility = currentQ === 0 ? 'hidden' : 'visible';
+					btnSkip.style.display    = currentQ === total - 1 ? 'none' : 'inline';
+					btnNext.textContent      = currentQ === total - 1 ? 'Mein Ergebnis anzeigen' : 'Weiter';
+					btnNext.disabled         = !hasAnswer(q);
+				  
+
+				  
+					const summaryLine =
+					  overallPct >= 0.70 ? "Du hast ein starkes Fundament aufgebaut. Die Bereiche unten zeigen dir, wo du als Nächstes ansetzen kannst." :
+					  overallPct >= 0.40 ? "Hier gibt es schon viel Gutes, aber auch noch echte Lücken. Das Profil unten zeigt dir, womit du am besten startest." :
+					  "Das ist ein super Ausgangspunkt. Kleine, gezielte Veränderungen in den unten genannten Bereichen können schon einen riesigen Unterschied machen.";
+
+</script>
