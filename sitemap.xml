@@ -1,10 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">	  
-  <url>
-		<loc>https://cybearapp.de/index.html</loc>
-		<lastmod>2026-05-21</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>1.0</priority>
-  </url>
-</urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- 1. HOME -->
+  <url>
+	<loc>https://cybearapp.de/index.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/index.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/index_en.html" />
+	<changefreq>weekly</changefreq>
+	<priority>1.0</priority>
+  </url>
+  <url>
+	<loc>https://cybearapp.de/index_en.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/index.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/index_en.html" />
+	<changefreq>weekly</changefreq>
+	<priority>0.9</priority>
+  </url>
+
+  <!-- 2. ABOUT US -->
+  <url>
+	<loc>https://cybearapp.de/team_ueber-uns.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/team_ueber-uns.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/team_aboutus_en.html" />
+	<changefreq>monthly</changefreq>
+	<priority>0.7</priority>
+  </url>
+  <url>
+	<loc>https://cybearapp.de/team_aboutus_en.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/team_ueber-uns.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/team_aboutus_en.html" />
+	<changefreq>monthly</changefreq>
+	<priority>0.6</priority>
+  </url>
+
+  <!-- 3. GUIDES FOR PARENTS -->
+  <url>
+	<loc>https://cybearapp.de/guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/guides-parents-kids-checklists-resources-digital-literacy-media_en.html" />
+	<changefreq>weekly</changefreq>
+	<priority>0.8</priority>
+  </url>
+  <url>
+	<loc>https://cybearapp.de/guides-parents-kids-checklists-resources-digital-literacy-media_en.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/guides-parents-kids-checklists-resources-digital-literacy-media_en.html" />
+	<changefreq>weekly</changefreq>
+	<priority>0.7</priority>
+  </url>
+
+  <!-- 4. DIGITAL LITERACY TOPICS -->
+  <url>
+	<loc>https://cybearapp.de/kinder_digitale_medien-kompetenz-online-sicherheit_themen_lernen_nach_alter.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/kinder_digitale_medien-kompetenz-online-sicherheit_themen_lernen_nach_alter.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/children_digital_literacy_competency_topics_learn_at_which_age_groups_en.html" />
+	<changefreq>monthly</changefreq>
+	<priority>0.9</priority>
+  </url>
+  <url>
+	<loc>https://cybearapp.de/children_digital_literacy_competency_topics_learn_at_which_age_groups_en.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/kinder_digitale_medien-kompetenz-online-sicherheit_themen_lernen_nach_alter.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/children_digital_literacy_competency_topics_learn_at_which_age_groups_en.html" />
+	<changefreq>monthly</changefreq>
+	<priority>0.7</priority>
+  </url>
+
+  <!-- 5. TYPICAL DIGITAL PARENTING MISTAKES -->
+  <url>
+	<loc>https://cybearapp.de/guide_leitfaden_typische_fehler_digitale_erziehung_medien_kompetenz_eltern.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/guide_leitfaden_typische_fehler_digitale_erziehung_medien_kompetenz_eltern.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/guide_parents_mistakes_digital_parenting_literacy_competencies_screentime_en.html" />
+	<changefreq>monthly</changefreq>
+	<priority>0.8</priority>
+  </url>
+  <url>
+	<loc>https://cybearapp.de/guide_parents_mistakes_digital_parenting_literacy_competencies_screentime_en.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/guide_leitfaden_typische_fehler_digitale_erziehung_medien_kompetenz_eltern.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/guide_parents_mistakes_digital_parenting_literacy_competencies_screentime_en.html" />
+	<changefreq>monthly</changefreq>
+	<priority>0.7</priority>
+  </url>
+
+  <!-- 6. FAMILY MEDIA USAGE AGREEMENT -->
+  <url>
+	<loc>https://cybearapp.de/familien-medien-nutzungs-vertrag-kinder-gerecht_cybear.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/familien-medien-nutzungs-vertrag-kinder-gerecht_cybear.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/family-media-usage-agreement-digital-parenting-children_cybear_en.html" />
+	<changefreq>monthly</changefreq>
+	<priority>0.9</priority>
+  </url>
+  <url>
+	<loc>https://cybearapp.de/family-media-usage-agreement-digital-parenting-children_cybear_en.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/familien-medien-nutzungs-vertrag-kinder-gerecht_cybear.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/family-media-usage-agreement-digital-parenting-children_cybear_en.html" />
+	<changefreq>monthly</changefreq>
+	<priority>0.7</priority>
+  </url>
+
+  <!-- 7. DIGITAL SAFETY FOR KIDS REGULATION IDEAS -->
+  <url>
+	<loc>https://cybearapp.de/regulation.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/regulation.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/regulation_en.html" />
+	<changefreq>monthly</changefreq>
+	<priority>0.7</priority>
+  </url>
+  <url>
+	<loc>https://cybearapp.de/regulation_en.html</loc>
+	<xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/regulation.html" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/regulation_en.html" />
+	<changefreq>monthly</changefreq>
+	<priority>0.6</priority>
+  </url>
+
+  <!-- 8. DICTIONARY (Combined DE/EN - No specific language split needed if it acts as both) -->
+  <url>
+	<loc>https://cybearapp.de/woerterbuch-digitale-medien-kompetenz-digital-literacy-dictionary.html</loc>
+	<changefreq>monthly</changefreq>
+	<priority>0.7</priority>
+  </url>
+
+  <!-- 9. GAME RECOMMENDATIONS (German Only) -->
+  <url>
+	<loc>https://cybearapp.de/spiele-empfehlungen-kinder.html</loc>
+	<changefreq>monthly</changefreq>
+	<priority>0.7</priority>
+  </url>
+  
+  <!-- 10. Tips for parents: Screen time for app types and games -->
+	<url>
+	  <loc>https://cybearapp.de/bildschirmzeit-apps-alters-empfehlungen-fuer-kinder.html</loc>
+	  <xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/bildschirmzeit-apps-alters-empfehlungen-fuer-kinder.html" />
+	  <xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/screentime-apps-age-recommendations-for-children.html" />
+	  <changefreq>monthly</changefreq>
+	  <priority>0.8</priority>
+	</url>
+	<url>
+	  <loc>https://cybearapp.de/screentime-apps-age-recommendations-for-children.html</loc>
+	  <xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/bildschirmzeit-apps-alters-empfehlungen-fuer-kinder.html" />
+	  <xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/screentime-apps-age-recommendations-for-children.html" />
+	  <changefreq>monthly</changefreq>
+	  <priority>0.7</priority>
+	</url>
+  
+	<!--  11.Parent digital parenting self-assessment test -->
+	<url>
+	  <loc>https://cybearapp.de/selbsttest_fragebogen_eltern_digitale-erziehung-medienkompetenz.html</loc>
+	  <xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/selbsttest_fragebogen_eltern_digitale-erziehung-medienkompetenz.html" />
+	  <xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/self-assessment_questionnaire_parents_digital-parenting_education_digital-literacy_en.html" />
+	  <changefreq>monthly</changefreq>
+	  <priority>0.8</priority>
+	</url>
+	<url>
+	  <loc>https://cybearapp.de/self-assessment_questionnaire_parents_digital-parenting_education_digital-literacy_en.html</loc>
+	  <xhtml:link rel="alternate" hreflang="de-DE" href="https://cybearapp.de/selbsttest_fragebogen_eltern_digitale-erziehung-medienkompetenz.html" />
+	  <xhtml:link rel="alternate" hreflang="en" href="https://cybearapp.de/self-assessment_questionnaire_parents_digital-parenting_education_digital-literacy_en.html" />
+	  <changefreq>monthly</changefreq>
+	  <priority>0.7</priority>
+	</url>
+
+</urlset>
