@@ -17,7 +17,7 @@
 
 <meta name="description" content="Cybear – die spielerische Lernapp für digitale Kompetenzen. Kinder lernen sicher, kritisch und selbstbewusst mit Apps, Internet, KI und Medien umzugehen – Eltern erhalten praktische Hilfe für Risiken, Bildschirmzeit und den digitalen Familienalltag.">
 
-<meta name="keywords" content="Lernapp, spielerisch lernen, digitale Kompetenzen, digitale Bildung, Medienkompetenz Kinder, Medienkompetenz Eltern, Internet Sicherheit Kinder, Bildschirmzeit Kinder, App Sucht, digitale Erziehung, Kinderschutz Internet, Cybersicherheit Kinder, Online Risiken, Desinformation Kinder, Elternratgeber Medien, digitale Kompetenzen Kinder">
+<meta name="keywords" content="Lernapp, Bildschirmzeit, sicher online, digitale Kompetenzen, digitale Bildung, Medienkompetenz Kinder, Medienkompetenz Eltern, Internet Sicherheit Kinder, Bildschirmzeit Kinder, App Sucht, digitale Erziehung, Kinderschutz Internet, Cybersicherheit Kinder, Online Risiken, Desinformation Kinder, Elternratgeber Medien, digitale Kompetenzen Kinder">
 
 <meta name="author" content="Cybear">
 <meta name="geo.country" content="DE">
@@ -73,6 +73,8 @@
 			  'cygreen': '#dffaf8', //   #ceefed
 			  'cyteal': '#4ECDC4',
 			  'cypink': '#FF8FAB',
+			  'cylightpink': '#f5e9ee',
+			  'cylightbeige': '#f5e9da',
 			}
 		  }
 		}
@@ -133,6 +135,10 @@
 } 
 </style>
 <style data-purpose="neobrutalism-styles">
+     .neo-border-circle {
+	  border: 3px solid #000000;
+	  box-shadow: 6px 6px 0px 0px #000000;
+	}
 	.neo-border {
 	  border: 3px solid #000000;
 	  box-shadow: 6px 6px 0px 0px #000000;
@@ -388,9 +394,12 @@
 			  transform: translateX(-100%);
 			  pointer-events: none;
 			}
-			#bear-sideshow {opacity:0;}
+			#bear-sideshow {
+				// opacity:0;
+			     display:none;}
 			#bear-sideshow.is-visible {
-				opacity:1;
+				// opacity:1;
+				display: block;
 			}
 			.c138z5kb[data-is-visible='false'] { opacity: 0; }
 			
@@ -562,7 +571,7 @@
 		<div class="flex items-center gap-4 lg:gap-8">
 			<a href="#features" title="Wie CyBear hilft" class="font-semibold text-base hover:text-cyorange transition">Was man lernt</a>
 			<a href="./team_ueber-uns.html" title="Über das CyBear team" class="font-semibold text-base hover:text-cyorange transition">Über uns</a>
-			<a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" title="Ratgeber und Ressourcen für Eltern" class="font-semibold text-base hover:text-cyorange transition">Eltern-Ratgeber</a>
+			<a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" title="Guides und Ressourcen für Eltern" class="font-semibold text-base hover:text-cyorange transition">Eltern-Ratgeber</a>
 	
 		   <button class="hidden">
 			 <a href="#waitlist" class="hidden md:block bg-cyyellow text-black px-5 py-2 rounded-full font-bold hover:scale-105 transition active:scale-95 shadow-lg shadow-black/20 text-sm sm:text-base">
@@ -651,8 +660,8 @@
 <!-- <p class="mt-8 text-slate-800 max-w-lg leading-relaxed text-xl lg:text-xl pr-0 lg:pr-12 xl:pr-3 font-['Merriweather'] font-[#64748b]" style="line-height: 1.5;"> -->
 <p class="mt-8 max-w-lg leading-relaxed text-xl lg:text-xl pr-0 lg:pr-12 xl:pr-3 font-['Geist'] text-[#44546b]" style="line-height: 1.5;">
 			Cybear macht euch bereit. <strong>Kinder</strong> lernen spielerisch die Online-Welt und ihre Risiken kennen. Dabei werden Kompetenzen und Verhaltensweisen trainiert. 
-			<strong>Eltern</strong> lernen mehr über Gefahren und App-spezifisches Knowhow, um proaktiv handeln zu können - inklusive Tipps wie sich Probleme zusammen lösen lassen.
-			*<i class="text-base font-bold">Unsere App ist noch in Entwicklung. Schaut auf unser <a href="https://instagram.com/cybearapp" target="_blank" title="Cybear auf Instagram" class="underline text-blue-800">Instagram-Profil</a> für Tipps und Hilfestellungen.</i> 
+			<strong>Eltern</strong> lernen mehr über Gefahren und App-spezifisches Knowhow, um proaktiv handeln zu können, inklusive Tipps wie sich Probleme zusammen lösen lassen.
+			*<i class="text-base font-bold">Unsere App ist noch in Entwicklung. Für weitere Tipps und Hilfestellungen könnt ihr uns auch auf <a href="https://instagram.com/cybearapp" target="_blank" title="Cybear auf Instagram" class="underline text-blue-800">Instagram</a> folgen.</i> 
 			
 		  </p>
 </div>
@@ -683,12 +692,11 @@
 <!-- App Visuals -->
 <div class="relative lg:-translate-x-0 xl:-translate-x-8" data-purpose="app-visual-showcase">
 	
-<!-- CALL TO ACTION RATGEBER -->
-<div class="absolute -left-1 md:-left-24 xl:-left-40 top-24 md:top-[15em] lg:top-[15em] -translate-y-1/2 w-auto max-w-[170px] md:max-w-[180px] lg:max-w-[200px] md:aspect-[1/1] rounded-[20px] md:rounded-[500px] bg-red-400 border-2 border-black neo-shadow flex flex-col items-center justify-center text-center rotate-4 z-20 p-2 md:p-6 rotate-[5deg]">
-	<p class="text-lg md:text-2xl font-bold uppercase leading-tight mb-2 text-wrap text-white">Praktische Ratgeber <a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" class="text-blue-700 underline text-base md:text-xl">Hier klicken!</a></p>
+<!-- CALL TO ACTION CIRCLE RATGEBER -->
+<div class="absolute -left-1 md:-left-12 lg:-left-46 xl:-left-16 2xl:-left-32 top-24 md:top-[15em] lg:top-[7em] xl:top-[7em] 2xl:top-[15em] -translate-y-1/2 w-auto max-w-[150px] md:max-w-[160px] lg:max-w-[170px] 2xl:max-w-[200px] md:aspect-[1/1] rounded-[20px] md:rounded-[500px] bg-red-400 neo-border-circle border-white flex flex-col items-center justify-center text-center rotate-4 z-20 p-2 md:p-6 rotate-[5deg]">
+	<p class="text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-xl font-normal uppercase leading-tight mb-2 text-wrap text-white">Praktische Ratgeber <a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" class="text-white underline text-base md:text-2xl font-medium">Hier!</a></p>
 	<!-- <button class="w-auto md:w-4/5 bg-white text-primary border-2 border-black rounded-full px-2 py-1 text-base font-bold neo-shadow active-neo-press text-wrap">Medienvertrag für Kinder</button> -->
 </div>
-
 <!-- Main Game Map Image -->
 <div id="main-map-container" class="relative group sm:scale-[1.2] md:scale-[1.0] w-full md:w-full lg:w-full neo-border rounded-3xl overflow-hidden bg-white lg:rotate-1 shadow-2xl transition-transform duration-300 cursor-pointer">
 <img alt="CyBear Learning Map" class="w-full block" src="./images/cybear_game_screen.jpg"/>
@@ -717,11 +725,15 @@
 </div>
 </main>
 <!-- END: HeroSection -->
+
+
+
+
 <!-- BEGIN: EducationalCards -->
-<section id="features" class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+<!--<section id="features" class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">-->
 <!-- Card for Parents -->
-<div class="relative bg-parent-bg neo-border rounded-[40px] p-8 md:p-12 min-h-[400px]" data-purpose="parents-learning-card" style="background-color: #FFF0F3;">
+<!--<div class="relative bg-parent-bg neo-border rounded-[40px] p-8 md:p-12 min-h-[400px]" data-purpose="parents-learning-card" style="background-color: #FFF0F3;">
 <span class="tab-label text-cypink text-base sm:text-lg md:text-lg xl:text-xl">Was Eltern lernen</span>
 <h3 class="text-3xl lg:text-4xl font-black mb-6" style="line-height: 1.24;">Mehr Insider-Wissen, bessere Maßnahmen und ein ruhiges Gewissen</h3>
 <div class="">
@@ -737,9 +749,9 @@
 <strong class="text-lg">➜ Besser App-Benutzung, Sicherheit und Bildschirmzeit von Kindern im Griff haben, ohne dass jedes Gespräch zur Verhandlung wird.</strong>
 </div>
 </div>
-</div>
+</div>-->
 <!-- Card for Kids -->
-<div class="relative bg-kid-bg neo-border rounded-[40px] p-8 md:p-12 min-h-[400px]" data-purpose="kids-learning-card" style="background-color: #E0F2FE;">
+<!--<div class="relative bg-kid-bg neo-border rounded-[40px] p-8 md:p-12 min-h-[400px]" data-purpose="kids-learning-card" style="background-color: #E0F2FE;">
 <span class="tab-label text-cyteal text-base sm:text-lg md:text-lg xl:text-xl">Was Kinder lernen</span>
 <h3 class="text-3xl lg:text-4xl font-black mb-6" style="line-height: 1.24;">Sicheres Verhalten, stärkere Impulskontrolle und klügeres Online-sein</h3>
 <div class="">
@@ -756,7 +768,77 @@
 </div>
 </div>
 </div>
-</section>
+</section>-->
+
+<style>
+	  @keyframes crossPulse {
+		0%, 100% {
+		  transform: scale(1);
+		  color: currentColor; /* Inherits the slate-400 color */
+		}
+		50% {
+		  transform: scale(2.3); /* Increases size by 130% (1 + 1.3 = 2.3) */
+		  color: #ea580c; /* Tailwind's orange-600 */
+		}
+	  }
+	
+	  .pulse-cross {
+		animation: crossPulse 4s ease-in-out infinite;
+	  }
+	</style>
+<section id="features" class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+	<!-- Card for Parents -->
+	<div class="relative bg-parent-bg neo-border rounded-[40px] p-8 md:p-12 h-fit" data-purpose="parents-learning-card" style="background-color: #FFF0F3;">
+		
+		
+				
+	<span class="tab-label text-cypink text-base sm:text-lg md:text-lg xl:text-xl">Was Eltern lernen</span>
+	<h3 class="text-3xl lg:text-4xl font-black mb-6" style="line-height: 1.24;">Mehr Insider-Wissen, bessere Maßnahmen und ein ruhiges Gewissen</h3>
+	<!--<div class="">-->
+		<details class="group border-b border-slate-200 pb-4">
+			<summary class="cursor-pointer list-none flex items-center justify-between font-bold text-lg lg:text-xl text-slate-800">
+	<p class="text-xl font-medium mb-4 text-2xl">Praktische Hilfen, die Unsicherheit in Sicherheit verwandeln. </p> <span class="pulse-cross ml-4 text-2xl text-slate-400 group-open:rotate-45 transition-transform">+</span></summary>
+	<p class="mt-3 text-base lg:text-lg text-[#44546b] leading-relaxed">
+	<ul class="leading-tight text-base lg:text-lg space-y-2 text-[#44546b] line-h list-disc list-outside pl-3 lg:pl-6 pr-1 lg:pr-3 xl:pr-6" style="line-height:1.2em;">
+	<li class="pl-3 lg:pl-0">Risiken und Warnzeichen besser verstehen</li>
+	<li class="pl-3 lg:pl-0">Typische Probleme und Stolperfallen in Apps</li>
+	<li class="pl-3 lg:pl-0">Kinder bei gesünderen Gewohnheiten unterstützen</li>
+	<li class="pl-3 lg:pl-0">Bildschirmzeit besprechen, ohne Wutausbrüche</li>
+	<li class="pl-3 lg:pl-0">Verfolgen, was das eigene Kind bereits gelernt hat</li>
+	</ul>
+	<div class="bg-white/80 border-2 border-black/0 rounded-[10px] p-2 mt-6 font-['Geist'] font-[#64748b]">
+	<strong class="text-lg">➜ Besser App-Benutzung, Sicherheit und Bildschirmzeit von Kindern im Griff haben, ohne dass jedes Gespräch zur Verhandlung wird.</strong>
+	</div>
+	</p>
+	</details>
+	<!--</div>-->
+	</div>
+	<!-- Card for Kids -->
+	<div class="relative bg-kid-bg neo-border rounded-[40px] p-8 md:p-12 h-fit" data-purpose="kids-learning-card" style="background-color: #E0F2FE;">
+	<span class="tab-label text-cyteal text-base sm:text-lg md:text-lg xl:text-xl">Was Kinder lernen</span>
+	<h3 class="text-3xl lg:text-4xl font-black mb-6" style="line-height: 1.24;">Sicheres Verhalten, stärkere Impulskontrolle und klügeres Online-sein</h3>
+	<!--<div class="">-->
+		<details class="group border-b border-slate-200 pb-4">
+			<summary class="cursor-pointer list-none flex items-center justify-between font-bold text-lg lg:text-xl text-slate-800">
+	<p class="text-xl font-medium mb-4 text-2xl">Spielerische Inhalte und kleine Herausforderungen, die digitale Resilienz fördern.</p> <span class="pulse-cross ml-4 text-2xl text-slate-400 group-open:rotate-45 transition-transform">+</span></summary>
+	<ul class="leading-tight text-base lg:text-lg space-y-2 text-[#44546b] list-disc list-outside pl-3 lg:pl-6 pr-1 lg:pr-6 xl:pr-12" style="line-height:1.2em;">
+	<li class="pl-3 lg:pl-0">Apps: Sicheres & umsichtiges Verhalten lernen</li>
+	<li class="pl-3 lg:pl-0">Schwierige Situationen üben, bevor sie passieren</li>
+	<li class="pl-3 lg:pl-0">Fakes, Betrugsmaschen, Desinformation erkennen</li>
+	<li class="pl-3 lg:pl-0">Gefühl für Bildschirmzeit + Selbstkontrolle entwickeln</li>
+	<li class="pl-3 lg:pl-0">Urteilsvermögen und kritisches Denken stärken</li>
+	</ul>
+	<div class="bg-white/80 border-2 border-black/0 rounded-[10px] p-2 mt-6 font-['Geist'] font-[#64748b]">
+	<strong class="text-lg">➜ Denn digitale Resilienz- und Kommunikationsfähigkeiten sind heute Lebenskompetenzen.</strong>
+	</div>
+	</details>
+	<!--</div>-->
+	</div>
+	</section>
+	
+
+
 <!-- END: EducationalCards -->
 <!-- BEGIN: SkillsSection -->
 <section class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
@@ -774,6 +856,7 @@
 </div>
 </section>
 <!-- END: SkillsSection -->
+
 <section class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
 <div class="relative bg-cygreen neo-border rounded-[40px] p-10 md:p-16" data-purpose="waitlist-card">
 <span class="tab-label bg-white text-base sm:text-lg md:text-lg xl:text-xl">Was wirklich wichtig ist</span>
@@ -795,6 +878,281 @@
 </div>
 </div>
 </section>
+
+
+
+
+
+
+<!-- BEGIN: FAQSection -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
+<div class="relative bg-white neo-border rounded-[40px] p-10 md:p-16" data-purpose="faq-card">
+<span class="tab-label bg-white text-base sm:text-lg md:text-lg xl:text-xl">Häufige Fragen von Eltern</span>
+<h2 class="text-3xl md:text-4xl font-black mb-10" style="line-height: 1.24;">Bildschirmzeit, Medienkompetenz & Kinderschutz-Apps – kurz erklärt</h2>
+<div class="space-y-4 max-w-3xl">
+
+<details class="group border-b border-slate-200 pb-4">
+<summary class="cursor-pointer list-none flex items-center justify-between font-bold text-lg lg:text-xl text-slate-800">
+Wie viel Bildschirmzeit ist für Kinder normal?
+<span class="ml-4 text-2xl text-slate-400 group-open:rotate-45 transition-transform">+</span>
+</summary>
+<p class="mt-3 text-base lg:text-lg text-[#44546b] leading-relaxed">
+Eine pauschale Stundenzahl, wieviel Bildschirmzeit nun "ungesund" ist, gibt es nicht. Das unterscheidet sich stark nach Alter. Inhalt sowie Art der Nutzung sind mindestens genauso entscheidend. Statt nur die Bildschirmzeit zu begrenzen: Bespreche gemeinsam mit dem Kind, welche Apps und Inhalte sinnvoll sind. Lerne darüber in unserer <a href="./bildschirmzeit-apps-alters-empfehlungen-fuer-kinder.html" target="_self" class="font-bold text-blue-700 underline">Übersicht Alters-gerechter Empfehlungen zur Bildschirmzeit</a> und <a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" target="_self" class="font-bold text-blue-700 underline">Ratgebern für Eltern</a>
+</p>
+</details>
+
+<details class="group border-b border-slate-200 pb-4">
+<summary class="cursor-pointer list-none flex items-center justify-between font-bold text-lg lg:text-xl text-slate-800">
+Was ist Medienkompetenz und wieso ist die wichtig für mein Kind?
+<span class="ml-4 text-2xl text-slate-400 group-open:rotate-45 transition-transform">+</span>
+</summary>
+<p class="mt-3 text-base lg:text-lg text-[#44546b] leading-relaxed">
+Medienkompetenz ist die Fähigkeit, mit Apps, Internet und KI-Inhalten sicher, kritisch und selbstbestimmt umzugehen: Gefahren erkennen, Quellen hinterfragen, eigenständig gute Entscheidungen treffen. Aber auch Selbstregulation, also die Selbstkontrolle über "Ich will das jetzt..."-Impulse und zwanghafte Handlungen gehört dazu. Medienkompetenz entsteht nicht von heute auf morgen, sondern muss Schritt für Schritt geübt und aufgebaut werden. Eltern müssen sich dieser Aufgabe so früh wie möglich stellen. Mehr lernen in unseren <a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" target="_self" class="font-bold text-blue-700 underline">Medienkompetenz-Ratgebern für Eltern</a>
+</p>
+</details>
+
+<details class="group border-b border-slate-200 pb-4">
+<summary class="cursor-pointer list-none flex items-center justify-between font-bold text-lg lg:text-xl text-slate-800">
+Wieso genügen Kinderschutz-Apps wie Helmit nicht, damit mein Kind online sicher ist?
+<span class="ml-4 text-2xl text-slate-400 group-open:rotate-45 transition-transform">+</span>
+</summary>
+<p class="mt-3 text-base lg:text-lg text-[#44546b] leading-relaxed">
+Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umgangen, haben Erkennungslücken und vermitteln keine eigene Medienkompetenz. Wenn Kinder erstmal zu Teens herangewachsen sind, werden diese sich zudem sträuben solche Monitoring-Apps auf ihren Geräten zu haben. Cybear setzt deshalb auf spielerisches Training, damit Kinder Risiken auch ohne Kontrolle der Eltern selbst erkennen. So funktioniert proaktive Gefahrenvorbeugung am besten.
+</p>
+</details>
+
+</div>
+</div>
+</section>
+<!-- END: FAQSection -->
+
+
+
+
+
+<!-- Begin Brevo Form -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
+	<div class="relative bg-white neo-border rounded-[40px] p-10 md:p-16" data-purpose="waitlist-card">
+
+<!-- START - We recommend to place the below code in head tag of your website html  -->
+
+<style>
+  @font-face {
+	font-display: block;
+	font-family: Geist;
+  }
+
+  @font-face {
+	font-display: fallback;
+	font-family: Geist;
+	font-weight: 600;
+  }
+
+  @font-face {
+	font-display: fallback;
+	font-family: Geist;
+	font-weight: 700;
+  }
+
+  :where(.sib-form-message-panel) {
+	display: none;
+  }
+
+  :where(.sib-form-message-panel .sib-notification__icon) {
+	width: 20px;
+	height: 20px;
+  }
+
+
+  #sib-container input:-ms-input-placeholder {
+	font-family: Helvetica, sans-serif;
+	text-align: left;
+	color: #c0ccda;
+  }
+
+  #sib-container input::placeholder {
+	font-family: Helvetica, sans-serif;
+	text-align: left;
+	color: #c0ccda;
+  }
+
+  #sib-container textarea::placeholder {
+	font-family: Helvetica, sans-serif;
+	text-align: left;
+	color: #c0ccda;
+  }
+
+
+  #sib-container a {
+	text-decoration: underline;
+	color: #2BB2FC;
+  }
+  sib-form .entry__error,.sib-form .entry__label,.sib-form .entry__specification,.sib-form .form__error{max-width:40em}.sib-form .entry__error,.sib-form .entry__specification,.sib-form .form__error{display:block}.sib-form .entry__choice+.entry__error,.sib-form .entry__choice+.entry__specification,.sib-form .entry__error+.entry__error,.sib-form .entry__error+.entry__specification,.sib-form .entry__specification+.entry__error,.sib-form .entry__specification+.entry__specification{margin-top:.5rem}.sib-form .entry__label+.entry__specification{margin-top:4px}.sib-form .entry__error{display:none;color:#ff4949;font-size:.87055056rem;line-height:1rem}.sib-form .entry__specification{color:#687484;margin:0}.sib-form .entry__choice{padding-left:1.5em;text-indent:-1.5em}.sib-form .entry__choice .checkbox,.sib-form .entry__choice .radio-button{margin-right:.5em}.sib-form .entry__choice .sib-toggletip{text-indent:0}.sib-form .entry__choice:not(:first-child){margin-top:.5rem}
+  .sib-form-block__button-with-loader{min-height:40px;line-height:23px}
+  
+  
+  .sib-form-message-panel{margin:0 0 1.25rem 0;width:100%;padding:.4375rem;border:1px solid;display:none}
+  
+  .sib-form-message-panel--active{display:inline-block}
+  
+  .sib-form-message-panel__text{display:flex;align-items:center;margin:0;padding:.5rem}
+  
+  .sib-form-message-panel__text 
+  
+  .sib-icon{contain:strict;display:inline-block;fill:currentColor}
+  
+  .sib-form-message-panel__text .sib-notification__icon{height:1.5em;width:1.5em;flex-shrink:0;margin-right:calc(1rem - 1px)}
+  
+  .entry__specification{display:inline-block}
+  
+  .sib-form .sib-entry_errored{margin-left:-0.5rem;padding-left:.5rem}
+  .sib-form .sib-entry_errored:before{background:#ff4949;bottom:0;content:"";position:absolute;right:100%;top:0;width:.25rem}
+  .sib-form .entry__error,.sib-form .entry__label,.sib-form .entry__specification,.sib-form .form__error{max-width:40em}
+  .sib-form .entry__error,.sib-form .entry__specification,.sib-form .form__error{display:block}
+  .sib-form .entry__choice+.entry__error,.sib-form .entry__choice+.entry__specification,.sib-form .entry__error+.entry__error,.sib-form .entry__error+.entry__specification,.sib-form .entry__specification+.entry__error,.sib-form .entry__specification+.entry__specification{margin-top:.5rem}
+  .sib-form .entry__label+.entry__specification{margin-top:4px}
+  .sib-form .entry__error{display:none;color:#ff4949;font-size:.87055056rem;line-height:1rem}
+  .sib-form .entry__specification{color:#687484;margin:0}
+  
+  .form__label-row{display:flex;flex-direction:column;justify-content:stretch}.form__label-row--horizontal{flex-direction:row;align-items:flex-start;margin:10px 0}.form__label-row--horizontal>*:first-child{margin-right:20px}.form__label-row--horizontal>*{width:50%;flex-grow:1}
+</style>
+<!-- <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"> -->
+
+
+
+
+<!-- START - We recommend to place the below code where you want the form in your website html  -->
+
+	
+	
+	
+<!--  END - We recommend to place the above code in head tag of your website html -->
+
+<!-- START - We recommend to place the below code where you want the form in your website html  -->
+<div class="grid grid-cols-1 lg:grid-cols-8 gap-10">
+
+<div class="sib-form w-full flex justify-center bg-transparent py-0 col-span-8 lg:col-span-5">
+	<div id="sib-form-container" class="sib-form-container w-full max-w-7xl px-4 sm:px-6">
+		
+		<div id="error-message" class="sib-form-message-panel mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-900 text-sm font-medium shadow-sm">
+			<div class="flex items-start gap-3">
+				<svg viewBox="0 0 512 512" class="w-5 h-5 fill-red-600 shrink-0 mt-0.5">
+					<path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+				</svg>
+				<span class="text-left text-sm md:text-base text-red-800">
+					Ihre Anmeldung konnte nicht durchgeführt werden. Versuchen Sie es bitte nochmals.
+				</span>
+			</div>
+		</div>
+	
+		<div id="success-message" class="sib-form-message-panel mb-6 p-4 rounded-xl bg-green-50 border border-green-200 text-green-900 text-sm font-medium shadow-sm">
+			<div class="flex items-start gap-3">
+				<svg viewBox="0 0 512 512" class="w-5 h-5 fill-green-600 shrink-0 mt-0.5">
+					<path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+				</svg>
+				<span class="text-left text-sm md:text-base text-green-800 leading-relaxed">
+					Der erste Schritt Ihrer Anmeldung war erfolgreich! <strong class="text-green-950">Nächster Schritt:</strong> Bestätigungs-E-Mail im Postfach öffnen und Link anklicken. Danach erhalten Sie Ihren Familien-Mediennutzungsvertrag.
+				</span>
+			</div>
+		</div>
+	
+		<div id="sib-container" class="w-full p-6 sm:p-10">
+		    
+			<form id="sib-form" method="POST" action="https://572ad0c8.sibforms.com/serve/MUIFAIZlP5kroZq12ONE4myg6gQxNeqYXSIA49d3wF7FSNPUmGoyuXOREaCJiY1CZBsiO59Hw3me6X7g6RRWPQXxAdQCRdOb6Ad3BUVJTrpLAJ71sM38ClxfB_esc8wOggp6jcoZUIwuFEVLK6nyGFwfPJE-lgN7eyJaf78GpJAM592TKgapYTUM91272oPbuQdgovOhyNhnKQcqWw==" data-type="subscription" class="space-y-6">
+				
+				<div class="space-y-2 border-b border-slate-100 pb-6 dark:border-slate-800">
+					<h2 class="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">
+						Bleib auf dem neuesten Stand
+					</h2>
+					<p class="text-base sm:text-xl lg:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed">
+						Erhalte Launch-Updates, Tipps</span> und den praktischen <span class="font-semibold text-orange-600 dark:text-orange-400"><strong>Mediennutzungsvertrag für Familien</strong></span> als PDF direkt in dein Postfach.
+					</p>
+				</div>
+		
+				<div class="sib-input flex flex-col gap-1.5">
+					<label class="text-base md:text-lg font-semibold text-slate-700 dark:text-slate-300" for="EMAIL">
+						E-Mail-Adresse <span class="text-red-500">*</span>
+					</label>
+					<div class="relative w-full">
+						<input class="w-full px-4 py-3 border border-slate-500 dark:border-slate-300 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all text-sm sm:text-base" type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="deine@email.de" required />
+					</div>
+					<label class="entry__error entry__error--primary empty:hidden mt-1 p-2 rounded-lg bg-red-50 text-red-800 text-xs border border-red-200"></label>
+					<span class="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
+						* Du kannst dich jederzeit mit nur einem Klick wieder abmelden.
+					</span>
+				</div>
+		
+				<div class="sib-optin" data-required="true">
+					<div class="flex flex-col gap-1">
+						<label class="flex items-start gap-3 cursor-pointer group">
+							<input type="checkbox" class="scale-[1.5] mt-1 shrink-0 accent-green-600 h-4 w-4 rounded border-slate-800 text-green-600 focus:ring-green-500 dark:bg-slate-800 dark:border-slate-700" value="1" id="GDPR_CONFIRM" name="GDPR_CONFIRM" required />
+							<span class="text-xs sm:text-sm lg:text-base text-slate-600 leading-normal group-hover:text-slate-800 transition-colors">
+								Ich stimme dem Erhalt des Newsletters zu und bestätige die <a href="./privacypol_cy.html" target="_blank" class="font-medium underline hover:text-green-600 transition-colors">Cybear Datenschutz-Bestimmungen</a>.
+							</span>
+						</label>
+						<label class="entry__error entry__error--primary empty:hidden mt-1 p-2 rounded bg-red-50 text-red-800 text-xs border border-red-200"></label>
+					</div>
+				</div>
+		
+				<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+					
+					<div class="sib-captcha w-full sm:w-auto flex justify-center sm:justify-start">
+						<script>
+							function handleCaptchaResponse() {
+								var event = new Event('captchaChange');
+								document.getElementById('sib-captcha').dispatchEvent(event);
+								window.grecaptcha = window.turnstile;
+							}
+						</script>
+						<div class="cf-turnstile g-recaptcha scale-90 sm:scale-100 origin-center sm:origin-left" data-sitekey="0x4AAAAAADlapgzxkhkhunAX" id="sib-captcha" data-callback="handleCaptchaResponse" data-language="de"></div>
+					</div>
+		
+					<div class="w-full sm:w-auto text-right shrink-0">
+						<button class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3.5 bg-green-700 hover:bg-green-600 text-white font-bold text-sm sm:text-base rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 cursor-pointer" form="sib-form" type="submit">
+							<svg class="icon w-4 h-4 fill-current animate-spin hidden" id="loading-spinner" viewBox="0 0 512 512">
+								<path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+							</svg>
+							JETZT ANMELDEN
+						</button>
+					</div>
+					
+				</div>
+		
+				<input type="text" name="email_address_check" value="" class="hidden">
+				<input type="hidden" name="locale" value="de">
+		
+			</form>
+		</div>
+	</div>
+</div>
+<!-- END - We recommend to place the above code where you want the form in your website html  -->
+
+<!-- CLOUDFLARE CAPTCHA AND FORM CODE AT END OF FILE -->
+<div class="gap-8 items-start mt-4 col-span-8 lg:col-span-3">
+		<div class="w-full border-0 overflow-hidden bg-transparent z-10 aspect-[4/5]">
+		<img alt="CyBear Mediennutzungsvertrag für Familien" class="w-full h-full object-cover" src="./images/cybear_mediennutzungs-vertrag_4.jpg"/>
+	  </div>
+	  
+</div>
+
+
+	</div>
+	</div>
+</section>
+<!-- End Brevo Form -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- BEGIN: MainFooter -->
 <footer class="bg-dark-teal text-white py-16 px-16 sm:px-16 md:px-20 lg:px:48 lg:px-[16vw] " style="background-color: #3D5266;">
@@ -865,11 +1223,11 @@
 <!-- END: MainFooter -->
 
 <!--BEAR SIDESHOW IMAGE START-->
-<div class="bear-sideshow-wrapper" id="bear-sideshow">
+<div class="bear-sideshow-wrapper pointer-events-none" id="bear-sideshow">
 	<div class="s1dltx2z" id="sidespeechbubble" style="pointer-events: auto;">
 	  <div class="w1pd6ffd" style="opacity: 1; transform: scaleX(1) translateX(0px);">
 		<div data-use-adaptive-colors="true" class="f1mhl5zj l17lpp8k w-[16.5rem] sm:w-[16.5rem] md:w-[20.5rem]">
-		  <div class="t1c3tid0" style="top: -10px;">
+		  <div class="t1c3tid0 pointer-events-none" style="top: -10px;">
 			<svg width="65" height="78" viewBox="0 0 95 95" fill="none" preserveAspectRatio="none">
 			  <path d="M0 0C0 0 24.8936 38.9937 47 58C57.5966 67.1106 73.8292 77.0249 84.1762 83C90.03 86.3804 94 95 94 95L94.5 36C94.5 36 88.5727 43.1045 81 41.4825C70.8874 39.3165 56.9488 35.8549 47 31.5C26.7586 22.6397 0 0 0 0Z" fill="var(--color-adaptive-white)"></path>
 			</svg>
@@ -877,7 +1235,7 @@
 		  <div data-is-visible="true" class="c138z5kb" style="--delay: 1250ms;">
 			<p class="prg881n">Für Eltern mit wenig Zeit: Kompakte Ratgeber und Leitfäden, die bei den ersten Schritten helfen.</p>
 			<div class="b19w5h5e">
-			  <button data-cy="speech-bubble-accept" class="buqgy6u" style="color: rgb(66, 66, 250);font-weight:700;"><a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html">Erfahre mehr!</button>
+			  <button data-cy="speech-bubble-accept" class="buqgy6u" style="color: rgb(66, 66, 250);font-weight:700;"><a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html">Erfahre mehr!</a></button>
 			  <button data-cy="speech-bubble-deny" class="buqgy6u" data-modal-target="bear-sideshow" data-modal-toggle="bear-sideshow" style="display:none;">Jetzt nicht</button>
 			</div>
 		  </div>
@@ -934,7 +1292,7 @@
 					<!-- free popover -->
 					<!-- Large Modal 1 -->
 					<div id="large-modal-1" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
-						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
+						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in pointer-events-none"></div>
 							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.6-30vmax/1.2)] md:top-0">
 							<!-- Modal content -->
 							<div class="relative bg-spot-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 sm:my-8 sm:w-full lg:w-4/5 xl:w-3/4 2xl:w-1/2 data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in data-closed:sm:translate-y-0 data-closed:sm:scale-95">
@@ -1225,4 +1583,33 @@
 		}, { passive: true });
 	});
 	</script>
+	
+	<!-- START - We recommend to place the below code in footer or bottom of your website html  -->
+	<script>
+	  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+	  window.LOCALE = 'de';
+	
+	  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Etwas stimmt nicht mit Ihrer Eingabe. Bitte nochmal prüfen und abermals versuchen.";
+	  window.REQUIRED_ERROR_MESSAGE = "Dieses Feld kann nicht leer bleiben. ";
+	  window.GENERIC_INVALID_MESSAGE = "Etwas stimmt nicht mit Ihrer Eingabe. Bitte nochmal prüfen und abermals versuchen.";
+	  window.INVALID_NUMBER = "Etwas stimmt nicht mit Ihrer Eingabe. Bitte nochmal prüfen und abermals versuchen.";
+	  window.INVALID_DATE = "Please enter a valid date";
+	  window.REQUIRED_MULTISELECT_MESSAGE = 'Sie müssen mindestens eine Option auswählen.';
+	
+	  window.translation = {
+		common: {
+		  selectedList: '{quantity} list selected',
+		  selectedLists: '{quantity} lists selected',
+		  selectedOption: '{quantity} selected',
+		  selectedOptions: '{quantity} selected',
+		}
+	  };
+	
+	  var AUTOHIDE = Boolean(0);
+	</script>
+	
+	<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+	
+	<!-- END - We recommend to place the above code in footer or bottom of your website html  -->
 </body></html>
