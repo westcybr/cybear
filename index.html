@@ -1044,21 +1044,32 @@ Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umg
 					</span>
 				</div>
 		
-				<div class="sib-optin" data-required="true">
-					<div class="flex flex-col gap-1">
-						<label class="flex items-start gap-3 cursor-pointer group">
-							<input type="checkbox" class="scale-[1.5] mt-1 shrink-0 accent-green-600 h-4 w-4 rounded border-slate-800 text-green-600 focus:ring-green-500" value="1" id="GDPR_CONFIRM" name="GDPR_CONFIRM" required />
-							<span class="text-base sm:text-base lg:text-base text-slate-600 leading-normal group-hover:text-slate-800 transition-colors">
-								Ich stimme dem Erhalt des Newsletters zu und bestätige die <a href="./privacypol_cy.html" target="_blank" class="font-medium underline hover:text-green-600 transition-colors">Cybear Datenschutz-Bestimmungen</a>.
-							</span>
-						</label>
-						<label class="entry__error entry__error--primary empty:hidden mt-1 p-2 rounded bg-red-50 text-red-800 text-xs border border-red-200"></label>
-					</div>
+				<div class="sib-optin sib-form-block" data-required="true">
+			  <div class="form__entry entry_mcq flex flex-col gap-1">
+				<div class="form__label-row">
+				  <label class="flex items-start gap-3 cursor-pointer group">
+					<input type="checkbox" class="scale-[1.0] lg:scale-[1.8] input_replaced mt-1 shrink-0 accent-green-600 h-4 w-4 rounded border-slate-300 text-green-600 focus:ring-green-500" value="1" id="GDPR_CONFIRM" name="GDPR_CONFIRM" required />
+					<span class="text-xs sm:text-sm text-slate-700 leading-normal group-hover:text-slate-800 transition-colors">
+					  Ich stimme zu den Newsletter zu erhalten und bestätige die <a href="./privacypol_cy.html" target="_blank" class="underline">Cybear Datenschutz-Bestimmungen</a> hiermit.
+					</span>
+				  </label>
 				</div>
-		
-				<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
-					
-			 <div class="sib-captcha sib-form-block">
+				<label class="entry__error entry__error--primary empty:hidden mt-1 p-2 rounded bg-red-50 text-red-800 text-xs border border-red-200"></label>
+			  </div>
+			</div>
+	
+			<div class="flex flex-col sm:flex-row-reverse sm:items-center sm:justify-between gap-4 pt-2">
+			  
+			  <div class="sib-form-block text-right shrink-0">
+				<button class="sib-form-block__button sib-form-block__button-with-loader inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-green-700 hhover:bg-green-200 hover:text-black text-white font-bold text-sm sm:text-base md:text-lg xl:text-xl rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 cursor-pointer animate-[pulse_3s_infinite]" form="sib-form" type="submit">
+					  <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon w-4 h-4 fill-current animate-spin hidden" viewBox="0 0 512 512">
+						<path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+					  </svg>
+					  JETZT ANMELDEN
+					</button>
+			  </div>
+	
+			  <div class="sib-captcha sib-form-block">
 				<div class="form__entry entry_block">
 				  <div class="form__label-row flex justify-center sm:justify-start">
 					<script>
@@ -1073,22 +1084,13 @@ Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umg
 				  <label class="entry__error entry__error--primary empty:hidden mt-1 p-2 rounded bg-red-50 text-red-800 text-xs border border-red-200"></label>
 				</div>
 			  </div>
-		
-					<div class="w-full sm:w-auto text-right shrink-0">
-						<button class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3.5 bg-green-700 hover:bg-green-600 text-white font-bold text-sm sm:text-base rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 cursor-pointer" form="sib-form" type="submit">
-							<svg class="icon w-4 h-4 fill-current animate-spin hidden" id="loading-spinner" viewBox="0 0 512 512">
-								<path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
-							</svg>
-							JETZT ANMELDEN
-						</button>
-					</div>
-					
-				</div>
-		
-				<input type="text" name="email_address_check" value="" class="hidden">
-				<input type="hidden" name="locale" value="de">
-		
-			</form>
+	
+			</div>
+	
+			<input type="text" name="email_address_check" value="" class="hidden">
+			<input type="hidden" name="locale" value="en">
+	
+		  </form>
 		</div>
 	</div>
 </div>
