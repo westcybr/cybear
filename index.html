@@ -36,7 +36,7 @@
 <meta name="twitter:description" content="Spielerische Lernapp für Kinder und Eltern: Digitale Kompetenzen stärken, Risiken erkennen und sicher durch den digitalen Alltag navigieren.">
 <meta name="twitter:image" content="https://cybearapp.de/og-image.jpg">
 
-<link rel="canonical" href="https://cybearapp.de/"/>
+<link rel="canonical" href="https://cybearapp.de"/>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a56fdbdd-d3c7-4196-84c6-b6a526e56ca4"></script>
 <!-- Tailwind CSS v3 CDN -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -312,7 +312,7 @@
 			  0% { transform: translateX(-50%) rotate(0deg); }
 			  100% { transform: translateX(-150%) rotate(0deg); }
 			}
-			.s1dltx2z { position: fixed; z-index: 1001;  }
+			.s1dltx2z { position: fixed; z-index: 1001; left: 120px; bottom: 90px; }
 			@media print { .s1dltx2z { display: none; } }
 			
 			/* =============================================
@@ -378,7 +378,7 @@
 			.f1mhl5zj {
 			  position: relative;
 			  border-radius: 24px !important;
-			  // padding: 24px 32px;
+			  padding: 24px 32px;
 			  z-index: 2;
 			  color: hsl(222deg 22% 5%);
 			  -webkit-filter: drop-shadow(0px 1px 4px hsl(0deg 0% 0% / 0.12)) drop-shadow(0px 2px 8px hsl(0deg 0% 0% / 0.06)) drop-shadow(0px 8px 32px hsl(0deg 0% 0% / 0.12));
@@ -461,7 +461,6 @@
 			.s1dltx2z button {
 			  display: block;
 			  margin: 0;
-			  padding: 12px;
 			  border: none;
 			  background: transparent;
 			  cursor: pointer;
@@ -497,14 +496,14 @@
 				  margin-right: 8px;
 				  border: 1px solid rgba(0,0,0,0.1);
 			  }
-			  @media only screen and (min-width: 1024px)  {
+			  // @media only screen and (min-width: 992px)  {
 	
 				  /* Hide scrollbar for cleaner look */
 				  ::-webkit-scrollbar { width: 8px; }
 				  ::-webkit-scrollbar-track { background: #f1f1f1; }
 				  ::-webkit-scrollbar-thumb { background: #2e2195; border-radius: 10px; }
 				  ::-webkit-scrollbar-thumb:hover { background: #1a135a; }
-				  }
+				//  }
 			  </style>
 </head>
 <body class="text-slate-900 overflow-x-hidden overflow-y-scroll">
@@ -647,16 +646,17 @@
 	  </script>
 <!-- END: MainHeader -->
 <!-- BEGIN: HeroSection -->
-<main class="sm:max-w-[90vw] md:max-w-[80vw] mx-auto px-4 md:px-8 py-16 pt-20 md:py-20 relative overflow-x-hidden">
+<!-- <main class="sm:max-w-[90vw] md:max-w-[80vw] mx-auto px-4 md:px-8 py-16 pt-20 md:py-20 relative overflow-x-hidden md:overflow-auto"> -->
+<main class="sm:max-w-[90vw] md:max-w-[80vw] mx-auto px-4 md:px-8 py-16 pt-20 md:py-20 relative">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 <!-- Text & Mascot Content -->
 <div class="space-y-8">
 <div data-purpose="hero-text">
 	
-<p class="mt-8 max-w-lg leading-relaxed text-xl lg:text-xl pr-0 lg:pr-12 xl:pr-3 font-['Geist'] text-[#44546b] max-w-[400px]" style="line-height: 1.5;">
-	<i class="items-center text-xl p-4 bg-blue-50 rounded-xl border-2 border-slate-700 text-slate-700 font-bold block lg:hidden mt-3">Dein Support ist wichtig, um andere Eltern zu erreichen. <a href="https://instagram.com/cybearapp" target="_blank" title="Cybear auf Instagram" class="underline text-cyorange">Folge uns auf Instagram</a></i>
+<p class="mt-8 max-w-lg leading-relaxed text-xl lg:text-xl pr-0 lg:pr-12 xl:pr-3 font-['Geist'] text-[#44546b] max-w-[400px] mb-6 sm:mb-3 md:mb-0" style="line-height: 1.5;">
+	<i class="items-center text-xl p-4 bg-blue-50 rounded-xl border-2 border-slate-700 text-slate-700 font-bold block lg:hidden mt-3">Dein Support ist wichtig, um andere Eltern zu erreichen. <br class="inline sm:hidden"><a href="https://instagram.com/cybearapp" target="_blank" title="Cybear auf Instagram" class="underline text-cyorange">Folge uns auf Instagram</a></i>
 	
-  </p>	
+  </p>
 <!-- <p class="text-[#fb6746] font-bold mb-4 bg-clip-text bg-red-pink-gradient">Kids für die Online KI-Welt vorbereiten</p> -->
 <p class="hidden lg:inline text-transparent font-bold mb-4 bg-clip-text bg-red-pink-gradient">Kids für die Online KI-Welt vorbereiten</p>
 <h1 class="text-3xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-[800] leading-tight text-slate-800 font-sans leading-[1.2] xl:max-w-[11em]" style="line-height: 1.24;">
@@ -667,7 +667,7 @@
 <p class="mt-8 max-w-lg leading-relaxed text-xl lg:text-xl pr-0 lg:pr-12 xl:pr-3 font-['Geist'] text-[#44546b]" style="line-height: 1.5;">
 			Cybear macht euch bereit. <strong>Kinder</strong> lernen spielerisch die Online-Welt und ihre Risiken kennen. Dabei werden Kompetenzen und Verhaltensweisen trainiert. 
 			<strong>Eltern</strong> lernen mehr über Gefahren und App-spezifisches Knowhow, um proaktiv handeln zu können, inklusive Tipps wie sich Probleme zusammen lösen lassen.
-			<i class="text-base text-slate-700 font-bold hidden lg:inline-block mt-3">* Unsere App ist noch in Entwicklung. Für mehr Tipps folgt uns auf <a href="https://instagram.com/cybearapp" target="_blank" title="Cybear auf Instagram" class="underline text-blue-800">Instagram</a>.</i> 
+			<i class="text-base text-slate-700 font-bold hidden lg:block mt-3">* Unsere App ist noch in Entwicklung. Für mehr Tipps folgt uns auf <a href="https://instagram.com/cybearapp" target="_blank" title="Cybear auf Instagram" class="underline text-blue-800">Instagram</a>.</i> 
 		  </p>
 </div>
 <!-- Call to Action Buttons & Mascot -->
@@ -684,7 +684,7 @@
 <!-- Tap Hand Cursor Icon -->
 <div class="absolute left-32 top-32 pointer-events-none z-30"></div>
 <!-- Lab Bear Mascot - Shrunk to 50% scale relative to container -->
-<div class="relative w-32 md:w-40 lg:w-36 xl:w-32 2xl:w-40 ml-auto mr-1 md:mr-20 lg:mr-[--mr_lg_bear] xl:mr-[--mr_xl_bear] 2xl:mr-[--mr_2xl_bear] mt-[0px] lg:mt-[36px] xl:mt-[20px] scale-[1.625]">
+<div class="relative w-32 md:w-40 lg:w-36 xl:w-32 2xl:w-40 ml-auto mr-3 md:mr-20 lg:mr-[--mr_lg_bear] xl:mr-[--mr_xl_bear] 2xl:mr-[--mr_2xl_bear] mt-[0px] lg:mt-[36px] xl:mt-[20px] scale-[1.425] md:scale-[1.625]">
 <img alt="Lab Bear Mascot" class="w-full h-auto" src="./images/cybear_lab-bear.gif"/>
 </div>
 </div>
@@ -699,7 +699,7 @@
 	
 <!-- CALL TO ACTION CIRCLE RATGEBER -->
 <div class="absolute -left-5 md:-left-12 lg:-left-46 xl:-left-16 2xl:-left-32 top-20 md:top-[9em] lg:top-[7em] xl:top-[7em] 2xl:top-[15em] -translate-y-1/2 w-auto max-w-[150px] md:max-w-[160px] lg:max-w-[170px] 2xl:max-w-[200px] md:aspect-[1/1] rounded-[20px] md:rounded-[500px] bg-red-400 neo-border-circle border-white flex flex-col items-center justify-center text-center rotate-4 z-20 p-2 md:p-6 rotate-[5deg]">
-	<p class="text-base sm:text-lg md:text-base lg:text-lg xl:text-lg 2xl:text-xl font-normal uppercase leading-tight mb-2 mt-2 md:mt-0 text-wrap text-white"><a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" class="text-white underline font-bold sm:font-medium">Tipps für Apps & Geräte-Umgang</a></p>
+	<p class="text-base sm:text-lg md:text-base lg:text-lg xl:text-lg 2xl:text-xl font-normal uppercase leading-tight mb-2 mt-2 md:mt-0 text-wrap text-white"><a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" class="text-white font-bold sm:font-medium"><u class="underline">Tipps</u> für Eltern mit wenig Zeit</a></p>
 	<!-- <button class="w-auto md:w-4/5 bg-white text-primary border-2 border-black rounded-full px-2 py-1 text-base font-bold neo-shadow active-neo-press text-wrap">Medienvertrag für Kinder</button> -->
 </div>
 <!-- Main Game Map Image -->
@@ -799,7 +799,7 @@
 		
 				
 	<span class="tab-label text-cypink text-base sm:text-lg md:text-lg xl:text-xl">Was Eltern lernen</span>
-	<h3 class="text-3xl lg:text-4xl font-black mb-6" style="line-height: 1.24;">Mehr Insider-Wissen, bessere Maßnahmen und ein ruhiges Gewissen</h3>
+	<h3 class="text-2xl sm:text-3xl md:text-4xl font-black mb-6" style="line-height: 1.24;">Mehr Insider-Wissen, bessere Maßnahmen und ein ruhiges Gewissen</h3>
 	<!--<div class="">-->
 		<details class="group border-b border-slate-200 pb-4">
 			<summary class="cursor-pointer list-none flex items-center justify-between font-bold text-lg lg:text-xl text-slate-800">
@@ -822,7 +822,7 @@
 	<!-- Card for Kids -->
 	<div class="relative bg-kid-bg neo-border rounded-[40px] p-8 md:p-12 h-fit" data-purpose="kids-learning-card" style="background-color: #E0F2FE;">
 	<span class="tab-label text-cyteal text-base sm:text-lg md:text-lg xl:text-xl">Was Kinder lernen</span>
-	<h3 class="text-3xl lg:text-4xl font-black mb-6" style="line-height: 1.24;">Sicheres Verhalten, stärkere Impulskontrolle und klügeres Online-sein</h3>
+	<h3 class="text-2xl sm:text-3xl md:text-4xl font-black mb-6" style="line-height: 1.24;">Sicheres Verhalten, stärkere Impulskontrolle und klügeres Online-sein</h3>
 	<!--<div class="">-->
 		<details class="group border-b border-slate-200 pb-4">
 			<summary class="cursor-pointer list-none flex items-center justify-between font-bold text-lg lg:text-xl text-slate-800">
@@ -854,7 +854,7 @@
 </div>
 <!-- Skills Text -->
 <div class="w-4/5 md:w-1/2">
-<h2 class="text-3xl md:text-3xl font-normal text-slate/900 leading-tight italic" style="line-height: 1.44;">
+<h2 class="text-2xl sm:text-3xl md:text-3xl font-normal text-slate/900 leading-tight italic" style="line-height: 1.44;">
 	Kontroll-Apps sind toll, verhindern aber nicht, dass Kinder online Mist bauen. <strong class="font-black">Eigenständigkeit lernen ist <br class="hidden xl:inline">das A und O.</strong>
 </h2>
 </div>
@@ -865,10 +865,10 @@
 <section class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
 <div class="relative bg-cygreen neo-border rounded-[40px] p-10 md:p-16" data-purpose="waitlist-card">
 <span class="tab-label bg-white text-base sm:text-lg md:text-lg xl:text-xl">Was wirklich wichtig ist</span>
-	<h2 class="text-3xl md:text-4xl font-black mb-12" style="line-height: 1.24;">Viele achten darauf, wie lange Kinder online sind... Bildschirmzeit ist nur die halbe Geschichte..</h2>
+	<h2 class="text-2xl sm:text-3xl md:text-4xl font-black mb-12 break-word md:break-normal" style="line-height: 1.24;">Viele achten darauf, wie lange Kinder online sind... Bildschirmzeit ist nur die halbe Geschichte..</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-full">
 	<div class="flex justify-center flex-wrap">
-		<img alt="Cybear Krokodil wartet auf Hamster" class="max-w-[100%] h-fit aspect-auto" src="./images/cybear_crocodile_phone.png"/>
+		<img alt="Cybear Krokodil wartet auf Hamster" class="max-w-[100%] w-fit h-fit aspect-[3/2]" src="./images/cybear_crocodile_phone.png"/>
 	</div>
 	<div class="">
 	
@@ -893,7 +893,7 @@
 <section class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
 <div class="relative bg-white neo-border rounded-[40px] p-10 md:p-16" data-purpose="faq-card">
 <span class="tab-label bg-white text-base sm:text-lg md:text-lg xl:text-xl">Häufige Fragen von Eltern</span>
-<h2 class="text-xl sm:text-3xl md:text-4xl font-black mb-10 break-all md:break-word" style="line-height: 1.24;">Bildschirmzeit, Medienkompetenz & Kinderschutz-Apps – kurz erklärt</h2>
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-black mb-10 break-word md:break-normal" style="line-height: 1.24;">Bildschirmzeit, Medienkompetenz & Kinderschutz-Apps – kurz erklärt</h2>
 <div class="space-y-4 max-w-3xl">
 
 <details class="group border-b border-slate-200 pb-4">
@@ -902,7 +902,7 @@ Wie viel Bildschirmzeit / Medienzeit ist für Kinder normal?
 <span class="ml-4 text-2xl text-slate-400 group-open:rotate-45 transition-transform">+</span>
 </summary>
 <p class="mt-3 text-base lg:text-lg text-[#44546b] leading-relaxed">
-Eine pauschale Stundenzahl, wieviel Bildschirmzeit nun "ungesund" ist, gibt es nicht. Das unterscheidet sich stark nach Alter. Inhalt sowie Art der Nutzung sind mindestens genauso entscheidend. Eltern können zwar die Bildschirmzeit auf dem iPhone, Ipad, Samsung oder Android einstellen bzw. begrenzen, jedoch können pfiffige Kinder diese Bildschirmzeiteinstellungen umgehen. Deshalb Kinder gut erziehen: Bespreche gemeinsam mit dem Kind, welche Apps und Inhalte sinnvoll sind, was schädlich ist. Lerne darüber in unserer <a href="./bildschirmzeit-apps-alters-empfehlungen-fuer-kinder.html" target="_self" class="font-bold text-blue-700 underline">Übersicht Alters-gerechter Empfehlungen zur Bildschirmzeit</a> und <a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" target="_self" class="font-bold text-blue-700 underline">Ratgebern für Eltern</a>
+Eine pauschale Stundenzahl, wieviel Bildschirmzeit nun "ungesund" ist, gibt es nicht. Das unterscheidet sich stark nach Alter. Inhalt sowie Art der Nutzung sind mindestens genauso entscheidend. Eltern können zwar die Bildschirmzeit auf dem iPhone, Ipad, Samsung oder Android einstellen bzw. begrenzen, jedoch können pfiffige Kinder diese Bildschirmzeiteinstellungen umgehen. Deshalb Kinder einbeziehen: Bespreche gemeinsam mit dem Kind, welche Apps und Inhalte sinnvoll sind, was schädlich ist. Lerne darüber in unseren <a href="./bildschirmzeit-apps-alters-empfehlungen-fuer-kinder.html" target="_self" class="font-bold text-blue-700 underline">Empfehlungen zur alters-gerechten Bildschirmzeit</a> und <a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html" target="_self" class="font-bold text-blue-700 underline">Ratgebern für Eltern</a>
 </p>
 </details>
 
@@ -937,7 +937,7 @@ Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umg
 
 <!-- Begin Brevo Form -->
 <section class="max-w-7xl mx-auto px-4 md:px-8 py-20 translate-y-28 relative">
-	<div class="relative bg-white neo-border rounded-[40px] p-1 py-8 sm:p-10 md:p-16" data-purpose="waitlist-card">
+	<div class="relative bg-white neo-border rounded-[40px] p-4 py-8 sm:p-10 md:p-16" data-purpose="waitlist-card">
 
 <!-- START - We recommend to place the below code in head tag of your website html  -->
 
@@ -1066,21 +1066,21 @@ Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umg
 		    
 			<form id="sib-form" method="POST" action="https://572ad0c8.sibforms.com/serve/MUIFAIZlP5kroZq12ONE4myg6gQxNeqYXSIA49d3wF7FSNPUmGoyuXOREaCJiY1CZBsiO59Hw3me6X7g6RRWPQXxAdQCRdOb6Ad3BUVJTrpLAJ71sM38ClxfB_esc8wOggp6jcoZUIwuFEVLK6nyGFwfPJE-lgN7eyJaf78GpJAM592TKgapYTUM91272oPbuQdgovOhyNhnKQcqWw==" data-type="subscription" class="space-y-6">
 				
-				<div class="space-y-2 border-b border-slate-100 pb-6 dark:border-slate-800">
+				<div class="space-y-2 border-b border-slate-100 pb-6">
 					<h2 class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
 						Bleib auf dem neuesten Stand
 					</h2>
-					<p class="text-xl sm:text-xl lg:text-2xl text-slate-600 leading-relaxed">
+					<p class="text-lg sm:text-xl lg:text-2xl text-slate-600 leading-relaxed">
 						Erhalte Launch-Updates, Tipps</span> und den praktischen <span class="font-semibold text-orange-600 dark:text-orange-400"><strong>Mediennutzungsvertrag für Familien</strong></span> als PDF direkt in dein Postfach.
 					</p>
 				</div>
 		
 				<div class="sib-input flex flex-col gap-1.5">
-					<label class="text-base md:text-lg font-semibold text-slate-700 dark:text-slate-300" for="EMAIL">
+					<label class="text-base md:text-lg font-semibold text-slate-700" for="EMAIL">
 						E-Mail-Adresse <span class="text-red-500">*</span>
 					</label>
 					<div class="relative w-full">
-						<input class="w-full px-4 py-3 border border-slate-500 dark:border-slate-300 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all text-sm sm:text-base" type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="deine@email.de" required />
+						<input class="w-full px-4 py-3 border border-slate-500 rounded-xl bg-slate-50 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all text-sm sm:text-base" type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="deine@email.de" required />
 					</div>
 					<label class="entry__error entry__error--primary empty:hidden mt-1 p-2 rounded-lg bg-red-50 text-red-800 text-xs border border-red-200"></label>
 					<span class="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
@@ -1091,7 +1091,7 @@ Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umg
 				<div class="sib-optin" data-required="true">
 					<div class="flex flex-col gap-1">
 						<label class="flex items-start gap-3 cursor-pointer group">
-							<input type="checkbox" class="scale-[1.5] mt-1 shrink-0 accent-green-600 h-4 w-4 rounded border-slate-800 text-green-600 focus:ring-green-500 dark:bg-slate-800 dark:border-slate-700" value="1" id="GDPR_CONFIRM" name="GDPR_CONFIRM" required />
+							<input type="checkbox" class="scale-[1.5] mt-1 shrink-0 accent-green-600 h-4 w-4 rounded border-slate-800 text-green-600 focus:ring-green-500" value="1" id="GDPR_CONFIRM" name="GDPR_CONFIRM" required />
 							<span class="text-base sm:text-base lg:text-base text-slate-600 leading-normal group-hover:text-slate-800 transition-colors">
 								Ich stimme dem Erhalt des Newsletters zu und bestätige die <a href="./privacypol_cy.html" target="_blank" class="font-medium underline hover:text-green-600 transition-colors">Cybear Datenschutz-Bestimmungen</a>.
 							</span>
@@ -1231,20 +1231,20 @@ Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umg
 
 <!--BEAR SIDESHOW IMAGE START-->
 <div class="bear-sideshow-wrapper pointer-events-none" id="bear-sideshow">
-	<div class="s1dltx2z left-[70px] md:left-[120px] bottom-[40px] md:bottom-[90px]" id="sidespeechbubble" style="pointer-events: auto;">
+	<div class="s1dltx2z" id="sidespeechbubble" style="pointer-events: auto;">
 	  <div class="w1pd6ffd" style="opacity: 1; transform: scaleX(1) translateX(0px);">
-		<div data-use-adaptive-colors="true" class="f1mhl5zj l17lpp8k w-[14.5rem] sm:w-[16.5rem] md:w-[20.5rem] py-[24px] px-[20px] md:py-[24px] md:px-[32px]">
+		<div data-use-adaptive-colors="true" class="f1mhl5zj l17lpp8k w-[16.5rem] sm:w-[16.5rem] md:w-[20.5rem]">
 		  <div class="t1c3tid0 pointer-events-none" style="top: -10px;">
 			<svg width="65" height="78" viewBox="0 0 95 95" fill="none" preserveAspectRatio="none">
 			  <path d="M0 0C0 0 24.8936 38.9937 47 58C57.5966 67.1106 73.8292 77.0249 84.1762 83C90.03 86.3804 94 95 94 95L94.5 36C94.5 36 88.5727 43.1045 81 41.4825C70.8874 39.3165 56.9488 35.8549 47 31.5C26.7586 22.6397 0 0 0 0Z" fill="var(--color-adaptive-white)"></path>
 			</svg>
 		  </div>
 		  <div data-is-visible="true" class="c138z5kb z-20" style="--delay: 1250ms;">
-			  <button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-16 h-16 ms-auto inline-flex justify-center items-center" data-modal-hide="bear-sideshow">
+			  <button type="button" class="modal-close-x hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-8 h-8 md:w-16 md:h-16 ms-auto right-6 md:right-0 top-5 md:top-0 inline-flex justify-center items-center p-2 md:p-12" data-modal-hide="bear-sideshow">
 				  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
 				  <span class="sr-only">Close modal</span>
 			  </button>
-			<p class="prg881n">Für Eltern mit wenig Zeit: Kompakte Ratgeber und Leitfäden, die bei den ersten Schritten helfen.</p>
+			<p class="prg881n">Kompakte Ratgeber und Leitfäden, die bei den ersten Schritten helfen.</p>
 			<div class="b19w5h5e">
 			  <button data-cy="speech-bubble-accept" class="buqgy6u" style="color: rgb(66, 66, 250);font-weight:700;"><a href="./guides-eltern-kinder-checklists-leitfaden-digitale-medien-kompetenz.html">Erfahre mehr!</a></button>
 			  <button data-cy="speech-bubble-deny" class="buqgy6u" data-modal-target="bear-sideshow" data-modal-toggle="bear-sideshow" style="display:none;">Jetzt nicht</button>
@@ -1319,9 +1319,9 @@ Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umg
 					
 					<!-- free popover -->
 					<!-- Large Modal 1 -->
-					<div id="large-modal-1" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-scroll md:overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
+					<div id="large-modal-1" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
 						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in pointer-events-none"></div>
-							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(50vmin*1.6-30vmax/1.2)] md:top-0">
+							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(40vmin*1.6-30vmax/1.2)] sm:top-[calc(30vmin*1.6-30vmax/1.2)] md:top-[calc(50vmin*1.6-30vmax/1.2)] lg:top-0">
 							<!-- Modal content -->
 							<div class="relative bg-spot-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 sm:my-8 sm:w-full lg:w-4/5 xl:w-3/4 2xl:w-1/2 data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in data-closed:sm:translate-y-0 data-closed:sm:scale-95">
 								<!-- Modal header -->
@@ -1340,14 +1340,13 @@ Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umg
 									  </svg>
 									</div>
 									<div class="mt-3 sm:mt-0 sm:ml-4 text-left">
-									  <h3 id="dialog-title" class="text-xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold text-gray-900">Verführerische Benutzungs-Mechanismen, KI Inhalte, Kaufreiz-Verstärkung. Viele Risiken sind unsichtbar.</h3>
+									  <h3 id="dialog-title" class="text-xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold text-gray-900">Verlockende Benutzungs-Mechanismen, KI Inhalte oder undurchsichtige Einstellungen.</h3>
 									  <div class="mt-4 sm:mt-4 md:mt-6 lg:mt-6 xl:mt-8">
-										<p class=" text-base lg:text-lg text-black-300 font-['Merriweather']">Es ist schwierig all dem zu widerstehen.. In-App Purchases, Skins &amp; Lootboxes, Scams, Influencer-Welten, Click-Bait, süchtig-machende Belohnungsmuster. Inhalte oder Apps, die Benutzer zum Weitermachen animieren, sind bis auf kleinste Detail optimiert. </p>
-										<blockquote class="hidden md:inline-block max-w-3/4 text-lg lg:text-xl text-[#ED546F] italic font-semibold text-left text-heading font-['Geist'] my-2 lg:my-3">Mit für Kinder visuell ansprechenden Anreizen wird die Versuchung nochmal vergrößert. Dazu kommen mehr algorithmisch und KI generierte Inhalte, die personalisiert noch stärker wirken.</blockquote> <p class="text-base lg:text-lg text-black-300  font-['Merriweather']">
+										<p class="text-base lg:text-lg text-black-300 font-['Merriweather']">Es ist schwierig all dem zu widerstehen: "One-Click" In-App-Käufe, geschönte Influencer-Welten, verheissungsvolle Click-Baits, manipulatives Shopping, süchtig-machende Belohnungsmuster. Inhalte oder Funktionen, die Benutzer ewig bei der Stange halten, sind bis auf kleinste Detail optimiert. </p><blockquote class="hidden md:inline-block max-w-3/4 text-lg lg:text-xl text-[#ED546F] italic font-semibold text-left text-heading font-['Geist'] my-2 lg:my-3">Gezielte visuelle Reize vergrößern den Lockvogel-Effekt. Hinzu kommen algorithmisch und KI generierte Inhalte, die personalisiert noch stärker wirken.</blockquote> <p class="text-base lg:text-lg text-black-300  font-['Merriweather']">
 										<strong class="underline">Unmittelbarer Effekt:</strong><br>
-										Viele Mechanismen lösen instinktives Impulsverhalten aus, also Handeln ohne Rücksicht auf die Konsequenzen. Auch kompulsives Verhalten ("ich muss noch...") wird gefördert. Es ist so von den Machern gewollt. Das Internet ist voll davon.<br><br>
+										Viele Benutzungsmechanismen lösen instinktives Impulsverhalten aus, also Handeln ohne Rücksicht auf die Konsequenzen (oder Nachdenken); ebenso zwanghaftes Verhalten ("ich muss noch...") wird gefördert. Das ist so von den Machern gewollt.<br><br>
 										
-										<strong>Diese Mechanismen kindgerecht zu erlernen und das Erkennen dieser zu schärfen ist ungeheuer wichtig, damit Kinder grundlegend verstehen, welche Absichten oder Risiken dahinterstecken. Cybear hilft dabei Kids kritisch darauf vorzubereiten.</strong> </p>
+										<strong>Diese Risiken kindgerecht zu erlernen und das Erkennen dieser zu schärfen ist ungeheuer wichtig, damit Kinder grundlegend verstehen, welche Absichten und Gefahren dahinterstecken. Cybear hilft dabei Kids kritisch darauf vorzubereiten.</strong> </p>
 									  </div>
 									</div>
 								<!-- Modal footer -->
@@ -1361,7 +1360,7 @@ Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umg
 					<!-- Large Modal 2 -->
 					<div id="large-modal-2" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
 						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
-							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(30vmin*1.6-30vmax/1.2)] md:top-[calc(50vmin*1.6-30vmax/1.2)] md:top-0">
+							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(30vmin*1.6-30vmax/1.2)] md:top-[calc(50vmin*1.6-30vmax/1.2)] lg:top-0">
 							<!-- Modal content -->
 							<div class="relative bg-protect-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 sm:my-8 sm:w-full lg:w-4/5 xl:w-3/4 2xl:w-1/2 data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in data-closed:sm:translate-y-0 data-closed:sm:scale-95">
 								<!-- Modal header -->
@@ -1399,7 +1398,7 @@ Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umg
 					<!-- Large Modal 3 -->
 					<div id="large-modal-3" tabindex="-1" class="fixed items-center top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%+1rem)] max-h-auto">
 						<div class="fixed inset-0 bg-gray-500/75 transition-opacity blur-sm data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in "></div>
-							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(30vmin*1.6-30vmax/1.2)] md:top-[calc(50vmin*1.6-30vmax/1.2)] md:top-0">
+							<div class="relative w-full max-w-full max-h-auto flex justify-center top-[calc(30vmin*1.6-30vmax/1.2)] md:top-[calc(50vmin*1.6-30vmax/1.2)] lg:top-0">
 							<!-- Modal content -->
 							<div class="relative bg-staysafe-bg neo-border rounded-[40px] text-left shadow-xl transition-all p-6 md:p-12 lg:p-12 sm:my-8 sm:w-full lg:w-4/5 xl:w-3/4 2xl:w-1/2 data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in data-closed:sm:translate-y-0 data-closed:sm:scale-95">
 								<!-- Modal header -->
