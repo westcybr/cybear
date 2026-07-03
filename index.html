@@ -1058,16 +1058,21 @@ Kinderschutz-Apps (sogenannte Kontroll- oder Monitoring-Apps) werden häufig umg
 		
 				<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
 					
-					<div class="sib-captcha w-full sm:w-auto flex justify-center sm:justify-start">
-						<script>
-							function handleCaptchaResponse() {
-								var event = new Event('captchaChange');
-								document.getElementById('sib-captcha').dispatchEvent(event);
-								window.grecaptcha = window.turnstile;
-							}
-						</script>
-						<div class="cf-turnstile g-recaptcha scale-90 sm:scale-100 origin-center sm:origin-left" data-sitekey="0x4AAAAAADlapgzxkhkhunAX" id="sib-captcha" data-callback="handleCaptchaResponse" data-language="de"></div>
-					</div>
+			 <div class="sib-captcha sib-form-block">
+				<div class="form__entry entry_block">
+				  <div class="form__label-row flex justify-center sm:justify-start">
+					<script>
+					  function handleCaptchaResponse() {
+						var event = new Event('captchaChange');
+						document.getElementById('sib-captcha').dispatchEvent(event);
+						window.grecaptcha = window.turnstile;
+					  }
+					</script>
+					<div class="cf-turnstile g-recaptcha scale-90 origin-left" data-sitekey="0x4AAAAAADlapgzxkhkhunAX" id="sib-captcha" data-callback="handleCaptchaResponse" data-language="en"></div>
+				  </div>
+				  <label class="entry__error entry__error--primary empty:hidden mt-1 p-2 rounded bg-red-50 text-red-800 text-xs border border-red-200"></label>
+				</div>
+			  </div>
 		
 					<div class="w-full sm:w-auto text-right shrink-0">
 						<button class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3.5 bg-green-700 hover:bg-green-600 text-white font-bold text-sm sm:text-base rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 cursor-pointer" form="sib-form" type="submit">
