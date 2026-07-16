@@ -459,21 +459,21 @@
 
 
 <!-- BEGIN: HeroSection -->
-<main class="sm:max-w-[90vw] md:max-w-7xl  mx-auto px-4 md:px-8 mt-5 xl:mt-12 relative">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<main class="sm:max-w-[90vw] md:max-w-3xl lg:max-w-7xl mx-auto px-4 md:px-8 mt-8 md:mt-8 xl:mt-12 relative mb-8 lg:mb-2">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 items-start">
 <!-- Text & Mascot Content -->
 <div class="space-y-1 md:space-y-8">
 <div data-purpose="hero-text">
-<p class="text-[#fb6746] font-bold mb-4">Altersgerechte Spiele schnell finden</p>
+<p class="text-[#fb6746] font-bold lg:mb-4">Altersgerechte Spiele schnell finden</p>
 <h1 class="text-3xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-[800] leading-tight text-slate-800 font-sans leading-[1.2] xl:max-w-[11em]" style="line-height: 1.24;">
 			<!--<span class="text-[#fb6746]">Damit sich Risiken für <span class="curved-underline">Kinder</span> &amp; Jugendliche</span>--> Das richtige Spiel auszusuchen wird schnell zum Abenteuer 
 </h1>
 </div>
 </div>
-<div class="space-y-8 lg:mt-3">
+<div class="space-y-0 lg:space-y-8 lg:mt-3">
 <!-- <p class="mt-8 text-slate-800 max-w-lg leading-relaxed text-xl lg:text-xl pr-0 lg:pr-12 xl:pr-3 font-['Merriweather'] font-[#64748b]" style="line-height: 1.5;"> -->
-<p class="mt-8 text-slate-800 max-w-lg leading-relaxed text-xl lg:text-xl pr-0 lg:pr-12 xl:pr-3 font-['Geist'] font-[#64748b] " style="line-height: 1.5;">
-			In unserem kleinen Spiele-Verzeichnis <strong>können Eltern die gängigsten Titel beurteilen.</strong> <br>*wird noch erweitert  			
+<p class="lg:mt-8 text-slate-800 max-w-lg leading-relaxed text-xl lg:text-xl pr-0 lg:pr-12 xl:pr-3 font-['Geist'] font-[#64748b] " style="line-height: 1.5;">
+			In unserem kleinen Spiele-Verzeichnis <strong>können Eltern die gängigsten Titel beurteilen.</strong> <br><i class="text-base">*wird noch erweitert<i>  			
 		  </p>
 </div>
 
@@ -601,7 +601,7 @@
 	
 	
 
-<section class="w-full md:w-3/4 lg:2/3 max-w-7xl mx-auto px-1 sm:px-4 md:px-1 lg:px-3 py-20 translate-y-0 md:translate-y-28 relative">
+<section class="w-full md:w-5/6 lg:2/3 max-w-7xl mx-auto px-1 sm:px-4 md:px-1 lg:px-3 pb-20 translate-y-0 md:translate-y-28 relative">
 
   <div class="relative bg-white neo-border rounded-[20px] md:rounded-[40px] px-5 py-5 md:p-10 lg:p-16" data-purpose="waitlist-card">
 	  
@@ -616,8 +616,8 @@
 		body{font-family:var(--font-sans);}
 		.wrap{padding:1rem 0;}
 		.controls{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:1.25rem;align-items:center;}
-		.filter-btn{font-size:12px;padding:5px 12px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-secondary);cursor:pointer;transition:all .15s;}
-		.filter-btn.active{background:var(--color-background-secondary);color:var(--color-text-primary);border-color:var(--color-border-primary);font-weight:500;}
+		.filter-btn{font-size:12px;padding:5px 12px;border:0.5px solid #333;border-radius: 20px;color:#222;cursor:pointer;transition:all .15s;}
+		.filter-btn.active{background:#ddd;color:var(--color-text-primary);border-color:#aaa;font-weight:500;}
 		.search-box{flex:1;min-width:160px;padding:6px 10px;background:var(--color-background-primary);color:var(--color-text-primary);}
 		.search-box:focus{outline:none;border-color:var(--color-border-primary);}
 		.legend{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:1rem;font-size:12px;color:var(--color-text-secondary);padding:10px 0;border-top:0.5px solid var(--color-border-tertiary);border-bottom:0.5px solid var(--color-border-tertiary);}
@@ -670,13 +670,13 @@
 			<div class="controls">
 			  <input class="search-box border-2 border-black rounded-xl" type="text" placeholder="Spiele suchen..." id="searchInput" oninput="filterTable()">
 			  <span class="block lg:inline">
-			  <button class="filter-btn active" onclick="setFilter('all',this)">Alle Altersgruppen</button>
-			  <button class="filter-btn" onclick="setFilter('5',this)">5–7</button>
-			  <button class="filter-btn" onclick="setFilter('8',this)">8–10</button>
-			  <button class="filter-btn" onclick="setFilter('11',this)">11–13</button>
-			  <button class="filter-btn" onclick="setFilter('13',this)">13–19</button>
-			  <button class="filter-btn" onclick="setFilter('16',this)">16+</button>
-			  <button class="filter-btn" onclick="setFilter('18',this)">18+</button>
+			  <button class="filter-btn inline-block active hover:border-2 hover:border-black hover:rounded-xl hover:bg-slate-100" onclick="setFilter('all',this)">Alle Altersgruppen</button>
+			  <button class="filter-btn inline-block hover:border-2 hover:border-black hover:bg-slate-100" onclick="setFilter('5',this)">5–7</button>
+			  <button class="filter-btn hover:border-2 hover:border-black hover:bg-slate-100" onclick="setFilter('8',this)">8–10</button>
+			  <button class="filter-btn hover:border-2 hover:border-black hover:bg-slate-100" onclick="setFilter('11',this)">11–13</button>
+			  <button class="filter-btn hover:border-2 hover:border-black hover:bg-slate-100" onclick="setFilter('13',this)">13–19</button>
+			  <button class="filter-btn hover:border-2 hover:border-black hover:bg-slate-100" onclick="setFilter('16',this)">16+</button>
+			  <button class="filter-btn hover:border-2 hover:border-black hover:bg-slate-100" onclick="setFilter('18',this)">18+</button>
 			  </span>
 			</div>
 			
